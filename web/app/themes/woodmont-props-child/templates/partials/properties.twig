@@ -1,0 +1,15 @@
+{% for property in properties %}
+	<article class="property" style="margin-bottom:30px">
+		<img class="property__thumbnail" src="{{ property.thumbnail }}" width="600">
+		<h3 class="property__name">{{ property.title }}</h3>
+		<h4 class="property__citystate">{{ property.city_state }}</h4>
+		<ul>
+			<li class="property__type">{{ property.current_status }}</li>
+			<li class="property__status">{{ property.property_type }}</li>
+			<li class="property__details">{{ property.details }}</li>
+		</ul>
+		<p class="property__description">{{ property.content }}</p>
+		<a class="property__phone" href="tel:{{ property.phone_number }}">{{ property.phone_number }}</a>
+		<a class="property__website" href="http://{{ property.website }}">{{ property.website }}</a>
+	</article>
+{% endfor %}
