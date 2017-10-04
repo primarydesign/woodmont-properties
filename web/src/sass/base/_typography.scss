@@ -1,10 +1,13 @@
 html {
 	font-size: 16px;
+	line-height: 1.5;
 	font-family: $sans;
 	color: $dkgray;
 }
 h1, h2, h3, h4, h5, h6 {
 	color: $dkblue;
+	font-weight: normal;
+	line-height: 1.5;	
 }
 h1, h2, h3 {
 	font-family: $serif;

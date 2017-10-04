@@ -41,17 +41,23 @@ summary{display:list-item}
 canvas{display:inline-block}
 template{display:none}
 [hidden]{display:none}
-html{font-size:16px;font-family:"Open Sans",sans-serif;color:#626366}
-h1,h2,h3,h4,h5,h6{color:#084560}
+html{font-size:16px;line-height:1.5;font-family:"Open Sans",sans-serif;color:#626366}
+h1,h2,h3,h4,h5,h6{color:#084560;font-weight:normal;line-height:1.5}
 h1,h2,h3{font-family:"PT Serif",serif}
+img{max-width:100%}
 .content-wrapper{padding:0 15px}
-.section__slideshow{background-color:#084560;background-image:url(../img/slideshow-1_woodmont-cove-rendering.jpg);background-size:cover;background-position:center;padding:2em}
+.nav__navbar{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;height:45px;padding:15px;background:#084560;color:#fefefe}
+.navbar__logo{max-width:200px}
+.section__slideshow{background-color:#084560;background-image:url(../img/slideshow-1_woodmont-cove-rendering.jpg);background-size:cover;background-position:center;padding:2em;font-size:1em}
 .slideshow__container{color:#fefefe}
 .slideshow__text--bold{font-weight:800;text-transform:uppercase;font-size:3em}
 .slideshow__text--italic{display:block;font-family:"PT Serif",serif;font-style:italic}
 .slideshow__text{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;letter-spacing:1px;font-size:2em;line-height:1}
-.slideshow__cta-button{font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;padding:1.25em 2em;margin:2em 1em 0 0;font-size:1em;line-height:0;color:#084560;background:#fefefe}
-img{max-width:100%}
-@media(min-width:800px){.slideshow__text{font-size:3em}
-}@media(min-width:1600px){.slideshow__text{font-size:5em}
+.slideshow__cta-button{font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;padding:1.25em 2em;margin:2em 1em 0 0;font-size:1rem;line-height:0;color:#084560;background:#fefefe}
+.staff-member__portrait{height:200px;float:left;margin:0 15px 5px 0}
+.staff-member__name{margin:0}
+.staff-member__job-title{margin:0}
+.staff-member__department{margin:0}
+@media(min-width:800px){.section__slideshow{font-size:1.5em}
+}@media(min-width:1600px){.section__slideshow{font-size:2em}
 }

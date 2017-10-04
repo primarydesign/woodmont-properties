@@ -6,8 +6,7 @@
 
 @import "layout/grid";
 
+@import "components/navbar";
 @import "components/slideshow";
-
-img {
-	max-width: 100%;
-}
+@import "components/staff";
+@import "components/properties";

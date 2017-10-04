@@ -1,6 +1,16 @@
 .staff-member {}
-.staff-member__portrait {}
-.staff-member__name {}
-.staff-member__job-title {}
-.staff-member__department {}
+.staff-member__portrait {
+	height: 200px;
+	float: left;
+	margin: 0 15px 5px 0;
+}
+.staff-member__name {
+	margin: 0;
+}
+.staff-member__job-title {
+	margin: 0;
+}
+.staff-member__department {
+	margin: 0;
+}
 .staff-member__description {}
