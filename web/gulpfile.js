@@ -34,7 +34,7 @@ var projectURL              = 'localhost:8888'; // Local project URL of your alr
 var productURL              = './'; // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
 
 // Style related.
-var styleSRC                = './app/themes/woodmont-props-child/sass/main.scss'; // Path to main .scss file.
+var styleSRC                = './src/sass/main.scss'; // Path to main .scss file.
 var styleDestination        = './app/themes/woodmont-props-child/assets/css/'; // Path to place the compiled CSS file.
 // Default set to root folder.
 
@@ -55,7 +55,7 @@ var imagesSRC               = './src/img/**/*.{png,jpg,jpeg,gif,svg}'; // Source
 var imagesDestination       = './app/themes/woodmont-props-child/assets/img/'; // Destination folder of optimized images. Must be different from the imagesSRC folder.
 
 // Watch files paths.
-var styleWatchFiles         = './app/themes/woodmont-props-child/sass/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
+var styleWatchFiles         = './src/sass/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
 var vendorJSWatchFiles      = './src/js/vendor/*.js'; // Path to all vendor JS files.
 var customJSWatchFiles      = './src/js/custom/*.js'; // Path to all custom JS files.
 var projectPHPWatchFiles    = './app/themes/woodmont-props-child/**/*.{php,twig}'; // Path to all PHP and Twig files.
