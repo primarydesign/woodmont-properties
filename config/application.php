@@ -79,5 +79,5 @@ define('DISALLOW_FILE_EDIT', true);
  * Bootstrap WordPress
  */
 if (!defined('ABSPATH')) {
-    define('ABSPATH', $webroot_dir . '/wpa/');
+    define('ABSPATH', $webroot_dir . '/wp/');
 }
