@@ -1,9 +1,0 @@
-{% for member in staff %}
-	<article class="staff-member" style="margin-bottom:60px">
-		<img class="staff-member__portrait" src="{{ member.thumbnail }}" height="200" style="float:left;margin-right:15px;">
-		<h3 class="staff-member__name">{{ member.title }}</h3>
-		<h4 class="staff-member__job-title">{{ member.job_title }}</h4>
-		<h5 class="staff-member__department">Department: {{ member.job_department }}</h5>
-		<p class="staff-member__description">{{ member.content }}</p>
-	</article>
-{% endfor %}
