@@ -55,7 +55,7 @@ var imagesSRC               = './src/img/**/*.{png,jpg,jpeg,gif,svg}'; // Source
 var imagesDestination       = './app/themes/woodmont-props-child/assets/img/'; // Destination folder of optimized images. Must be different from the imagesSRC folder.
 
 // Watch files paths.
-var styleWatchFiles         = './src/sass/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
+var styleWatchFiles         = './src/sass/**/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
 var vendorJSWatchFiles      = './src/js/vendor/*.js'; // Path to all vendor JS files.
 var customJSWatchFiles      = './src/js/custom/*.js'; // Path to all custom JS files.
 var projectPHPWatchFiles    = './app/themes/woodmont-props-child/**/*.{php,twig}'; // Path to all PHP and Twig files.

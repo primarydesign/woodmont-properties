@@ -77,10 +77,14 @@ class acf_field_wysiwyg extends acf_field
    		if( version_compare($wp_version, '3.9', '>=' ) ) {
 			
 			// add code
-			$plugins['code'] = apply_filters('acf/get_info', 'dir') . 'js/tinymce.code.min.js';
-		
+			//Niko commented out the line below to prevent Admin page error
+			//$plugins['code'] = apply_filters('acf/get_info', 'dir') . 'js/tinymce.code.min.js';
+			
+			//Niko added the line below based on this suggestion: https://support.advancedcustomfields.com/forums/topic/acf-admin-cssjs-not-loading
+			
+			$plugins['code'] = get_bloginfo('url') . '/app/plugins/advanced-custom-fields/js/tinymce.code.min.js';
+
 		}
-		
 		
 		// return
 		return $plugins;

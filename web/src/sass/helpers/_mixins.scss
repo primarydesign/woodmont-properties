@@ -1,0 +1,8 @@
+@mixin fontSmooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@mixin boldCaps {
+	font-weight: 800;
+	text-transform: uppercase;
+}
