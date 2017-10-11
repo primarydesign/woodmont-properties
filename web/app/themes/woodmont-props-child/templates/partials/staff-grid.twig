@@ -1,0 +1,15 @@
+<div class="row group">
+	<div class="col span_1_of_6"></div>	
+	{% for member in staff %}
+	<div class="col span_1_of_6">
+		<figure class="staff-thumbnail" style="background-image: url({{ member.thumbnail.src }});background-size:cover;">
+			<img class="staff-thumbnail__portrait" >
+			<figcaption class="staff-thumbnail__text">
+				<h3 class="staff-thumbnail__name">{{ member.title }}</h3>
+				<h4 class="staff-thumbnail__jobtitle">{{ member.job_title }}</h4>
+			</figcaption>
+		</figure>
+	</div>
+	{% endfor %}
+	<div class="col span_1_of_6"></div>
+</div>
