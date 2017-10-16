@@ -33,6 +33,11 @@ var project                 = 'web'; // Project Name.
 var projectURL              = 'localhost:8888'; // Local project URL of your already running WordPress site. Could be something like local.dev or localhost:8888.
 var productURL              = './'; // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
 
+var pagesSRC                = './src/pages/**/*.{php,twig}'; // Path to main .twig / .php files.
+var pagesDestination        = './app/themes/woodmont-props-child/';
+
+// Path to place the compiled CSS file.
+// Default set to root folder.
 // Style related.
 var styleSRC                = './src/sass/main.scss'; // Path to main .scss file.
 var styleDestination        = './app/themes/woodmont-props-child/assets/css/'; // Path to place the compiled CSS file.
@@ -59,6 +64,7 @@ var styleWatchFiles         = './src/sass/**/**/*.scss'; // Path to all *.scss f
 var vendorJSWatchFiles      = './src/js/vendor/*.js'; // Path to all vendor JS files.
 var customJSWatchFiles      = './src/js/custom/*.js'; // Path to all custom JS files.
 var projectPHPWatchFiles    = './app/themes/woodmont-props-child/**/*.{php,twig}'; // Path to all PHP and Twig files.
+var pagesWatchFiles         = './src/pages/**/*.{php,twig}'; // Path to all *.twig and *.php files inside templates folder
 
 // Browsers you care about for autoprefixing.
 // Browserlist https        ://github.com/ai/browserslist
@@ -143,7 +149,6 @@ gulp.task( 'browser-sync', function() {
   } );
 });
 
-
 /**
  * Task: `styles`.
  *
@@ -192,7 +197,7 @@ gulp.task( 'browser-sync', function() {
 
     .pipe( filter( '**/*.css' ) ) // Filtering stream to only css files
     .pipe( browserSync.stream() )// Reloads style.min.css if that is enqueued.
-    .pipe( notify( { message: 'TASK: "styles" Completed! 💯', onLast: true } ) )
+    //.pipe( notify( { message: 'TASK: "styles" Completed! 💯', onLast: true } ) )
  });
 
 

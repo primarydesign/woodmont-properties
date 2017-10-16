@@ -1,16 +1,113 @@
-.staff-member {}
+.section__staff-grid {
+	.col {background: #fff;}
+	@media (max-width:960px) {
+		.span_1_of_4 {
+			width: 49%;
+		}
+	}
+}
+
+.staff-thumbnail {
+	position: relative;
+	display: inline-block;
+	background-position: center;
+	margin: 0;
+	width: 100%;
+	min-height: 300px;
+ }
+.staff-thumbnail:hover .staff-thumbnail__text {
+	height: 100%;
+}
+
+.staff-thumbnail__text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	box-sizing:border-box;
+	padding: 10px;
+	background-color: $tpdkblue;
+	transition: height .3s ease-out;
+	height: 25%;
+	cursor: pointer;
+	&:hover {
+		height: 100%;
+	}
+}
+
+.staff-thumbnail__name, .staff-thumbnail__jobtitle {
+	@include fontSmooth;
+	padding: 0;
+	margin: 0;
+	line-height: 1.25;
+	vertical-align: middle;	
+	color: #fff;
+}
+
+.staff-thumbnail__name, .staff-member__name {
+	@include boldCaps;
+	font-size: 1em;
+	font-family: $sans;
+	letter-spacing: 1px;
+}
+.staff-thumbnail__jobtitle, .staff-member__job-title {	
+	font-family: $serif;
+	font-style: italic; 
+	font-size: .85em;
+	letter-spacing: .05em;
+}
+
+
+/* Selected Staff */
+
+.section__staff {
+	background: $dkblue;
+}
+.staff-member__modal {
+	position: relative;
+	margin:60px auto;
+	max-width: 1000px;
+}
+.staff-member__modal-exit {
+	position: absolute;
+	right: 5%;
+	padding: 2%;
+	color: $gray;
+	cursor: pointer;
+}
+.staff-member__portrait, .staff-member__text {
+	height: 50vh;
+	margin: 0;
+	background-color: #fff;
+}
 .staff-member__portrait {
-	height: 200px;
-	float: left;
-	margin: 0 15px 5px 0;
+	background-size:  cover !important;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.staff-member__text {
+	box-sizing: border-box;
+	overflow-y: auto;
+	padding: 5%;
 }
 .staff-member__name {
 	margin: 0;
+	line-height: 1;
+	color: $dkblue;
 }
 .staff-member__job-title {
 	margin: 0;
 }
-.staff-member__department {
-	margin: 0;
+.staff-member__description {
+	p {
+		font-size: .8em !important;
+		padding-right: 10px;
+	}
 }
-.staff-member__description {}
+.staff-member__department {
+	text-transform: uppercase;
+	letter-spacing: .05em;
+}
