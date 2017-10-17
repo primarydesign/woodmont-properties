@@ -13,27 +13,11 @@
 			<p class="intro__paragraph">Imagineer dog and pony show can I just chime in on that one. Organic growth we need to future-proof this, and timeframe where do we stand on the latest client ask. Cloud strategy deliverables. Imagineer show pony. Reach out deliverables nor can you ballpark the cost per unit for me, and strategic staircase synergize productive mindfulness. Nail jelly to the hothouse wall show pony nail jelly to the hothouse wall.</p>
 		</div>
 	</section>
-	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-		<section class="section__header">
-				<div class="col span_1_of_8"></div>
-				<h1 class="header__title">{{post.title}}</h1>
-		</section>
-		<span class="col span_1_of_8"></span>
-		<div class="col span_6_of_8">		
-			<h2 class="intro__statement">{{post.content}}</h2>
-		</div>
-		<section class="section__about row">
-			<span class="col span_1_of_8"></span>
-			<div class="col span_6_of_8">		
-				<h2 class="section__headline">Storied History</h2>
-				<p class="intro__paragraph">Imagineer dog and pony show can I just chime in on that one. Organic growth we need to future-proof this, and timeframe where do we stand on the latest client ask. Cloud strategy deliverables. Imagineer show pony. Reach out deliverables nor can you ballpark the cost per unit for me, and strategic staircase synergize productive mindfulness. Nail jelly to the hothouse wall show pony nail jelly to the hothouse wall.</p>
-				<span class="col span_1_of_8"></span>	
-				<h2 class="section__headline">What We Do</h2>
-				<p class="intro__paragraph">Imagineer dog and pony show can I just chime in on that one. Organic growth we need to future-proof this, and timeframe where do we stand on the latest client ask. Cloud strategy deliverables. Imagineer show pony. Reach out deliverables nor can you ballpark the cost per unit for me, and strategic staircase synergize productive mindfulness. Nail jelly to the hothouse wall show pony nail jelly to the hothouse wall.</p>
-			</div>
-		</section>
-	</article>
+	<section class="section__our-company post-type-{{post.post_type}}" id="post-{{post.ID}}">
+		{% include "partials/about.twig" %}
+	</section>
 	<section class="section__staff-grid row group">
+		<h2 class="intro__statement">A Trandition of Personal &amp; Corporate Integrity.<br>Our Success Stems from Our People.</h2>
 		<span class="col span_1_of_8"></span>
 		<div class="col span_6_of_8">
 			<h2 class="section__headline">Who We Are</h2>
