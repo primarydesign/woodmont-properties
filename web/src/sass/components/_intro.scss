@@ -1,0 +1,46 @@
+.section__intro {
+	margin: 10% 0 !important;
+}
+.intro__headline, .intro__paragraph {
+	margin: 0;
+	padding: 0;
+}
+.intro__headline {
+	@include fontSmooth;
+	font-size: 2em;
+	line-height: 1.5;
+	font-family: $sans;
+	color: $dkgray;
+}
+.intro__paragraph {
+	line-height: 2;
+}
+.section__page-content {
+	
+}
+.section__header {
+	background: $dkblue;
+	padding: 400px 0 30px 0;
+}
+.header__title {
+	@include boldCaps;
+	@include fontSmooth;
+	color: $white;
+	font-size: 3em;
+}
+.header__title, .intro__statement {
+	margin: 0 auto;
+	max-width: 1000px;
+}
+.intro__statement {
+	@include fontSmooth;	
+	font-size: 1.75em;
+	text-align: center;
+	font-style: italic;
+	color: $dkgray;
+}
+.section__about {
+	.section__headline {
+		text-align: left !important;
+	}
+}

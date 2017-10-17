@@ -1,8 +1,15 @@
 .section__staff-grid {
-	.col {background: #fff;}
-	@media (max-width:960px) {
+	.span_1_of_4 {
+		width: 49%
+	}
+	@media (min-width:960px) {
 		.span_1_of_4 {
-			width: 49%;
+			width: 32%;
+		}
+	}	
+	@media (min-width:1280px) {
+		.span_1_of_4 {
+			width: 23.8%
 		}
 	}
 }
@@ -13,7 +20,7 @@
 	background-position: center;
 	margin: 0;
 	width: 100%;
-	min-height: 300px;
+	min-height: 350px;
  }
 .staff-thumbnail:hover .staff-thumbnail__text {
 	height: 100%;

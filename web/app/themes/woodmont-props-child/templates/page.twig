@@ -4,35 +4,51 @@
 	<section class="section__slideshow">
 		{% include "partials/slideshow.twig" %}
 	</section>
-		<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
-		<div class="content-margins">
-			<section class="article-content">
-				<h1 class="article-h1">{{post.title}}</h1>
-				<div class="article-body">
-					{{post.content}}
-				</div>
-			</section>
-			<section class="section__staff-grid row group" style="clear:both;margin-bottom:100px">
-				<div class="col span_1_of_8"></div>
-				<div class="col span_6_of_8">
-				<h2 class="section__headline">Who We Are</h2>
-					{% include "partials/staff-grid.twig" %}
-				</div>	
-				<div class="col span_1_of_8"></div>
-			</section>
+	<section class="section__intro content-margins row group">
+		<span class="col span_1_of_8"></span>
+		<div class="col span_3_of_8">
+			<h2 class="intro__headline">Focused pursuit of new real estate opportunities.</h2>
 		</div>
-		<section class="section__staff row group" style="clear:both;margin-bottom:100px">
-			<div class="col span_1_of_8"></div>
-			<div class="col span_6_of_8">
-			{% include "partials/staff.twig" %}
-			</div>
-			<div class="col span_1_of_8"></div>
+		<div class="col span_3_of_8">
+			<p class="intro__paragraph">Imagineer dog and pony show can I just chime in on that one. Organic growth we need to future-proof this, and timeframe where do we stand on the latest client ask. Cloud strategy deliverables. Imagineer show pony. Reach out deliverables nor can you ballpark the cost per unit for me, and strategic staircase synergize productive mindfulness. Nail jelly to the hothouse wall show pony nail jelly to the hothouse wall.</p>
+		</div>
+	</section>
+	<article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+		<section class="section__header">
+				<div class="col span_1_of_8"></div>
+				<h1 class="header__title">{{post.title}}</h1>
 		</section>
-		<div class="content-margins">	
-			<section class="section__properties" style="clear:both;margin-bottom:100px">
-				<h2 class="section__headline">Properties</h2>
-				{% include "partials/properties.twig" %}
-			</section>
+		<span class="col span_1_of_8"></span>
+		<div class="col span_6_of_8">		
+			<h2 class="intro__statement">{{post.content}}</h2>
 		</div>
-		</article>
+		<section class="section__about row">
+			<span class="col span_1_of_8"></span>
+			<div class="col span_6_of_8">		
+				<h2 class="section__headline">Storied History</h2>
+				<p class="intro__paragraph">Imagineer dog and pony show can I just chime in on that one. Organic growth we need to future-proof this, and timeframe where do we stand on the latest client ask. Cloud strategy deliverables. Imagineer show pony. Reach out deliverables nor can you ballpark the cost per unit for me, and strategic staircase synergize productive mindfulness. Nail jelly to the hothouse wall show pony nail jelly to the hothouse wall.</p>
+				<span class="col span_1_of_8"></span>	
+				<h2 class="section__headline">What We Do</h2>
+				<p class="intro__paragraph">Imagineer dog and pony show can I just chime in on that one. Organic growth we need to future-proof this, and timeframe where do we stand on the latest client ask. Cloud strategy deliverables. Imagineer show pony. Reach out deliverables nor can you ballpark the cost per unit for me, and strategic staircase synergize productive mindfulness. Nail jelly to the hothouse wall show pony nail jelly to the hothouse wall.</p>
+			</div>
+		</section>
+	</article>
+	<section class="section__staff-grid row group">
+		<span class="col span_1_of_8"></span>
+		<div class="col span_6_of_8">
+			<h2 class="section__headline">Who We Are</h2>
+			{% include "partials/staff-grid.twig" %}
+		</div>
+	</section>
+	<section class="section__staff row group">
+		<span class="col span_1_of_8"></span>
+		<div class="col span_6_of_8">
+		{% include "partials/staff.twig" %}
+		</div>
+	</section>	
+	<section class="section__properties content-margins">
+		<h2 class="section__headline">Properties</h2>
+		{% include "partials/properties.twig" %}
+	</section>
+
 {% endblock %}
