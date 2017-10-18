@@ -1,3 +1,66 @@
+.prprty-type__intro, .prprty-type__image {
+	vertical-align: top;
+	@media (min-width: $screen-md) {
+		display: inline-block;
+		width: 49%
+	}
+}
+.prprty-type__intro {
+	padding: 80px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	max-width: 700px;
+}
+.prprty-type__image {
+	background-color: $dkblue;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 100% center;
+	height: 50vh;
+	min-height: 470px;
+	margin: 0;
+}
+.prprty-type__intro--apts, .prprty-type__intro--commercial {
+
+}
+
+.prprty-type__intro--homes, .prprty-type__intro--industrial {
+	background-color: $ltgray;
+	@media (min-width: $screen-md) {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+}
+.prprty-type__intro--apts {
+	
+}
+.prprty-type__intro--commercial {}
+.prprty-type__intro--homes {}
+.prprty-type__intro--industrial {}
+
+.prprty-type__headline {
+	@include fontSmooth;
+	@include boldCaps;
+	font-size: 1.25em;
+	letter-spacing: 1px;
+}
+.prprty-type__description {
+	@extend .intro__paragraph;
+	margin-bottom: 30px;
+}
+.prprty-type__cta {
+	@include boldCaps;	
+	@include fontSmooth;
+	display: inline-block;
+	padding: 10px 20px;
+	margin-bottom: 30px;	
+	background: $gray;
+	font-size: .85em;
+	letter-spacing: 1px;
+	color: #fff;
+	text-decoration: none;
+}
+
 .property {}
 .property__thumbnail {}
 .property__name {}

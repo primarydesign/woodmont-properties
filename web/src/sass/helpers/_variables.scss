@@ -6,7 +6,8 @@ $black: #1F232A;
 $tpdkblue: rgba(17,68,107,.7); 
 $dkblue: 	#084560;
 $dkgray:	#626366;
-$gray:	#999;
+$gray:		#999;
+$ltgray:	#e5e5e5;
 
 /* Typography */
 
@@ -15,7 +16,8 @@ $serif:		'PT Serif', serif;
 
 /* Screen Widths */
 
-$screen-xs: 		28em;
-$screen-sm: 		35em;
-$screen-md: 		52em;
-$screen-lg: 		60em;
+$screen-xs: 		28em;  //  448px
+$screen-sm: 		35em;	 //  560px
+$screen-md: 		52em;	 //  832px
+$screen-lg: 		60em;	 //  960px
+$screen-xl: 		100em; // 1600px

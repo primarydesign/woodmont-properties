@@ -7,7 +7,9 @@
 }
 .about__side-img {
 	width: 100%;
-	max-width: 400px;
+	@media (min-width: $screen-md) {	
+		max-width: 400px;
+	}
 }
 .about__text, .about__side-img {
 	@media (min-width: $screen-md) {	
@@ -42,5 +44,11 @@
 .section__about--what-we-do .about__text {
 	@media (min-width: $screen-md) {
 		padding-right: 2em;
+	}
+}
+.section__about--what-we-do {
+	@media (min-width: $screen-md) {	
+		display: flex;
+		flex-direction: row-reverse;
 	}
 }

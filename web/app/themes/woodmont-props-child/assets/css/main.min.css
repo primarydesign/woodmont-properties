@@ -122,7 +122,7 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .span_3_of_12{width:23.8%}
 .span_2_of_12{width:15.33%}
 .span_1_of_12{width:6.86%}
-.row{clear:both;padding:0;margin:0 auto 100px}
+.row{clear:both;padding:0;margin:0 auto}
 .group:before,.group:after{content:"";display:table}
 .group:after{clear:both}
 .group{zoom:1}
@@ -140,14 +140,15 @@ img{max-width:100%}
 .slideshow__text{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;letter-spacing:1px;font-size:2em;line-height:1}
 .slideshow__cta-button{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;padding:1.25em 2em;margin:2em 1em 0 0;font-size:1rem;line-height:0;color:#084560;background:#fefefe}
 .section__intro{margin:10% 0 !important}
-.intro__headline,.intro__paragraph,.about__paragraph{margin:0;padding:0}
+.intro__headline,.intro__paragraph,.about__paragraph,.prprty-type__description{margin:0;padding:0}
 .intro__headline{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:2em;line-height:1.5;font-family:"Open Sans",sans-serif;color:#626366}
-.intro__paragraph,.about__paragraph{line-height:2}
+.intro__paragraph,.about__paragraph,.prprty-type__description{line-height:2;font-size:.9em}
 .section__header{background:#084560;padding:400px 0 30px 0}
 .header__title{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#fefefe;font-size:3em}
 .header__title,.intro__statement{margin:0 auto;max-width:1000px}
 .intro__statement{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:1.75em;text-align:center;font-style:italic;color:#626366;padding:2em 0}
 .section__about .section__headline,.section__about .about__headline{text-align:left !important}
+.section__staff-grid{margin-bottom:100px}
 .section__staff-grid .span_1_of_4{width:49%}
 .staff-thumbnail{position:relative;display:inline-block;background-position:center;margin:0;width:100%;min-height:350px}
 .staff-thumbnail:hover .staff-thumbnail__text{height:100%}
@@ -156,7 +157,7 @@ img{max-width:100%}
 .staff-thumbnail__name,.staff-thumbnail__jobtitle{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:0;margin:0;line-height:1.25;vertical-align:middle;color:#fff}
 .staff-thumbnail__name,.staff-member__name{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;font-size:1em;font-family:"Open Sans",sans-serif;letter-spacing:1px}
 .staff-thumbnail__jobtitle,.staff-member__job-title{font-family:"PT Serif",serif;font-style:italic;font-size:.85em;letter-spacing:.05em}
-.section__staff{background:#084560}
+.section__staff{background:#084560;margin-bottom:100px}
 .staff-member__modal{position:relative;margin:60px auto;max-width:1000px}
 .staff-member__modal-exit{position:absolute;right:5%;padding:2%;color:#999;cursor:pointer}
 .staff-member__portrait,.staff-member__text{height:50vh;margin:0;background-color:#fff}
@@ -166,14 +167,26 @@ img{max-width:100%}
 .staff-member__job-title{margin:0}
 .staff-member__description p{font-size:.8em !important;padding-right:10px}
 .staff-member__department{text-transform:uppercase;letter-spacing:.05em}
-.about__side-img{width:100%;max-width:400px}
+.about__side-img{width:100%}
 .about__headline{margin-top:0;line-height:1}
 .about__paragraph{margin-bottom:15px}
 .link__read-more{display:block;color:#084560;text-transform:uppercase;letter-spacing:1px;text-decoration:none;margin-bottom:15px}
 .link__arrow-down{padding:5px}
-@media(min-width:52em){.about__text,.about__side-img{margin-bottom:60px}
+.prprty-type__intro,.prprty-type__image{vertical-align:top}
+.prprty-type__intro{padding:80px;background-repeat:no-repeat;background-size:contain;max-width:700px}
+.prprty-type__image{background-color:#084560;background-repeat:no-repeat;background-size:cover;background-position:100% center;height:50vh;min-height:470px;margin:0}
+.prprty-type__intro--homes,.prprty-type__intro--industrial{background-color:#e5e5e5}
+.prprty-type__headline{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;font-size:1.25em;letter-spacing:1px}
+.prprty-type__description{margin-bottom:30px}
+.prprty-type__cta{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;padding:10px 20px;margin-bottom:30px;background:#999;font-size:.85em;letter-spacing:1px;color:#fff;text-decoration:none}
+@media(min-width:52em){.about__side-img{max-width:400px}
+.about__text,.about__side-img{margin-bottom:60px}
 .section__about--history .about__text{padding-left:2em}
 .section__about--what-we-do .about__text{padding-right:2em}
+.section__about--what-we-do{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-webkit-flex-direction:row-reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
+.prprty-type__intro,.prprty-type__image{display:inline-block;width:49%}
+.prprty-type__intro--homes,.prprty-type__intro--industrial{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-webkit-flex-direction:row-reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
+}@media(min-width:100em){.intro__paragraph,.about__paragraph,.prprty-type__description{font-size:1.1em}
 }@media(min-width:800px){.section__slideshow{font-size:1.5em}
 }@media(min-width:960px){.section__staff-grid .span_1_of_4{width:32%}
 }@media(min-width:1280px){.section__staff-grid .span_1_of_4{width:23.8%}
