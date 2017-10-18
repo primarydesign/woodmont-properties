@@ -4,7 +4,7 @@
 @import "base/normalize";
 @import "base/typography";
 
-@import "layout/grid";
+//@import "layout/grid";
 
 @import "components/navbar";
 @import "components/slideshow";
@@ -13,4 +13,11 @@
 @import "components/about";
 @import "components/properties";
 
-@import "bootstrap/bootstrap"
+@import "bootstrap/bootstrap";
+	
+	.col {
+		padding-top: .75rem;
+    padding-bottom: .75rem;
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid rgba(86,61,124,.2);
+}	

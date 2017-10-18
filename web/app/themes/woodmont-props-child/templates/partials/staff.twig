@@ -1,13 +1,15 @@
 {% for member in staff %}
-	<article class="staff-member__modal row group">
+	<figure class="staff-member__modal">
 		<span class="staff-member__modal-exit">x</span>
-		<div class="staff-member__portrait col span_2_of_5" style="background-image: url({{ member.thumbnail.src }})">
+		<div class="row">
+			<div class="staff-modal__portrait col-sm-5" style="background-image: url({{ member.thumbnail.src }})">
+			</div>
+			<figcaption class="staff-modal__text col-sm-7">
+				<h3 class="staff-member__name">{{ member.title }}</h3>
+				<h4 class="staff-member__job-title">{{ member.job_title }}</h4>
+				<span class="staff-member__description">{{ member.content }}</span>
+				<h5 class="staff-member__department">{{ member.job_department }}</h5>
+			</figcaption>
 		</div>
-		<div class="staff-member__text col span_3_of_5">		
-			<h3 class="staff-member__name">{{ member.title }}</h3>
-			<h4 class="staff-member__job-title">{{ member.job_title }}</h4>
-			<span class="staff-member__description">{{ member.content }}</span>
-			<h5 class="staff-member__department">{{ member.job_department }}</h5>
-		</div>
-	</article>
+	</figure>
 {% endfor %}

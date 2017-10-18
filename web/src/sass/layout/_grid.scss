@@ -11,13 +11,7 @@
 @import "grid/12cols";
 @import "grid/col";
 
-img {
-	max-width: 100%;
-}
 .content-wrapper, .content-margins {
 	padding: 0 15px;
 }
 
-* {
-	box-sizing: border-box;
-}

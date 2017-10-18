@@ -1,44 +1,40 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<section class="section__slideshow">
-		{% include "partials/slideshow.twig" %}
+<section class="section__slideshow">
+	{% include "partials/slideshow.twig" %}
+</section>
+<div class="container">
+	<section class="section__intro row">
+		<h2 class="intro__headline col-sm">Focused pursuit of new real estate opportunities.</h2>
+		<p class="intro__paragraph col-sm">Imagineer dog and pony show can I just chime in on that one. Organic growth we need to future-proof this, and timeframe where do we stand on the latest client ask. Cloud strategy deliverables. Imagineer show pony. Reach out deliverables nor can you ballpark the cost per unit for me, and strategic staircase synergize productive mindfulness. Nail jelly to the hothouse wall show pony nail jelly to the hothouse wall.</p>
 	</section>
-	<section class="section__intro content-margins row group">
-		<span class="col span_1_of_8"></span>
-		<div class="col span_3_of_8">
-			<h2 class="intro__headline">Focused pursuit of new real estate opportunities.</h2>
-		</div>
-		<div class="col span_3_of_8">
-			<p class="intro__paragraph">Imagineer dog and pony show can I just chime in on that one. Organic growth we need to future-proof this, and timeframe where do we stand on the latest client ask. Cloud strategy deliverables. Imagineer show pony. Reach out deliverables nor can you ballpark the cost per unit for me, and strategic staircase synergize productive mindfulness. Nail jelly to the hothouse wall show pony nail jelly to the hothouse wall.</p>
-		</div>
-	</section>
+</div>	
 	<section class="section__our-company post-type-{{post.post_type}}" id="post-{{post.ID}}">
 		{% include "partials/about.twig" %}
 	</section>
-	<section class="section__staff-grid row group">
+	<section class="section__staff-grid">
 		<h2 class="intro__statement">A Tradition of Personal &amp; Corporate Integrity.<br>Our Success Stems from Our People.</h2>
-		<span class="col span_1_of_8"></span>
-		<div class="col span_6_of_8">
+		<div class="container">
 			<h2 class="section__headline">Who We Are</h2>
 			{% include "partials/staff-grid.twig" %}
-		</div>
+		</div>	
 	</section>
-	<section class="section__staff row group">
-		<span class="col span_1_of_8"></span>
-		<div class="col span_6_of_8">
-		{% include "partials/staff.twig" %}
+	<section class="section__staff">
+		<div class="container">
+			{% include "partials/staff.twig" %}
 		</div>
 	</section>	
 	<section class="section__header">
-			<div class="col span_1_of_8"></div>
 			<h1 class="header__title">Properties</h1>
 	</section>
 	<section class="section__property-types">
 		{% include "partials/property-types.twig" %}
 	</section>
 	<section class="section__properties content-margins">
-		{% include "partials/properties.twig" %}
+		<div class="container">		
+			{% include "partials/properties.twig" %}
+		</div>
 	</section>
 
 {% endblock %}

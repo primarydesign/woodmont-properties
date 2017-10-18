@@ -1,18 +1,18 @@
 .section__about {
 	.col {
-		@media (max-width: $screen-md) {
+		@media (max-width: $screen-sm) {
 			width: 100% !important;
 		}
 	}
 }
 .about__side-img {
 	width: 100%;
-	@media (min-width: $screen-md) {	
+	@media (min-width: $screen-sm) {	
 		max-width: 400px;
 	}
 }
 .about__text, .about__side-img {
-	@media (min-width: $screen-md) {	
+	@media (min-width: $screen-sm) {	
 		margin-bottom: 60px;
 	}
 }
@@ -37,17 +37,17 @@
 	padding: 5px;
 }
 .section__about--history .about__text {
-	@media (min-width: $screen-md) {
+	@media (min-width: $screen-sm) {
 		padding-left: 2em;
 	}
 }
 .section__about--what-we-do .about__text {
-	@media (min-width: $screen-md) {
+	@media (min-width: $screen-sm) {
 		padding-right: 2em;
 	}
 }
 .section__about--what-we-do {
-	@media (min-width: $screen-md) {	
+	@media (min-width: $screen-sm) {	
 		display: flex;
 		flex-direction: row-reverse;
 	}
