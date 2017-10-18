@@ -179,7 +179,7 @@ img{max-width:100%}
 .prprty-type__headline{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;font-size:1.25em;letter-spacing:1px}
 .prprty-type__description{margin-bottom:30px}
 .prprty-type__cta{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;padding:10px 20px;margin-bottom:30px;background:#999;font-size:.85em;letter-spacing:1px;color:#fff;text-decoration:none}
-@media(min-width:52em){.about__side-img{max-width:400px}
+/*! Bootstrap v4.0.0-beta (https://getbootstrap.com) Copyright 2011-2017 The Bootstrap Authors Copyright 2011-2017 Twitter, Inc. Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */@media(min-width:52em){.about__side-img{max-width:400px}
 .about__text,.about__side-img{margin-bottom:60px}
 .section__about--history .about__text{padding-left:2em}
 .section__about--what-we-do .about__text{padding-right:2em}
