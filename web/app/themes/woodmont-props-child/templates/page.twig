@@ -1,15 +1,16 @@
 {% extends "base.twig" %}
 
 {% block content %}
-<section class="section__slideshow">
-	{% include "partials/slideshow.twig" %}
-</section>
-<div class="container">
-	<section class="section__intro row">
-		<h2 class="intro__headline col-sm">Focused pursuit of new real estate opportunities.</h2>
-		<p class="intro__paragraph col-sm">Imagineer dog and pony show can I just chime in on that one. Organic growth we need to future-proof this, and timeframe where do we stand on the latest client ask. Cloud strategy deliverables. Imagineer show pony. Reach out deliverables nor can you ballpark the cost per unit for me, and strategic staircase synergize productive mindfulness. Nail jelly to the hothouse wall show pony nail jelly to the hothouse wall.</p>
+
+	<section class="section__slideshow">
+		{% include "partials/slideshow.twig" %}
 	</section>
-</div>	
+
+	{% include "partials/sandbox.twig" %}
+
+	<div class="container">
+		 {% include "partials/intro.twig" %}
+	</div>	
 	<section class="section__our-company post-type-{{post.post_type}}" id="post-{{post.ID}}">
 		{% include "partials/about.twig" %}
 	</section>
@@ -22,11 +23,13 @@
 	</section>
 	<section class="section__staff">
 		<div class="container">
-			{% include "partials/staff.twig" %}
+			{% include "partials/staff-modals.twig" %}
 		</div>
 	</section>	
 	<section class="section__header">
-			<h1 class="header__title">Properties</h1>
+		<div class="container">	
+			<h1 class="header__title">Properties</h1>			
+		</div>	
 	</section>
 	<section class="section__property-types">
 		{% include "partials/property-types.twig" %}
@@ -37,4 +40,16 @@
 		</div>
 	</section>
 
+<div class="container-fluid">
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		<strong>Holy guacamole!</strong> You should check in on some of those fields below.
+	</div>
+</div>
+<script>$(".alert").alert('close');</script>
+<script>$('.carousel').carousel({
+  interval: 100
+})</script>
 {% endblock %}

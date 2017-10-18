@@ -205,4 +205,62 @@
       One of two columns
     </div>
   </div>
+	<h2>Column Wrapping</h2>
+	<div class="row">
+		<div class="col-9">.col-9</div>
+		<div class="col-4">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+		<div class="col-6">.col-6<br>Subsequent columns continue along the new line.</div>
+	</div>
+	<h2>Column Resets</h2>
+	<div class="row">
+		<div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+		<div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+
+		<!-- Add the extra clearfix for only the required viewport -->
+		<div class="clearfix d-none d-sm-block"></div>
+
+		<div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+		<div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+	</div>
+</div>
+<div class="container">
+	<h2>Flex Order</h2>
+  <div class="row">
+    <div class="col">
+      First, but unordered
+    </div>
+    <div class="col order-12">
+      Second, but last
+    </div>
+    <div class="col order-1">
+      Third, but first
+    </div>
+  </div>
+	<h2>Offsetting Columns</h2>
+	<div class="row">
+		<div class="col-md-4">.col-md-4</div>
+		<div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+		<div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+	</div>
+	<div class="row">
+		<div class="col-auto mr-auto">.col-auto .mr-auto</div>
+		<div class="col-auto">.col-auto</div>
+	</div>
+	<h2>Nesting</h2>
+	<div class="row">
+		<div class="col-sm-9">
+			Level 1: .col-sm-9
+			<div class="row">
+				<div class="col-8 col-sm-6">
+					Level 2: .col-8 .col-sm-6
+				</div>
+				<div class="col-4 col-sm-6">
+					Level 2: .col-4 .col-sm-6
+				</div>
+			</div>
+		</div>
+	</div>	
 </div>
