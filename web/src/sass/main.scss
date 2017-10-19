@@ -10,12 +10,13 @@
 @import "components/staff";
 @import "components/about";
 @import "components/properties";
+@import "components/portfolio";
 
 @import "bootstrap/bootstrap";
 	
-	.col {
-		padding-top: .75rem;
-    padding-bottom: .75rem;
-    background-color: rgba(86,61,124,.15);
-    border: 1px solid rgba(86,61,124,.2);
-}	
+.col {
+	padding-top: .75rem;
+	padding-bottom: .75rem;
+	background-color: rgba(86,61,124,.15);
+	border: 1px solid rgba(86,61,124,.2);
+}

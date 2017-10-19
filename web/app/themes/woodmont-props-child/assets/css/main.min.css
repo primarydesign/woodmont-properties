@@ -89,14 +89,24 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .about__paragraph{margin-bottom:15px}
 .link__read-more{display:inline-block;color:#084560;text-transform:uppercase;letter-spacing:1px;text-decoration:none;margin-bottom:15px}
 .link__arrow-down{padding:5px}
+.section__property-types{margin-bottom:100px}
 .prprty-type__intro,.prprty-type__image{vertical-align:top}
 .prprty-type__intro{padding:80px;background-repeat:no-repeat;background-size:contain;max-width:700px}
-.prprty-type__image{background-color:#084560;background-repeat:no-repeat;background-size:cover;background-position:100% center;height:50vh;min-height:470px;margin:0}
+.prprty-type__image{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;min-height:470px;margin:0;background-color:#084560;background-repeat:no-repeat;background-size:cover;background-position:100% center}
 .prprty-type__intro--homes,.prprty-type__intro--industrial{background-color:#e5e5e5}
 .prprty-type__headline{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;font-size:1.25em;letter-spacing:1px}
 .prprty-type__description{margin-bottom:30px}
 .prprty-type__cta{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;padding:10px 20px;margin-bottom:30px;background:#999;font-size:.85em;letter-spacing:1px;color:#fff;text-decoration:none;-webkit-transition:background .3s;transition:background .3s}
 .prprty-type__cta:hover{background:#084560}
+.portfolio__type-toggles,.portfolio__thumbnail{list-style:none}
+.portfolio__type-label{cursor:pointer;padding:10px 5px;letter-spacing:1px;text-align:center;font-size:.9em;border:1px solid #e5e5e5;background:#fff !important}
+.portfolio__type-label:hover{background:#e5e5e5 !important}
+.portfolio__thumbnails{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;text-align:center;margin-bottom:100px}
+.portfolio__thumbnail{cursor:pointer;height:200px;background-size:cover;background-repeat:no-repeat;background-clip:content-box;margin-bottom:10px;padding:0 5px !important}
+.portfolio-thumbnail__text{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;height:100%;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#fff;background-color:rgba(17,68,107,0.7);-webkit-transition:opacity .3s;transition:opacity .3s}
+.portfolio-thumbnail__text:hover{opacity:0}
+.portfolio-thumbnail__name,.portfolio-thumbnail__place{display:block;padding:5px 10px;font-size:.9em;line-height:1;letter-spacing:1px}
+.portfolio-thumbnail__name{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase}
 /*! Bootstrap v4.0.0-beta (https://getbootstrap.com) Copyright 2011-2017 The Bootstrap Authors Copyright 2011-2017 Twitter, Inc. Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */.container{margin-right:auto;margin-left:auto;padding-right:15px;padding-left:15px;width:100%}
 .container-fluid{width:100%;margin-right:auto;margin-left:auto;padding-right:15px;padding-left:15px;width:100%}
 .row{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}
@@ -544,7 +554,8 @@ a.text-dark:focus,a.text-dark:hover{color:#1d2124 !important}
 .section__about--history .about__text{padding-left:2em}
 .section__about--what-we-do .about__text{padding-right:2em}
 .section__about--what-we-do{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-webkit-flex-direction:row-reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
-}@media(min-width:52em){.prprty-type__intro,.prprty-type__image{display:inline-block;width:49%}
+}@media(min-width:52em){.section__prprty-type{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+.prprty-type__intro,.prprty-type__image{display:inline-block;width:49%}
 .prprty-type__intro--homes,.prprty-type__intro--industrial{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-webkit-flex-direction:row-reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
 }@media(min-width:100em){.intro__paragraph,.about__paragraph,.prprty-type__description{font-size:1.1em}
 }@media(min-width:576px){.container{max-width:540px}

@@ -1,4 +1,46 @@
 <h2 class="section__headline">Our Portfolio</h2>
+<div class="container">
+	<ul class="portfolio__type-toggles row">
+			<li class="portfolio__type-label col-lg-3 col-6">Luxury Apartments</li>
+			<li class="portfolio__type-label col-lg-3 col-6">Luxury Homes</li>
+			<li class="portfolio__type-label col-lg-3 col-6">Industrial</li>
+			<li class="portfolio__type-label col-lg-3 col-6">Commercial</li>		
+	</ul>
+	<ul class="portfolio__thumbnails row">
+		{% for property in properties %}
+			<li class="portfolio__thumbnail col-lg-3 col-6" style="background-image:url({{ property.thumbnail.src }})">
+				<div class="portfolio-thumbnail__text">
+					<span class="portfolio-thumbnail__name">{{ property.title }}</span>
+					<span class="portfolio-thumbnail__place">{{ property.city_state }}</span>
+				</div>
+			</li>
+		{% endfor %}
+		{% for property in properties %}
+			<li class="portfolio__thumbnail col-lg-3 col-6" style="background-image:url({{ property.thumbnail.src }})">
+				<div class="portfolio-thumbnail__text">
+					<span class="portfolio-thumbnail__name">{{ property.title }}</span>
+					<span class="portfolio-thumbnail__place">{{ property.city_state }}</span>
+				</div>
+			</li>
+		{% endfor %}	
+		{% for property in properties %}
+			<li class="portfolio__thumbnail col-lg-3 col-6" style="background-image:url({{ property.thumbnail.src }})">
+				<div class="portfolio-thumbnail__text">
+					<span class="portfolio-thumbnail__name">{{ property.title }}</span>
+					<span class="portfolio-thumbnail__place">{{ property.city_state }}</span>
+				</div>
+			</li>
+		{% endfor %}
+		{% for property in properties %}
+			<li class="portfolio__thumbnail col-lg-3 col-6" style="background-image:url({{ property.thumbnail.src }})">
+				<div class="portfolio-thumbnail__text">
+					<span class="portfolio-thumbnail__name">{{ property.title }}</span>
+					<span class="portfolio-thumbnail__place">{{ property.city_state }}</span>
+				</div>
+			</li>
+		{% endfor %}
+	</ul>
+</div>		
 {% for property in properties %}
 	<article class="property" style="margin-bottom:60px">
 		<img class="property__thumbnail" src="{{ property.thumbnail }}" width="600">
