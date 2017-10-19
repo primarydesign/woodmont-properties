@@ -1,6 +1,6 @@
 <div class="row no-gutters">
 {% for member in staff %}
-	<div class="col-xl-3 col-md-4 col-6">	
+	<div class="col-xl-3 col-md-4 col-6" data-toggle="modal" data-target="#{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}">	
 		<figure class="staff-thumbnail" style="background-image: url({{ member.thumbnail.src }});background-size:cover;">
 			<img class="staff-thumbnail__portrait" >
 			<figcaption class="staff-thumbnail__text">
@@ -8,10 +8,53 @@
 				<h4 class="staff-thumbnail__jobtitle">{{ member.job_title }}</h4>
 			</figcaption>
 		</figure>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog staff-member__modal" role="document">
+				<span class="staff-member__modal-exit" data-dismiss="modal">x</span>
+				<div class="row no-gutters">
+					<div class="staff-modal__portrait col-sm-5" style="background-image: url({{ member.thumbnail.src }})">
+					</div>
+					<figcaption class="staff-modal__text col-sm-7">
+						<h3 class="staff-member__name">{{ member.title }}</h3>
+						<h4 class="staff-member__job-title">{{ member.job_title }}</h4>
+						<span class="staff-member__description">{{ member.content }}</span>
+						<h5 class="staff-member__department">{{ member.job_department }}</h5>
+					</figcaption>
+				</div>
+		</div>
+	</div>
+{% endfor %}
+{% for member in staff %}
+	<div class="col-xl-3 col-md-4 col-6" data-toggle="modal" data-target="#{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}">	
+		<figure class="staff-thumbnail" style="background-image: url({{ member.thumbnail.src }});background-size:cover;">
+			<img class="staff-thumbnail__portrait" >
+			<figcaption class="staff-thumbnail__text">
+				<h3 class="staff-thumbnail__name">{{ member.title }}</h3>
+				<h4 class="staff-thumbnail__jobtitle">{{ member.job_title }}</h4>
+			</figcaption>
+		</figure>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog staff-member__modal" role="document">
+				<span class="staff-member__modal-exit" data-dismiss="modal">x</span>
+				<div class="row no-gutters">
+					<div class="staff-modal__portrait col-sm-5" style="background-image: url({{ member.thumbnail.src }})">
+					</div>
+					<figcaption class="staff-modal__text col-sm-7">
+						<h3 class="staff-member__name">{{ member.title }}</h3>
+						<h4 class="staff-member__job-title">{{ member.job_title }}</h4>
+						<span class="staff-member__description">{{ member.content }}</span>
+						<h5 class="staff-member__department">{{ member.job_department }}</h5>
+					</figcaption>
+				</div>
+		</div>
 	</div>
 {% endfor %}	
 {% for member in staff %}
-	<div class="col-xl-3 col-md-4 col-6">		
+	<div class="col-xl-3 col-md-4 col-6" data-toggle="modal" data-target="#{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}">	
 		<figure class="staff-thumbnail" style="background-image: url({{ member.thumbnail.src }});background-size:cover;">
 			<img class="staff-thumbnail__portrait" >
 			<figcaption class="staff-thumbnail__text">
@@ -20,9 +63,25 @@
 			</figcaption>
 		</figure>
 	</div>
-{% endfor %}
+	<!-- Modal -->
+	<div class="modal fade" id="{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog staff-member__modal" role="document">
+				<span class="staff-member__modal-exit" data-dismiss="modal">x</span>
+				<div class="row no-gutters">
+					<div class="staff-modal__portrait col-sm-5" style="background-image: url({{ member.thumbnail.src }})">
+					</div>
+					<figcaption class="staff-modal__text col-sm-7">
+						<h3 class="staff-member__name">{{ member.title }}</h3>
+						<h4 class="staff-member__job-title">{{ member.job_title }}</h4>
+						<span class="staff-member__description">{{ member.content }}</span>
+						<h5 class="staff-member__department">{{ member.job_department }}</h5>
+					</figcaption>
+				</div>
+		</div>
+	</div>
+{% endfor %}	
 {% for member in staff %}
-	<div class="col-xl-3 col-md-4 col-6">
+	<div class="col-xl-3 col-md-4 col-6" data-toggle="modal" data-target="#{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}">	
 		<figure class="staff-thumbnail" style="background-image: url({{ member.thumbnail.src }});background-size:cover;">
 			<img class="staff-thumbnail__portrait" >
 			<figcaption class="staff-thumbnail__text">
@@ -30,17 +89,22 @@
 				<h4 class="staff-thumbnail__jobtitle">{{ member.job_title }}</h4>
 			</figcaption>
 		</figure>
-	</div>	
-{% endfor %}
-{% for member in staff %}
-	<div class="col-xl-3 col-md-4 col-6">
-		<figure class="staff-thumbnail" style="background-image: url({{ member.thumbnail.src }});background-size:cover;">
-			<img class="staff-thumbnail__portrait" >
-			<figcaption class="staff-thumbnail__text">
-				<h3 class="staff-thumbnail__name">{{ member.title }}</h3>
-				<h4 class="staff-thumbnail__jobtitle">{{ member.job_title }}</h4>
-			</figcaption>
-		</figure>
-	</div>	
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog staff-member__modal" role="document">
+				<span class="staff-member__modal-exit" data-dismiss="modal">x</span>
+				<div class="row no-gutters">
+					<div class="staff-modal__portrait col-sm-5" style="background-image: url({{ member.thumbnail.src }})">
+					</div>
+					<figcaption class="staff-modal__text col-sm-7">
+						<h3 class="staff-member__name">{{ member.title }}</h3>
+						<h4 class="staff-member__job-title">{{ member.job_title }}</h4>
+						<span class="staff-member__description">{{ member.content }}</span>
+						<h5 class="staff-member__department">{{ member.job_department }}</h5>
+					</figcaption>
+				</div>
+		</div>
+	</div>
 {% endfor %}
 </div>

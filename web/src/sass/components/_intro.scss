@@ -25,6 +25,8 @@
 .section__header {
 	background: $dkblue;
 	padding: 400px 0 30px 0;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 .header__title {
 	@include boldCaps;

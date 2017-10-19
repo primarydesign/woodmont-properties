@@ -1,6 +1,9 @@
 .section__staff-grid {
  	margin-bottom: 100px;
 	line-height: 0;
+	.modal {
+		padding: 0 5% !important;
+	}
 }
 
 .staff-thumbnail {
@@ -56,7 +59,6 @@
 	letter-spacing: .05em;
 }
 
-
 /* Selected Staff */
 
 .section__staff {
@@ -66,13 +68,13 @@
 }
 .staff-member__modal {
 	position: relative;
-	margin:60px auto;
-	max-width: 1000px;
+	margin: 25vh auto !important;
+	max-width: 1070px !important;
 }
 .staff-member__modal-exit {
 	position: absolute;
-	right: .5%;
-	padding: 1.5%;
+	right: 0;
+	padding: 25px 35px;
 	color: $gray;
 	cursor: pointer;
 	z-index: 1;
@@ -91,11 +93,13 @@
 	box-sizing: border-box;
 	overflow-y: auto;
 	padding: 45px !important;
+	line-height: 1.75;
 }
 .staff-member__name {
 	margin: 0;
 	line-height: 1;
 	color: $dkblue;
+	margin-bottom: 5px;
 }
 .staff-member__job-title {
 	margin: 0;

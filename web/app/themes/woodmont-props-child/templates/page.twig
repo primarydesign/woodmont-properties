@@ -20,13 +20,8 @@
 			<h2 class="section__headline">Who We Are</h2>
 			{% include "partials/staff-grid.twig" %}
 		</div>	
-	</section>
-	<section class="section__staff">
-		<div class="container">
-			{% include "partials/staff-modals.twig" %}
-		</div>
 	</section>	
-	<section class="section__header">
+	<section class="section__header" style="background-image:url('{{theme.path}}/assets/img/header-image_properties.jpg')">
 		<div class="container">	
 			<h1 class="header__title">Properties</h1>			
 		</div>	
@@ -39,17 +34,4 @@
 			{% include "partials/properties.twig" %}
 		</div>
 	</section>
-
-<div class="container-fluid">
-	<div class="alert alert-success alert-dismissible fade show" role="alert">
-		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		</button>
-		<strong>Holy guacamole!</strong> You should check in on some of those fields below.
-	</div>
-</div>
-<!--<script>$(".alert").alert('close');</script>-->
-
-
-
 {% endblock %}

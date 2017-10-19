@@ -55,6 +55,10 @@
 	letter-spacing: 1px;
 	color: #fff;
 	text-decoration: none;
+	transition: background .3s;
+	&:hover {
+		background: $dkblue;
+	}
 }
 
 .property {}
