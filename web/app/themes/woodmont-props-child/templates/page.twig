@@ -22,15 +22,20 @@
 		</div>	
 	</section>	
 	<section class="section__header" style="background-image:url('{{theme.path}}/assets/img/header-image_properties.jpg')">
-		<div class="container">	
+		<div class="container-fluid">	
 			<h1 class="header__title">Properties</h1>			
 		</div>	
 	</section>
 	<section class="section__property-types">
 		{% include "partials/property-types.twig" %}
 	</section>
-	<section class="section__properties content-margins">
-		<div class="container">		
+	<section class="section__portfolio">
+		<div class="container">	
+			{% include "partials/portfolio.twig" %}
+		</div>
+	</section>	
+	<section class="section__properties">	
+		<div class="container">	
 			{% include "partials/properties.twig" %}
 		</div>
 	</section>

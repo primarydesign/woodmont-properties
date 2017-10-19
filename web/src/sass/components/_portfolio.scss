@@ -1,5 +1,78 @@
-.portfolio__type-toggles, .portfolio__thumbnail {
+.property--selected {
+	@include fontSmooth;	
+}
+.property__featured-img {
+	width: 100%;
+	margin-bottom: 15px;
+}
+.property__name {
+	@include boldCaps;
+	margin: 0 0 15px 0;
+	letter-spacing: 1px;
+	font-size: 1.5em;
+	line-height: 1;
+}
+.property__citystate {
+	margin: 0;
+	font-size: 1.25em;
+	line-height: 1;
+	font-family: $serif;
+	color: $dkblue;
+	font-style: italic;
+}
+.property__specs {
+	text-align: left;
+	padding: 0;
+	margin-bottom: 0;
+	li {
+		display: inline-block;
+		list-style: none;
+		font-size: .9em;
+		text-transform: uppercase;
+	}
+}
+.property__type {}
+.property__status {}
+.property__details {}
+.property__description {
+	display: inline-block;
+	font-size: .9em;
+	margin-bottom: 15px;
+	@include media-breakpoint-up(lg) {
+		font-size: 1em;
+	}	
+	@include media-breakpoint-up(xl) {
+		font-size: 1.25em;
+	}	
+}
+.property__phone, .property__website {
+	@extend .prprty-type__cta;
+	padding-top: 8px;
+	margin-right: 10px;
+	line-height: 1.75;
+	border: 1px solid $dkblue;
+}
+.property__phone  {
+	background: #fff;
+	color: $dkblue;
+	&:hover {
+		background: #fff;
+		color: $dkblue;
+	}
+}
+.property__website  {
+	background: $dkblue;
+}
+
+/* Portfolio Thumbnail Grid */
+.section__portfolio {
+	margin: 0 auto;
+	//max-width: 1140px;
+}
+.portfolio__type-toggles, .portfolio__thumbnails {
 	list-style: none;
+	margin-right: 15px;
+	margin-left: -30px;	
 }
 .portfolio__type-label {
 	cursor: pointer;
@@ -28,6 +101,15 @@
 	background-clip: content-box;
 	margin-bottom: 10px;
 	padding: 0 5px !important;
+	@include media-breakpoint-up(md) {
+		height: 150px;
+	}
+//	@include media-breakpoint-up(lg) {
+//		height: 125px;
+//	}
+	@include media-breakpoint-up(xl) {
+		height: 125px;
+	}		
 }
 .portfolio-thumbnail__text {
 	display: flex;
@@ -45,11 +127,14 @@
 .portfolio-thumbnail__name, .portfolio-thumbnail__place {
 	display: block;
 	padding: 5px 10px;
-	font-size: .9em;
+	font-size: 1em;
 	line-height: 1;
 	letter-spacing: 1px;
+	@include media-breakpoint-up(md) {
+		font-size: .9em;
+		letter-spacing: 0;
+	}		
 }
 .portfolio-thumbnail__name {
 	@include boldCaps;
-	
 }

@@ -1,0 +1,10 @@
+.footer {
+	@include fontSmooth;
+	padding: 30px;
+	background: $dkblue;
+	text-align: center;
+}
+.footer__copyright {
+	font-size: .85em;
+	color: #fff;
+}

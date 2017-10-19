@@ -1,6 +1,8 @@
 @import "helpers/variables";
 @import "helpers/mixins";
 
+@import "bootstrap/bootstrap";
+
 @import "base/normalize";
 @import "base/typography";
 
@@ -11,8 +13,8 @@
 @import "components/about";
 @import "components/properties";
 @import "components/portfolio";
+@import "components/footer";
 
-@import "bootstrap/bootstrap";
 	
 .col {
 	padding-top: .75rem;
