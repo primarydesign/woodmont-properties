@@ -7,14 +7,16 @@
 }
 .intro__headline {
 	@include fontSmooth;
+	margin-bottom: .5em;
 	font-size: 2em;
-	line-height: 1.5;
+	line-height: 1.25;
 	font-family: $sans;
 	color: $dkgray;
 }
 .intro__paragraph {
 	line-height: 2;
 	font-size: .9em;
+  padding: 5px;
 	@media (min-width: $screen-xl) {
 		font-size: 1.1em;
 	}	
@@ -23,16 +25,20 @@
 	
 }
 .section__header {
+	padding: 100px 0 30px 0;
 	background: $dkblue;
-	padding: 400px 0 30px 0;
 	background-size: cover;
 	background-repeat: no-repeat;
+	@include media-breakpoint-up(sm) {
+			padding: 400px 0 30px 0;
+	}
 }
 .header__title {
 	@include boldCaps;
 	@include fontSmooth;
 	color: $white;
 	font-size: 3em;
+	line-height: 1;
 }
 .header__title, .intro__statement {
 	margin: 0 auto;
@@ -40,11 +46,14 @@
 }
 .intro__statement {
 	@include fontSmooth;	
-	font-size: 1.75em;
+	font-size: 1.5em;
 	text-align: center;
 	font-style: italic;
 	color: $dkgray;
 	padding: 2em 0;
+	@include media-breakpoint-up(sm) {
+		font-size: 1.75em;
+	}
 }
 .section__about {
 	.section__headline {

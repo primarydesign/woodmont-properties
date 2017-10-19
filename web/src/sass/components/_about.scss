@@ -1,20 +1,18 @@
-.section__about {
-	.col {
-		@media (max-width: $screen-sm) {
-			width: 100% !important;
-		}
-	}
-}
+.section__about {}
 .about__side-img {
 	width: 100%;
-	@media (min-width: $screen-sm) {	
+	@include media-breakpoint-up(sm) {	
 		max-width: 400px;
 	}
 }
 .about__text, .about__side-img {
-	@media (min-width: $screen-sm) {	
-		margin-bottom: 60px;
+	margin-bottom: 15px;	
+	@include media-breakpoint-up(sm) {
+		margin-bottom: 30px;
 	}
+	@include media-breakpoint-up(lg) {
+		margin-bottom: 60px;
+	}	
 }
 .about__headline {
 	@extend .section__headline;
@@ -23,7 +21,7 @@
 }
 .about__paragraph {
 	@extend .intro__paragraph;
-	margin-bottom: 15px;
+	padding-top: 0;
 }
 .link__read-more {
 	display: inline-block;
@@ -32,22 +30,23 @@
 	letter-spacing: 1px;
 	text-decoration: none;
 	margin-bottom: 15px;
+	padding: 15px 5px;
 }
 .link__arrow-down {
 	padding: 5px;
 }
 .section__about--history .about__text {
-	@media (min-width: $screen-sm) {
+	@include media-breakpoint-up(sm) {
 		padding-left: 2em;
 	}
 }
 .section__about--what-we-do .about__text {
-	@media (min-width: $screen-sm) {
+	@include media-breakpoint-up(sm) {
 		padding-right: 2em;
 	}
 }
 .section__about--what-we-do {
-	@media (min-width: $screen-sm) {	
+	@include media-breakpoint-up(sm) {
 		display: flex;
 		flex-direction: row-reverse;
 	}

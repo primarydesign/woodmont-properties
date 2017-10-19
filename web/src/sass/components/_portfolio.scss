@@ -67,7 +67,11 @@
 /* Portfolio Thumbnail Grid */
 .section__portfolio {
 	margin: 0 auto;
+
 	//max-width: 1140px;
+	.container {
+		padding: 0;
+	}
 }
 .portfolio__type-toggles, .portfolio__thumbnails {
 	list-style: none;

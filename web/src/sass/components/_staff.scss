@@ -12,7 +12,10 @@
 	background-position: center;
 	margin: 0;
 	width: 100%;
-	min-height: 350px;
+	min-height: 250px;
+	@include media-breakpoint-up(sm) {
+		min-height: 350px;
+	}
  }
 .staff-thumbnail:hover .staff-thumbnail__text {
 	height: 100%;
@@ -30,8 +33,11 @@
 	padding: 10px;
 	background-color: $tpdkblue;
 	transition: height .3s ease-out;
-	height: 25%;
+	height: 35%;
 	cursor: pointer;
+	@include media-breakpoint-up(sm) {
+		height: 25%;
+	}
 	&:hover {
 		height: 100%;
 	}
@@ -67,8 +73,11 @@
 }
 .staff-member__modal {
 	position: relative;
-	margin: 25vh auto !important;
+	margin: 0 auto !important;
 	max-width: 1070px !important;
+	@include media-breakpoint-up(sm) {
+		margin: 25vh auto !important;
+	}
 }
 .staff-member__modal-exit {
 	position: absolute;

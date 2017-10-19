@@ -11,23 +11,28 @@
 	@media (min-width: $screen-md) {
 		display: inline-block;
 		width: 49%;
-		//max-width: 800px;
 	}
 }
 .prprty-type__intro {
-	padding: 80px;
+	padding: 30px;
 	background-repeat: no-repeat;
 	background-size: contain;
 	max-width: 700px;
+	@include media-breakpoint-up(sm) {
+		padding: 80px;
+	}	
 }
 .prprty-type__image {
 	flex: 1;
-	min-height: 470px;
+	min-height: 300px;
 	margin: 0;
 	background-color: $dkblue;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 100% center;
+	@include media-breakpoint-up(sm) {
+		min-height: 470px;
+	}
 }
 .prprty-type__intro--homes, .prprty-type__intro--industrial {
 	background-color: $ltgray;
