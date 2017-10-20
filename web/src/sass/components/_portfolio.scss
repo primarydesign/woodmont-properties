@@ -1,5 +1,7 @@
 .property--selected {
-	@include fontSmooth;	
+	@include fontSmooth;
+	text-align: left;
+	padding: 15px;
 }
 .property__featured-img {
 	width: 100%;

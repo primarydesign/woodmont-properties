@@ -37,37 +37,35 @@
 				</div>
 			</li>	
 	</ul>
-	<ul class="portfolio__thumbnails row">
-		{% for property in properties %}
-			<li class="portfolio__thumbnail col-xl-2 col-lg-3 col-md-4 col-6" style="background-image:url({{ property.thumbnail.src }})">
+
+	<ul id="portfolio__grid" class="portfolio__thumbnails row">
+		{% for thumbmails in properties %}
+			<li class="portfolio__thumbnail col-xl-2 col-lg-3 col-md-4 col-6" style="background-image:url({{ thumbmails.thumbnail.src }})" data-toggle="collapse" data-target="#{{ thumbmails.post_title|replace({'.': "", ' ': "", ',': ""}) }}" aria-expanded="false" aria-controls="collapseExample" data-parent="#portfolio__grid">
 				<div class="portfolio-thumbnail__text">
-					<span class="portfolio-thumbnail__name">{{ property.title }}</span>
-					<span class="portfolio-thumbnail__place">{{ property.city_state }}</span>
+					<span class="portfolio-thumbnail__name">{{ thumbmails.title }}</span>
+					<span class="portfolio-thumbnail__place">{{ thumbmails.city_state }}</span>
 				</div>
 			</li>
-		{% endfor %}
-		{% for property in properties %}
-			<li class="portfolio__thumbnail col-xl-2 col-lg-3 col-md-4 col-6" style="background-image:url({{ property.thumbnail.src }})">
-				<div class="portfolio-thumbnail__text">
-					<span class="portfolio-thumbnail__name">{{ property.title }}</span>
-					<span class="portfolio-thumbnail__place">{{ property.city_state }}</span>
-				</div>
-			</li>
-		{% endfor %}	
-		{% for property in properties %}
-			<li class="portfolio__thumbnail col-xl-2 col-lg-3 col-md-4 col-6" style="background-image:url({{ property.thumbnail.src }})">
-				<div class="portfolio-thumbnail__text">
-					<span class="portfolio-thumbnail__name">{{ property.title }}</span>
-					<span class="portfolio-thumbnail__place">{{ property.city_state }}</span>
-				</div>
-			</li>
-		{% endfor %}
-		{% for property in properties %}
-			<li class="portfolio__thumbnail col-xl-2 col-lg-3 col-md-4 col-6" style="background-image:url({{ property.thumbnail.src }})">
-				<div class="portfolio-thumbnail__text">
-					<span class="portfolio-thumbnail__name">{{ property.title }}</span>
-					<span class="portfolio-thumbnail__place">{{ property.city_state }}</span>
-				</div>
-			</li>
+			{% endfor %}
+			{% for property in properties %}
+			<div class="collapse" id="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}">
+				<article class="property--selected" data-parent="#portfolio__grid">
+					<img class="property__featured-img" src="{{ property.thumbnail }}" width="600">
+					<h3 class="property__name">{{ property.title }}</h3>
+					<h4 class="property__citystate">{{ property.city_state }}</h4>
+					<ul class="property__specs">
+						<li class="property__type">{{ property.current_status }} | </li>
+						<li class="property__status">{{ property.property_type }} | </li>
+						<li class="property__details">{{ property.details }}</li>
+					</ul>
+					<span class="property__description">{{ property.content }}</span>
+					{% if property.website %}
+						<a class="property__website" href="http://{{ property.website }}">Visit Website</a>
+					{% endif %}
+					{% if property.phone_number %}
+						<a class="property__phone" href="tel:{{ property.phone_number }}">{{ property.phone_number }}</a>
+					{% endif %}
+				</article>
+			</div>
 		{% endfor %}
 	</ul>

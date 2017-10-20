@@ -618,7 +618,7 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .portfolio-thumbnail__text:hover{opacity:0}
 .portfolio-thumbnail__name,.portfolio-thumbnail__place{display:block;padding:5px 10px;font-size:.9em;line-height:1}
 .portfolio-thumbnail__name{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase}
-.property--selected{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.property--selected{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-align:left;padding:15px}
 .property__featured-img{width:100%;margin-bottom:15px}
 .property__name{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;margin:0 0 15px 0;letter-spacing:1px;font-size:1.5em;line-height:1}
 .property__citystate{margin:0;font-size:1.25em;line-height:1;font-family:"PT Serif",serif;color:#084560;font-style:italic}
