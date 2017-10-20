@@ -1,8 +1,7 @@
 <div class="row no-gutters">
 {% for member in staff %}
-	<div class="col-xl-3 col-md-4 col-6" data-toggle="modal" data-target="#{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}">	
-		<figure class="staff-thumbnail" style="background-image: url({{ member.thumbnail.src }});background-size:cover;">
-			<img class="staff-thumbnail__portrait" >
+	<div class="staff-thumbnail col-xl-3 col-md-4 col-6" data-toggle="modal" data-target="#{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}">
+		<figure class="staff-thumbnail__portrait" style="background-image: url({{ member.thumbnail.src }});background-size:cover;">
 			<figcaption class="staff-thumbnail__text">
 				<h3 class="staff-thumbnail__name">{{ member.title }}</h3>
 				<h4 class="staff-thumbnail__jobtitle">{{ member.job_title }}</h4>
@@ -27,9 +26,8 @@
 	</div>
 {% endfor %}
 {% for member in staff %}
-	<div class="col-xl-3 col-md-4 col-6" data-toggle="modal" data-target="#{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}">	
-		<figure class="staff-thumbnail" style="background-image: url({{ member.thumbnail.src }});background-size:cover;">
-			<img class="staff-thumbnail__portrait" >
+	<div class="staff-thumbnail col-xl-3 col-md-4 col-6" data-toggle="modal" data-target="#{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}">	
+		<figure class="staff-thumbnail__portrait" style="background-image: url({{ member.thumbnail.src }});background-size:cover;">
 			<figcaption class="staff-thumbnail__text">
 				<h3 class="staff-thumbnail__name">{{ member.title }}</h3>
 				<h4 class="staff-thumbnail__jobtitle">{{ member.job_title }}</h4>
@@ -54,9 +52,8 @@
 	</div>
 {% endfor %}	
 {% for member in staff %}
-	<div class="col-xl-3 col-md-4 col-6" data-toggle="modal" data-target="#{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}">	
-		<figure class="staff-thumbnail" style="background-image: url({{ member.thumbnail.src }});background-size:cover;">
-			<img class="staff-thumbnail__portrait" >
+	<div class="staff-thumbnail col-xl-3 col-md-4 col-6" data-toggle="modal" data-target="#{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}">	
+		<figure class="staff-thumbnail__portrait" style="background-image: url({{ member.thumbnail.src }});background-size:cover;">
 			<figcaption class="staff-thumbnail__text">
 				<h3 class="staff-thumbnail__name">{{ member.title }}</h3>
 				<h4 class="staff-thumbnail__jobtitle">{{ member.job_title }}</h4>
@@ -81,9 +78,8 @@
 	</div>
 {% endfor %}	
 {% for member in staff %}
-	<div class="col-xl-3 col-md-4 col-6" data-toggle="modal" data-target="#{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}">	
-		<figure class="staff-thumbnail" style="background-image: url({{ member.thumbnail.src }});background-size:cover;">
-			<img class="staff-thumbnail__portrait" >
+	<div class="staff-thumbnail col-xl-3 col-md-4 col-6" data-toggle="modal" data-target="#{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}">	
+		<figure class="staff-thumbnail__portrait" style="background-image: url({{ member.thumbnail.src }});background-size:cover;">
 			<figcaption class="staff-thumbnail__text">
 				<h3 class="staff-thumbnail__name">{{ member.title }}</h3>
 				<h4 class="staff-thumbnail__jobtitle">{{ member.job_title }}</h4>

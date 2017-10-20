@@ -3,7 +3,7 @@
 	background-image: url(../img/slideshow-1_woodmont-cove-rendering.jpg);
 	background-size: cover;
 	background-position: center;
-	padding: 3em 1em;
+	padding: 3em 0;
 	font-size: .95em;
 	text-align: center;
 	@include media-breakpoint-up(sm) {
@@ -14,7 +14,7 @@
 		font-size: 2em;
 	}
 	.carousel-indicators {
-    bottom: -40px;
+    bottom: -45px;
 	}
 	.carousel-control-prev, .carousel-control-next {
 		width: 10% !important;

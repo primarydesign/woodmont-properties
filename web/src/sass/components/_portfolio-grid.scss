@@ -1,0 +1,102 @@
+.section__portfolio {
+	margin: 0 auto;
+	.container {
+		padding: 0;
+	}
+}
+.portfolio__type-toggles {
+	border: 1px solid $ltgray;
+	padding: 0;
+	margin-left: 30px;
+}
+.portfolio__type-toggles, .portfolio__thumbnails {
+	list-style: none;
+	margin-right: 15px;
+}
+.portfolio__type-dropdown {
+	.dropdown-menu {
+		padding: 0;
+		//background: $ltgray;
+		border: 1px solid $ltgray;
+		border-top: 0;
+		border-radius: 0 !important;
+		text-align: center;
+		width: 100%;
+		transform: translate3d(0, 39px, 0) !important;		
+	}
+	.dropdown-item {
+		@include fontSmooth;
+		padding: 10px;
+		color: $dkgray;
+		font-size: .85em;
+		text-decoration: none;
+		letter-spacing: 0;
+		border-top: 1px solid $ltgray;
+		&:hover {
+			background: $ltgray;
+		}
+	}
+}
+.portfolio__type-label {
+	display: block;
+}
+.portfolio__type-label[aria-expanded="true"] {
+
+}
+.portfolio__type-dropdown {
+	@include fontSmooth;
+	cursor: pointer;
+	padding: 10px 5px;
+	text-align: center;
+	font-size: .9em;
+	background: #fff !important;
+	&:hover {
+		background: $ltgray !important;
+	}
+}
+.portfolio__thumbnails {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 100px;
+}
+.portfolio__thumbnail {
+	cursor: pointer;
+	height: 125px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-clip: content-box;
+	margin-bottom: 1px;
+	padding: 0 1px 0 0 !important;
+	@include media-breakpoint-up(md) {
+		margin-bottom: 10px;
+		padding: 0 5px !important;
+		height: 150px;
+	}
+	@include media-breakpoint-up(xl) {
+		height: 125px;
+	}		
+}
+.portfolio-thumbnail__text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;	
+	height: 100%;
+	@include fontSmooth;
+	color: #fff;
+	background-color: $tpdkblue;
+	transition: opacity .3s;
+	&:hover {
+		opacity: 0;
+	}
+}
+.portfolio-thumbnail__name, .portfolio-thumbnail__place {
+	display: block;
+	padding: 5px 10px;
+	font-size: .9em;
+	line-height: 1;	
+}
+.portfolio-thumbnail__name {
+	@include boldCaps;
+}

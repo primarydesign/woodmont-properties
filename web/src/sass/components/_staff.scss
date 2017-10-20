@@ -5,21 +5,23 @@
 		padding: 0 5% !important;
 	}
 }
-
 .staff-thumbnail {
+	display: flex;
+}
+.staff-thumbnail__portrait {
 	position: relative;
 	display: inline-block;
 	background-position: center;
 	margin: 0;
 	width: 100%;
-	min-height: 250px;
+	height: 250px;
 	@include media-breakpoint-up(sm) {
-		min-height: 350px;
+		height: 350px;
 	}
  }
-.staff-thumbnail:hover .staff-thumbnail__text {
-	height: 100%;
-}
+//.staff-thumbnail:hover .staff-thumbnail__text {
+//	height: 100%;
+//}
 
 .staff-thumbnail__text {
 	display: flex;
