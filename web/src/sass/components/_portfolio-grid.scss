@@ -6,12 +6,15 @@
 }
 .portfolio__type-toggles {
 	border: 1px solid $ltgray;
+	margin: 0 4px 20px;
 	padding: 0;
-	margin-left: 30px;
+}
+.portfolio__thumbnails {
+	padding: 0;
+	margin: 0;
 }
 .portfolio__type-toggles, .portfolio__thumbnails {
 	list-style: none;
-	margin-right: 15px;
 }
 .portfolio__type-dropdown {
 	.dropdown-menu {
@@ -26,7 +29,7 @@
 	}
 	.dropdown-item {
 		@include fontSmooth;
-		padding: 10px;
+		padding: 11px;
 		color: $dkgray;
 		font-size: .85em;
 		text-decoration: none;
@@ -40,8 +43,8 @@
 .portfolio__type-label {
 	display: block;
 }
-.portfolio__type-label[aria-expanded="true"] {
-
+.portfolio__type-dropdown > portfolio__type-label[aria-expanded="true"] {
+	background: $ltgray;
 }
 .portfolio__type-dropdown {
 	@include fontSmooth;

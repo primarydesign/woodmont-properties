@@ -11,7 +11,11 @@
 	<!-- Modal -->
 	<div class="modal fade" id="{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog staff-member__modal" role="document">
-				<span class="staff-member__modal-exit" data-dismiss="modal">x</span>
+				<span class="staff-member__modal-exit" >
+					<button type="button" class="close" aria-label="Close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</span>
 				<div class="row no-gutters">
 					<div class="staff-modal__portrait col-sm-5" style="background-image: url({{ member.thumbnail.src }})">
 					</div>

@@ -19,10 +19,9 @@
 		height: 350px;
 	}
  }
-//.staff-thumbnail:hover .staff-thumbnail__text {
-//	height: 100%;
-//}
-
+.staff-thumbnail:hover .staff-thumbnail__text {
+	height: 100%;
+}
 .staff-thumbnail__text {
 	display: flex;
 	flex-direction: column;
@@ -88,6 +87,14 @@
 	color: $gray;
 	cursor: pointer;
 	z-index: 1;
+	.close {
+		width: 1.25em;
+		height: 1.25em;
+		background: #fff;
+		padding: 0 5px;
+		border-radius: 1.5em;
+		line-height: auto;
+	}
 }
 .staff-modal__portrait, .staff-modal__text {
 	height: 50vh;
