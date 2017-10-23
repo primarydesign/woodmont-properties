@@ -684,6 +684,7 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .property__phone{background:#fff;color:#084560}
 .property__phone:hover{background:#fff;color:#084560}
 .property__website{background:#084560}
+.section__awards{margin-bottom:100px}
 .section__contact{margin-bottom:100px}
 .form__submit-button{border:0}
 .footer{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:30px;background:#084560;text-align:center}

@@ -21,7 +21,7 @@
 	<section class="section__header" style="background-image:url('{{theme.path}}/assets/img/header-image_properties.jpg')">
 		<div class="container-fluid">	
 			<h1 class="header__title">Properties</h1>			
-		</div>	
+		</div>
 	</section>
 	<section class="section__property-types">
 		{% include "partials/property-types.twig" %}
@@ -31,10 +31,14 @@
 			{% include "partials/portfolio.twig" %}
 		</div>
 	</section>
+	<section class="section__careers">
+			{% include "partials/careers.twig" %}
+	</section>
 	<section class="section__awards">		
 			{% include "partials/awards.twig" %}
 	</section>
 	<section class="section__contact">		
 			{% include "partials/contact.twig" %}
 	</section>
+
 {% endblock %}

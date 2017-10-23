@@ -562,29 +562,27 @@ class acf {
 		$scripts = array();
 		$scripts[] = array(
 			'handle'	=> 'acf-field-group',
-			'src'		=> $this->settings['dir'] . "js/field-group{$min}.js",
+			'src'   => get_bloginfo('url') . '/app/plugins/advanced-custom-fields/js/field-group.min.js',
 			'deps'		=> array('jquery')
 		);
 		$scripts[] = array(
 			'handle'	=> 'acf-input',
-			'src'		=> $this->settings['dir'] . "js/input{$min}.js",
+			'src'   => get_bloginfo('url') . '/app/plugins/advanced-custom-fields/js/input.min.js',
 			'deps'		=> array('jquery', 'jquery-ui-core', 'jquery-ui-datepicker')
 		);
-		
 		
 		foreach( $scripts as $script )
 		{
 			wp_register_script( $script['handle'], $script['src'], $script['deps'], $this->settings['version'] );
 		}
 		
-		
 		// register acf styles
 		$styles = array(
-			'acf'				=> $this->settings['dir'] . 'css/acf.css',
-			'acf-field-group'	=> $this->settings['dir'] . 'css/field-group.css',
-			'acf-global'		=> $this->settings['dir'] . 'css/global.css',
-			'acf-input'			=> $this->settings['dir'] . 'css/input.css',
-			'acf-datepicker'	=> $this->settings['dir'] . 'core/fields/date_picker/style.date_picker.css',
+			'acf'   => get_bloginfo('url') . '/app/plugins/advanced-custom-fields/css/acf.css',
+			'acf-field-group'   => get_bloginfo('url') . '/app/plugins/advanced-custom-fields/css/field-group.css',
+			'acf-global'    => get_bloginfo('url') . '/app/plugins/advanced-custom-fields/css/global.css',
+			'acf-input' => get_bloginfo('url') . '/app/plugins/advanced-custom-fields/css/input.css',
+			'acf-datepicker'    => get_bloginfo('url') . '/app/plugins/advanced-custom-fields/core/fields/date_picker/style.date_picker.css',
 		);
 		
 		foreach( $styles as $k => $v )

@@ -1,0 +1,10 @@
+<div class="container">	
+	<h2 class="section__headline">Careers</h2>
+	{% for job in careers %}
+		<hr>
+		<h3>{{ job.title }}</h3>
+		<p>{{ job.content }}</p>
+		<h4>Education / Experience:</h4>
+		<p>{{ job.experience }}</p>
+	{% endfor %}	
+</div>

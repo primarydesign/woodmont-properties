@@ -28,6 +28,7 @@ $context['post'] = $post;
 /** Custom Post Types! */
 $context['properties'] = Timber::get_posts('post_type=properties');
 $context['staff'] = Timber::get_posts('post_type=staff');
+$context['careers'] = Timber::get_posts('post_type=careers');
 
 Timber::render( array(
 	'page-' . $post->post_name . '.twig',
