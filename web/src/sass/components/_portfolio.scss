@@ -14,35 +14,34 @@
 	font-size: 1.5em;
 	line-height: 1;
 }
-.property__citystate {
-	margin: 0;
+
+.property__citystate, .property__address {
+	margin: 0 0 .5em 0;
 	font-size: 1.25em;
 	line-height: 1;
 	font-family: $serif;
 	color: $dkblue;
 	font-style: italic;
+	display: block;
 }
 .property__specs {
 	text-align: left;
 	padding: 0;
 	margin-bottom: 0;
-	li {
+}
+.property__type, .property__status, .property__details {
 		display: inline-block;
 		list-style: none;
 		font-size: .9em;
 		text-transform: uppercase;
-	}
 }
-.property__type {}
-.property__status {}
-.property__details {}
 .property__description {
 	display: inline-block;
 	font-size: .9em;
 	margin-bottom: 15px;
 	@include media-breakpoint-up(lg) {
 		font-size: 1em;
-	}	
+	}
 	@include media-breakpoint-up(xl) {
 		font-size: 1.25em;
 	}	

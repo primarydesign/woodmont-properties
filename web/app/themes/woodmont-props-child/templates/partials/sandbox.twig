@@ -1,0 +1,75 @@
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div id="panel0" class="panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">   
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Property #1
+        </a>     
+    </div>
+  </div>
+  <div id="panel1" class="panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Property #2
+        </a>
+    </div>
+
+  </div>
+  <div id="panel2" class="panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">   
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Property #3
+        </a>     
+    </div>
+  </div>
+  <div id="panel3" class="panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">   
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Property #4
+        </a>     
+    </div>
+  </div>	
+<div class="panell">
+ <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        Prop 44444
+      </div>
+    </div>
+</div>	
+<div class="panell">
+ <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        Prop 33333
+      </div>
+    </div>
+</div>
+<div class="panell">
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+       Prop 22222
+      </div>
+    </div>
+</div>
+<div class="panell">
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+      Prop 111111
+      </div>
+    </div>
+  </div>  
+  </div>
+
+<a id="next" class="btn btn-default">Next Property</a>
+
+<script>
+	$(function(){
+		var current_panel = 0
+		$("a#next").click(function(){
+			$("#panel"+current_panel+" .panel-heading a").click()
+			if(current_panel < $(".panell").length-1) {
+				current_panel +=1
+			} else {
+				current_panel = 0
+			}
+		})
+	});			
+</script>

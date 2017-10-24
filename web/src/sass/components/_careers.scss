@@ -1,0 +1,14 @@
+.career__post {
+	border-top: 1px solid $dkblue;
+}
+.career__title {
+	@include boldCaps;
+	@include fontSmooth;
+}
+.career__subheading {
+	
+}
+.career__apply-cta {
+	@extend .prprty-type__cta;
+	margin-top: 15px;
+}

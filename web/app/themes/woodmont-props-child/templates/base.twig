@@ -18,19 +18,16 @@
 				{% endblock %}
 			</div>
 		</section>
-
+		
 		{% block footer %}
 			<footer id="footer" class="footer">
 				{% include 'partials/footer.twig' %}
 			</footer>
 			<script src="{{theme.path}}/assets/js/vendors.min.js"></script>
 			<script src="{{theme.path}}/assets/js/custom.js"></script><!-- Minified Bootstrap JavaScript files in custom.js -->
-			<script
-			  src="https://code.jquery.com/jquery-3.2.1.min.js"
-			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-			  crossorigin="anonymous"></script>
+	
 			{{ function('wp_footer') }}
 		{% endblock %}
-
+		{% include "partials/sandbox.twig" %}
 	</body>
 </html>
