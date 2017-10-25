@@ -26,8 +26,16 @@ $post = new TimberPost();
 $context['post'] = $post;
 
 /** Custom Post Types! */
-$context['properties'] = Timber::get_posts('post_type=properties');
-$context['staff'] = Timber::get_posts('post_type=staff');
+$propertyArgs = array(
+	'posts_per_page'   => -1,
+	'post_type' => 'properties'
+);
+$staffArgs = array(
+	'posts_per_page'   => -1,
+	'post_type' => 'staff'
+);
+$context['properties'] = Timber::get_posts($propertyArgs);
+$context['staff'] = Timber::get_posts($staffArgs);
 $context['careers'] = Timber::get_posts('post_type=careers');
 
 Timber::render( array(

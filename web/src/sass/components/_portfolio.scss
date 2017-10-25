@@ -1,55 +1,73 @@
 .property--selected {
 	@include fontSmooth;
 	text-align: left;
-	padding: 15px;
+	padding: 0 0 2rem;
+	font-size: 0;
+	@include media-breakpoint-up(md) {
+		padding: 0 5px 2rem;
+	}	
 }
 .property__featured-img {
 	width: 100%;
-	margin-bottom: 15px;
+	margin-bottom: 0;
+	padding: 0;
+}
+.property__status {
+	display: block;
+	margin: 0 0 2rem 0;
+	padding: .75em 1rem;
+	font-size: 1rem;
+	letter-spacing: 1px;
+	color: #fff;
+	text-transform: uppercase;
+	background: $dkblue;
 }
 .property__name {
 	@include boldCaps;
-	margin: 0 0 15px 0;
-	letter-spacing: 1px;
-	font-size: 1.5em;
-	line-height: 1;
-}
-
-.property__citystate, .property__address {
-	margin: 0 0 .5em 0;
-	font-size: 1.25em;
-	line-height: 1;
-	font-family: $serif;
-	color: $dkblue;
-	font-style: italic;
-	display: block;
+	@include fontSmooth;
+	margin: 0;
+	font-size: 1.85rem;
+	line-height: 1.2;
+	letter-spacing: 0;
 }
 .property__specs {
+	list-style: none;
 	text-align: left;
-	padding: 0;
-	margin-bottom: 0;
+	padding: 0 15px;
+	font-size: 1rem;
+	letter-spacing: .02rem;
+	margin: 0;
+	@include media-breakpoint-up(md) {
+		padding: 0;
+	}
 }
-.property__type, .property__status, .property__details {
-		display: inline-block;
-		list-style: none;
-		font-size: .9em;
+.property__address {
+	margin-bottom: 1em;
+	font-family: $serif;
+	color: $dkblue;
+	text-transform: none;
+	font-size: 1.25rem;
+	display: block;
+	font-weight: normal;
+}
+.property__type, .property__details {
+		display: inline;
 		text-transform: uppercase;
 }
 .property__description {
 	display: inline-block;
-	font-size: .9em;
-	margin-bottom: 15px;
+	font-size: .93rem;
+	line-height: 1.75;
+	margin: 1rem 0 2rem;
 	@include media-breakpoint-up(lg) {
-		font-size: 1em;
+		font-size: 1rem;
 	}
-	@include media-breakpoint-up(xl) {
-		font-size: 1.25em;
-	}	
 }
 .property__phone, .property__website {
 	@extend .prprty-type__cta;
 	padding-top: 8px;
 	margin-right: 10px;
+	font-size: 1rem;
 	line-height: 1.75;
 	border: 1px solid $dkblue;
 }

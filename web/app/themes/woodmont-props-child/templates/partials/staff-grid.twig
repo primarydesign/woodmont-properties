@@ -1,6 +1,6 @@
 <div class="row no-gutters">
 {% for member in staff %}
-	<div class="staff-thumbnail col-xl-3 col-md-4 col-6" data-toggle="modal" data-target="#{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}">
+	<div class="staff-thumbnail col-lg-3 col-md-4 col-6" data-toggle="modal" data-target="#{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}">
 		<figure class="staff-thumbnail__portrait" style="background-image: url({{ member.thumbnail.src }});background-size:cover;">
 			<figcaption class="staff-thumbnail__text">
 				<h3 class="staff-thumbnail__name">{{ member.title }}</h3>

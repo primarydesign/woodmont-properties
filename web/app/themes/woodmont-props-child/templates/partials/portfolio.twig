@@ -4,70 +4,65 @@
 				<span class="portfolio__type-label" id="btnGroupDrop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="group">Luxury Apartments</span>
 				<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
 					<a class="dropdown-item" href="">View All</a>
-					<a class="dropdown-item" href="#">New</a>
-					<a class="dropdown-item" href="#">In Development</a>
+					<a class="dropdown-item" href="#">Coming Soon</a>
+					<a class="dropdown-item" href="#">Now Leasing</a>
 					<a class="dropdown-item" href="#">Sold</a>				
 				</div>
 			</li>
 			<li class="portfolio__type-dropdown col-lg-3 col-6">
 				<span class="portfolio__type-label" id="btnGroupDrop2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Luxury Homes</span>
-				<div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
-					<a class="dropdown-item" href="#">View All</a>
-					<a class="dropdown-item" href="#">New</a>
-					<a class="dropdown-item" href="#">In Development</a>
-					<a class="dropdown-item" href="#">Sold</a>				
-				</div>		
 			</li>
 			<li class="portfolio__type-dropdown col-lg-3 col-6">
 				<span class="portfolio__type-label" id="btnGroupDrop3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Industrial</span>
 				<div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
-					<a class="dropdown-item" href="#">View All</a>
-					<a class="dropdown-item" href="#">New</a>
-					<a class="dropdown-item" href="#">In Development</a>
+					<a class="dropdown-item" href="">View All</a>
+					<a class="dropdown-item" href="#">Coming Soon</a>
+					<a class="dropdown-item" href="#">Now Leasing</a>
 					<a class="dropdown-item" href="#">Sold</a>				
 				</div>		
 			</li>
 			<li class="portfolio__type-dropdown col-lg-3 col-6">
 				<span class="portfolio__type-label" id="btnGroupDrop4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Commercial</span>
 				<div class="dropdown-menu" aria-labelledby="btnGroupDrop4">
-					<a class="dropdown-item" href="#">View All</a>
-					<a class="dropdown-item" href="#">New</a>
-					<a class="dropdown-item" href="#">In Development</a>
-					<a class="dropdown-item" href="#">Sold</a>				
+					<a class="dropdown-item" href="">View All</a>
+					<a class="dropdown-item" href="#">Coming Soon</a>
+					<a class="dropdown-item" href="#">Now Leasing</a>
+					<a class="dropdown-item" href="#">Sold</a>		
 				</div>
 			</li>	
 	</ul>
-
 	<section id="portfolio__grid">
-	<ul class="portfolio__thumbnails row">
-		{% for thumbmails in properties %}
-			<li class="portfolio__thumbnail col-xl-2 col-lg-3 col-md-4 col-6" style="background-image:url({{ thumbmails.thumbnail.src }})" data-toggle="collapse" data-target="#{{ thumbmails.post_title|replace({'.': "", ' ': "", ',': ""}) }}" aria-expanded="false" aria-controls="collapseExample" data-parent="#portfolio__grid">
-				<div class="portfolio-thumbnail__text">
-					<span class="portfolio-thumbnail__name">{{ thumbmails.title }}</span>
-					<span class="portfolio-thumbnail__place">{{ thumbmails.city_state }}</span>
-				</div>
-			</li>
-		{% endfor %}
-		</ul>
 		{% for property in properties %}
 		<div id="panel" class="panel">
 			<article class="property--selected collapse" id="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}">
 					<img class="property__featured-img" src="{{ property.thumbnail }}" width="600">
-					<h3 class="property__name">{{ property.title }}</h3>
+					<span class="property__status">{{ property.current_status }}</span>
 					<ul class="property__specs">
+						<li><h3 class="property__name">{{ property.title }}</h3></li>
 						<li class="property__address">{% if property.street_address %}{{property.street_address}}, {% endif %}{{ property.city_state }}</li>
-						<li class="property__type">{{ property.current_status }}</li>
-						<li class="property__status">| {{ property.property_type }}</li>
+						<li class="property__type">{{ property.property_type }}</li>
 						<li class="property__details">{% if property.details %} | {{ property.details }}{% endif %}</li>
+						<li><span class="property__description">{{ property.content }}</span></li>
+						<li>					
+							{% if property.website %}
+								<a class="property__website" href="http://{{ property.website }}">Visit Website</a>
+							{% endif %}
+							{% if property.phone_number %}
+								<a class="property__phone" href="tel:{{ property.phone_number }}">{{ property.phone_number }}</a>
+							{% endif %}
+						</li>
 					</ul>
-					<span class="property__description">{{ property.content }}</span>
-					{% if property.website %}
-						<a class="property__website" href="http://{{ property.website }}">Visit Website</a>
-					{% endif %}
-					{% if property.phone_number %}
-						<a class="property__phone" href="tel:{{ property.phone_number }}">{{ property.phone_number }}</a>
-					{% endif %}
 			</article>
 		</div>
 		{% endfor %}
+		<ul class="portfolio__thumbnails row">
+			{% for thumbmails in properties %}
+				<li class="portfolio__thumbnail col-xl-2 col-lg-3 col-md-4 col-6" style="background-image:url({{ thumbmails.thumbnail.src }})" data-toggle="collapse" data-target="#{{ thumbmails.post_title|replace({'.': "", ' ': "", ',': ""}) }}" aria-expanded="false" aria-controls="collapseExample" data-parent="#portfolio__grid">
+					<div class="portfolio-thumbnail__text">
+						<span class="portfolio-thumbnail__name">{{ thumbmails.title }}</span>
+						<span class="portfolio-thumbnail__place">{{ thumbmails.city_state }}</span>
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
 	</section>
