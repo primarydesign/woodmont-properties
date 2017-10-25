@@ -658,8 +658,6 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .prprty-type__description{margin-bottom:30px}
 .prprty-type__cta,.property__phone,.property__website,.form__submit-button,.career__apply-cta{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;padding:10px 20px;margin-bottom:30px;background:#999;font-size:.85em;letter-spacing:1px;color:#fff;text-decoration:none;-webkit-transition:background .3s;transition:background .3s}
 .prprty-type__cta:hover,.property__phone:hover,.property__website:hover,.form__submit-button:hover,.career__apply-cta:hover{background:#084560}
-.section__portfolio{margin:0 auto}
-.section__portfolio .container{padding:0}
 .portfolio__type-toggles{border:1px solid #e5e5e5;margin:0 4px 10px;padding:0}
 .portfolio__thumbnails{padding:0;margin:0}
 .portfolio__type-toggles,.portfolio__thumbnails{list-style:none}
@@ -676,9 +674,12 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .portfolio-thumbnail__text:hover{opacity:0}
 .portfolio-thumbnail__name,.portfolio-thumbnail__place{display:block;padding:5px 10px;font-size:.9em;line-height:1}
 .portfolio-thumbnail__name{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase}
-.property--selected{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-align:left;padding:0 0 2rem;font-size:0}
+.property--selected{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-align:left;padding:0;font-size:0}
 .property__featured-img{width:100%;margin-bottom:0;padding:0}
 .property__status{display:block;margin:0 0 2rem 0;padding:.75em 1rem;font-size:1rem;letter-spacing:1px;color:#fff;text-transform:uppercase;background:#084560}
+#portfolio__grid .collapsing{opacity:0;-webkit-transition:height 0s !important;transition:height 0s !important}
+#portfolio__grid .show{opacity:1;-webkit-transition:opacity .3s !important;transition:opacity .3s !important}
+.portfolio__next-button{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;float:right;color:#084560;font-size:2rem;padding-right:1rem;cursor:pointer}
 .property__name{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin:0;font-size:1.85rem;line-height:1.2;letter-spacing:0}
 .property__specs{list-style:none;text-align:left;padding:0 15px;font-size:1rem;letter-spacing:.02rem;margin:0}
 .property__address{margin-bottom:1em;font-family:"PT Serif",serif;color:#084560;text-transform:none;font-size:1.25rem;display:block;font-weight:normal}
@@ -1071,7 +1072,7 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .nav__navbar .nav-link{display:inline-block;padding:20px 0 15px 30px !important;font-size:.85em;letter-spacing:1px}
 .navbar__logo{width:200px}
 .portfolio__thumbnail{margin-bottom:10px;padding:0 5px !important;height:150px}
-.property--selected{padding:0 5px 2rem}
+.property--selected{padding:0 5px 0}
 .property__specs{padding:0}
 }@media(min-width:992px){.container{max-width:960px}
 .col-lg{-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}

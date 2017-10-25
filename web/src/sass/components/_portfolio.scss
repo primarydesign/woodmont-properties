@@ -1,10 +1,10 @@
 .property--selected {
 	@include fontSmooth;
 	text-align: left;
-	padding: 0 0 2rem;
+	padding: 0 0 0;
 	font-size: 0;
 	@include media-breakpoint-up(md) {
-		padding: 0 5px 2rem;
+		padding: 0 5px 0;
 	}	
 }
 .property__featured-img {
@@ -21,6 +21,25 @@
 	color: #fff;
 	text-transform: uppercase;
 	background: $dkblue;
+}
+#portfolio__grid {
+	.collapsing {
+		opacity: 0;
+		transition: height 0s !important;
+	}
+	.show {
+		opacity: 1;
+		transition: opacity .3s !important;
+	}
+} 
+.portfolio__next-button {
+	@include boldCaps;
+	@include fontSmooth;
+	float: right;
+	color: $dkblue;
+	font-size: 2rem;
+	padding-right: 1rem;
+	cursor: pointer;
 }
 .property__name {
 	@include boldCaps;

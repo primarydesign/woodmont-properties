@@ -25,9 +25,9 @@
 			</footer>
 			<script src="{{theme.path}}/assets/js/vendors.min.js"></script>
 			<script src="{{theme.path}}/assets/js/custom.js"></script><!-- Minified Bootstrap JavaScript files in custom.js -->
-	
+			{% include "partials/sandbox.twig" %} 
 			{{ function('wp_footer') }}
 		{% endblock %}
-<!--		{% include "partials/sandbox.twig" %}-->
+		
 	</body>
 </html>

@@ -34,10 +34,11 @@
 	<section id="portfolio__grid">
 		{% for property in properties %}
 		<div id="panel" class="panel">
-			<article class="property--selected collapse" id="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}">
+			<article class="property--selected collapse" id="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}" role="tabpanel" aria-labelledby="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}"> 
 					<img class="property__featured-img" src="{{ property.thumbnail }}" width="600">
 					<span class="property__status">{{ property.current_status }}</span>
 					<ul class="property__specs">
+						<a class="portfolio__next-button"> > </a>
 						<li><h3 class="property__name">{{ property.title }}</h3></li>
 						<li class="property__address">{% if property.street_address %}{{property.street_address}}, {% endif %}{{ property.city_state }}</li>
 						<li class="property__type">{{ property.property_type }}</li>
@@ -56,8 +57,8 @@
 		</div>
 		{% endfor %}
 		<ul class="portfolio__thumbnails row">
-			{% for thumbmails in properties %}
-				<li class="portfolio__thumbnail col-xl-2 col-lg-3 col-md-4 col-6" style="background-image:url({{ thumbmails.thumbnail.src }})" data-toggle="collapse" data-target="#{{ thumbmails.post_title|replace({'.': "", ' ': "", ',': ""}) }}" aria-expanded="false" aria-controls="collapseExample" data-parent="#portfolio__grid">
+			{% for counter, thumbmails in properties %}
+				<li class="portfolio__thumbnail thumb{{counter+1}} col-xl-2 col-lg-3 col-md-4 col-6" style="background-image:url({{ thumbmails.thumbnail.src }})" data-toggle="collapse" data-target="#{{ thumbmails.post_title|replace({'.': "", ' ': "", ',': ""}) }}" aria-expanded="false" aria-controls="collapseExample" data-parent="#portfolio__grid">
 					<div class="portfolio-thumbnail__text">
 						<span class="portfolio-thumbnail__name">{{ thumbmails.title }}</span>
 						<span class="portfolio-thumbnail__place">{{ thumbmails.city_state }}</span>

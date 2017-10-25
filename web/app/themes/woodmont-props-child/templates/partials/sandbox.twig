@@ -1,33 +1,35 @@
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <div id="panel0" class="panel-default">
+<!--
+
+<ul class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <li id="panel0" class="panel-default">
     <div class="panel-heading" role="tab" id="headingOne">   
         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           Property #1
         </a>     
     </div>
-  </div>
-  <div id="panel1" class="panel-default">
+  </li>
+  <li id="panel1" class="panel-default">
     <div class="panel-heading" role="tab" id="headingTwo">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
           Property #2
         </a>
     </div>
-
-  </div>
-  <div id="panel2" class="panel-default">
+  </li>
+  <li id="panel2" class="panel-default">
     <div class="panel-heading" role="tab" id="headingThree">   
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
           Property #3
         </a>     
     </div>
-  </div>
-  <div id="panel3" class="panel-default">
+  </li>
+  <li id="panel3" class="panel-default">
     <div class="panel-heading" role="tab" id="headingThree">   
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
           Property #4
-        </a>     
-    </div>
-  </div>	
+        </a> 
+  		</div>
+    </li>
+</ul>	
 <div class="panell">
  <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
       <div class="panel-body">
@@ -55,17 +57,19 @@
       Prop 111111
       </div>
     </div>
-  </div>  
-  </div>
+</div>  
+-->
 
-<a id="next" class="btn btn-default">Next Property</a>
+
+
+
 
 <script>
 	$(function(){
 		var current_panel = 0
-		$("a#next").click(function(){
-			$("#panel"+current_panel+" .panel-heading a").click()
-			if(current_panel < $(".panell").length-1) {
+		$("a.portfolio__next-button").click(function(){
+			$(".thumb"+current_panel+" .portfolio-thumbnail__text").click()
+			if(current_panel < $(".panel").length-1) {
 				current_panel +=1
 			} else {
 				current_panel = 0
