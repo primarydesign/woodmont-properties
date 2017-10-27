@@ -34,36 +34,36 @@ var projectURL              = 'localhost:8888'; // Local project URL of your alr
 var productURL              = './'; // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
 
 var pagesSRC                = './src/pages/**/*.{php,twig}'; // Path to main .twig / .php files.
-var pagesDestination        = './app/themes/woodmont-props-child/';
+var pagesDestination        = './app/themes/primary-design-child/';
 
 // Path to place the compiled CSS file.
 // Default set to root folder.
 // Style related.
 var styleSRC                = './src/sass/main.scss'; // Path to main .scss file.
-var styleDestination        = './app/themes/woodmont-props-child/assets/css/'; // Path to place the compiled CSS file.
+var styleDestination        = './app/themes/primary-design-child/assets/css/'; // Path to place the compiled CSS file.
 // Default set to root folder.
 
 // JS Vendor related.
 var jsVendorSRC             = './src/js/vendor/*.js'; // Path to JS vendor folder.
-var jsVendorDestination     = './app/themes/woodmont-props-child/assets/js/'; // Path to place the compiled JS vendors file.
+var jsVendorDestination     = './app/themes/primary-design-child/assets/js/'; // Path to place the compiled JS vendors file.
 var jsVendorFile            = 'vendors'; // Compiled JS vendors file name.
 // Default set to vendors i.e. vendors.js.
 
 // JS Custom related.
 var jsCustomSRC             = './src/js/custom/*.js'; // Path to JS custom scripts folder.
-var jsCustomDestination     = './app/themes/woodmont-props-child/assets/js/'; // Path to place the compiled JS custom scripts file.
+var jsCustomDestination     = './app/themes/primary-design-child/assets/js/'; // Path to place the compiled JS custom scripts file.
 var jsCustomFile            = 'custom'; // Compiled JS custom file name.
 // Default set to custom i.e. custom.js.
 
 // Images related.
 var imagesSRC               = './src/img/**/*.{png,jpg,jpeg,gif,svg}'; // Source folder of images which should be optimized.
-var imagesDestination       = './app/themes/woodmont-props-child/assets/img/'; // Destination folder of optimized images. Must be different from the imagesSRC folder.
+var imagesDestination       = './app/themes/primary-design-child/assets/img/'; // Destination folder of optimized images. Must be different from the imagesSRC folder.
 
 // Watch files paths.
 var styleWatchFiles         = './src/sass/**/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
 var vendorJSWatchFiles      = './src/js/vendor/*.js'; // Path to all vendor JS files.
 var customJSWatchFiles      = './src/js/custom/*.js'; // Path to all custom JS files.
-var projectPHPWatchFiles    = './app/themes/woodmont-props-child/**/*.{php,twig}'; // Path to all PHP and Twig files.
+var projectPHPWatchFiles    = './app/themes/primary-design-child/**/*.{php,twig}'; // Path to all PHP and Twig files.
 var pagesWatchFiles         = './src/pages/**/*.{php,twig}'; // Path to all *.twig and *.php files inside templates folder
 
 // Browsers you care about for autoprefixing.
@@ -212,7 +212,7 @@ gulp.task( 'browser-sync', function() {
   *     3. Renames the JS file with suffix .min.js
   *     4. Uglifes/Minifies the JS file and generates vendors.min.js
   */
- gulp.task( 'vendorsJs', function() {
+ gulp.task( 'vendorsJS', function() {
   gulp.src( jsVendorSRC )
     .pipe( concat( jsVendorFile + '.js' ) )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
@@ -224,7 +224,7 @@ gulp.task( 'browser-sync', function() {
     .pipe( uglify() )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
     .pipe( gulp.dest( jsVendorDestination ) )
-    .pipe( notify( { message: 'TASK: "vendorsJs" Completed! 💯', onLast: true } ) );
+    .pipe( notify( { message: 'TASK: "vendorsJS" Completed! 💯', onLast: true } ) );
  });
 
 
