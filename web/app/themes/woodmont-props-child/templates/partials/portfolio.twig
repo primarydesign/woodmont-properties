@@ -1,4 +1,5 @@
-<h2 class="section__headline">Our Portfolio</h2>
+	<h3 class="intro__statement">Throughout our history, Woodmont Properties has developed and invested in a diverse mix of real estate throughout New Jersey, New York and Pennsylvania. Today, our extensive portfolio comprises world-class residential, commercial and mixed-use properties.</h3>
+	<h2 class="section__headline">Our Portfolio</h2>
 	<ul class="portfolio__type-toggles row" role="group">
 			<li class="portfolio__type-dropdown col-lg-3 col-6">
 				<span class="portfolio__type-label" id="btnGroupDrop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="group">Luxury Apartments</span>
@@ -32,7 +33,9 @@
 			</li>	
 	</ul>
 	<section id="portfolio__grid">
+		
 		{% for property in properties %}
+
 		<div id="panel" class="panel">
 			<article class="property--selected collapse" id="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}" role="tabpanel" aria-labelledby="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}"> 
 					<img class="property__featured-img" src="{{ property.thumbnail }}" width="600">

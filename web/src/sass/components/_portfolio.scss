@@ -23,15 +23,9 @@
 	background: $dkblue;
 }
 #portfolio__grid {
-	.collapsing {
-		opacity: 0;
-		transition: height 0s !important;
-	}
-	.show {
-		opacity: 1;
-		transition: opacity .3s !important;
-	}
-} 
+	.collapsing {}
+	.show {}
+}
 .portfolio__next-button {
 	@include boldCaps;
 	@include fontSmooth;

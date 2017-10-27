@@ -40,12 +40,12 @@
 		padding-left: 2em;
 	}
 }
-.section__about--what-we-do .about__text {
+.section__about--what-we-do .about__text, .section__about--who-we-are .about__text {
 	@include media-breakpoint-up(sm) {
 		padding-right: 2em;
 	}
 }
-.section__about--what-we-do {
+.section__about--what-we-do, .section__about--who-we-are {
 	@include media-breakpoint-up(sm) {
 		display: flex;
 		flex-direction: row-reverse;

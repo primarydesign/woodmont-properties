@@ -1,3 +1,14 @@
+	<ul class="staff__type-toggles row">
+			<li class="staff__type-label col-md-4 col-12">
+				<span class="staff__type-filter">Principals</span>
+			</li>
+			<li class="staff__type-label col-md-4 col-12">
+				<span class="staff__type-filter">Executive Management</span>		
+			</li>
+			<li class="staff__type-label col-md-4 col-12">
+				<span class="staff__type-filter">Management</span>
+			</li>	
+	</ul>
 <div class="row no-gutters">
 {% for member in staff %}
 	<div class="staff-thumbnail col-lg-3 col-md-4 col-6" data-toggle="modal" data-target="#{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}">

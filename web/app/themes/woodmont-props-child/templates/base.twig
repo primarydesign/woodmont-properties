@@ -25,8 +25,20 @@
 			</footer>
 			<script src="{{theme.path}}/assets/js/vendors.min.js"></script>
 			<script src="{{theme.path}}/assets/js/custom.js"></script><!-- Minified Bootstrap JavaScript files in custom.js -->
-			{% include "partials/sandbox.twig" %} 
-			{{ function('wp_footer') }}
+		<script>
+			$(function(){
+				var current_panel = 0
+				$("a.portfolio__next-button").click(function(){
+					$(".thumb"+current_panel+" .portfolio-thumbnail__text").click()
+					if(current_panel < $(".panel").length-1) {
+						current_panel +=1
+					} else {
+						current_panel = 0
+					}
+				})
+			});			
+		</script>
+		{{ function('wp_footer') }}
 		{% endblock %}
 		
 	</body>

@@ -5,6 +5,17 @@
 		padding: 0 5% !important;
 	}
 }
+.staff__type-toggles {
+	@extend .portfolio__type-toggles;
+}
+.staff__type-label {
+	@extend .portfolio__type-dropdown;
+
+}
+.staff__type-filter {
+	 @extend .portfolio__type-label;
+	 padding: 10px;
+}
 .staff-thumbnail {
 	display: flex;
 }
@@ -14,9 +25,9 @@
 	background-position: center 25%;
 	margin: 0;
 	width: 100%;
-	height: 250px;
+	height: 300px;
 	@include media-breakpoint-up(sm) {
-		height: 350px;
+		height: 375px;
 	}
  }
 .staff-thumbnail:hover .staff-thumbnail__text {

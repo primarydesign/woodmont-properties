@@ -1,5 +1,7 @@
 .nav__navbar {
 	@include fontSmooth;
+	width: 100%;
+	z-index: 20;
 	padding: 15px;
 	background: $dkblue;
 	color: $white;
