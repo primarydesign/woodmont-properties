@@ -7,17 +7,15 @@
 	</section>
 	<div class="container">
 		 {% include "partials/intro.twig" %}
-	</div>	
+	</div>
 	<section class="section__our-company post-type-{{post.post_type}}" id="our-company">
 		{% include "partials/about.twig" %}
 	</section>
 	<section class="section__staff-grid">
-		<h2 class="intro__statement">A Tradition of Personal &amp; Corporate Integrity.<br>Our Success Stems from Our People.</h2>
 		<div class="container">
-			<h2 class="section__headline">Leadership</h2>
 			{% include "partials/staff-grid.twig" %}
-		</div>	
-	</section>	
+		</div>
+	</section>
 	<section class="section__header" style="background-image:url('{{theme.path}}/assets/img/header-image_properties.jpg')" id="properties">
 		<div class="container">
 			<h2 class="header__title">Properties</h2>
@@ -27,17 +25,17 @@
 		{% include "partials/property-types.twig" %}
 	</section>
 	<section class="section__portfolio">
-		<div class="container">	
+		<div class="container">
 			{% include "partials/portfolio.twig" %}
 		</div>
 	</section>
-	<section class="section__careers" id="careers">		
+	<section class="section__careers" id="careers">
 			{% include "partials/careers.twig" %}
 	</section>
-	<section class="section__awards" id="awards">		
+	<section class="section__awards" id="awards">
 			{% include "partials/awards.twig" %}
 	</section>
-	<section class="section__contact" id="contact">		
+	<section class="section__contact" id="contact">
 			{% include "partials/contact.twig" %}
 	</section>
 

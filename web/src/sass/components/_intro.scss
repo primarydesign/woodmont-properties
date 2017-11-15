@@ -10,17 +10,18 @@
 	margin-bottom: .5em;
 	font-size: 2em;
 	line-height: 1.25;
-	font-family: $sans;
+	font-family: $serif;
+	font-style: italic;
 	color: $dkgray;
 }
 .intro__paragraph {
 	line-height: 2;
 	font-size: .9em;
-  padding: 5px;
+  padding: 5px 0;
 	margin-bottom: 10px;
 	@media (min-width: $screen-xl) {
 		font-size: 1.1em;
-	}	
+	}
 }
 .section__header {
 	padding: 100px 0 30px 0;
@@ -44,19 +45,19 @@
 	max-width: 1000px;
 }
 .intro__statement {
-	@include fontSmooth;	
-	font-size: 1.25em;
+	@include fontSmooth;
+	font-size: 1.5em;
 	text-align: center;
 	font-style: italic;
 	color: $dkgray;
-	padding: 2em 0;
+	padding: 3em 0 2em;
 	@include media-breakpoint-up(lg) {
 		font-size: 1.75em;
 	}
 }
 .intro__statement--white {
 	color: #fff;
-} 
+}
 .section__about {
 	.section__headline {
 		text-align: left !important;

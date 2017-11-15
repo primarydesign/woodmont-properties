@@ -1,7 +1,74 @@
 .section__contact {
-	margin-bottom: 100px;
+	@include fontSmooth;
+	background: $dkblue;
+	color: $white;
+	.form-control, input {
+		border-radius: 0;
+		color: $dkblue;
+		border: none;
+	}
+}
+.section__contact-form {
+	padding-bottom: 100px;
+}
+.footer__signup-message {
+	font-size: .85em;
+	padding: .5em 0 1em .5em;
 }
 .form__submit-button {
 	@extend .prprty-type__cta;
 	border: 0;
+	color: $white !important;
+}
+.footer__headline {
+	text-transform: uppercase;
+	font-family: $sans;
+	font-size: 1em;
+	line-height: 1.25;
+	font-weight: 700;
+	color: $white;
+	margin: 0 0 .5em 0;
+}
+.footer__contact-info {
+	list-style: none;
+	margin: 0 0 2em 0;
+	padding: 0;
+	li {
+		font-size: .9em;
+		padding-bottom: .25em;
+	}
+	@include media-breakpoint-up(md) {
+		padding-left: 10%;
+	}
+}
+@include media-breakpoint-up(md) {
+	.footer__left-column {
+		-ms-flex-order: 1;
+		order: 1;
+	}
+	.footer__right-column {
+		-ms-flex-order: 2;
+		order: 2;
+	}
+}
+@mixin placeholder {
+	color: $dkblue;
+	font-size: .8em;
+	font-family: $sans;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.section__contact {
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		@include placeholder
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+		@include placeholder
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+		@include placeholder
+	}
+	:-moz-placeholder { /* Firefox 18- */
+		@include placeholder
+	}
 }

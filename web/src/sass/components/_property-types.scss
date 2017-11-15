@@ -17,25 +17,25 @@
 	padding: 30px;
 	background-repeat: no-repeat;
 	background-size: contain;
+	background-color: $ltgray;
 	max-width: 860px;
 	@include media-breakpoint-up(sm) {
 		padding: 80px;
-	}	
+	}
 }
 .prprty-type__image {
 	flex: 1;
-	min-height: 300px;
+	min-height: 275px;
 	margin: 0;
 	background-color: $dkblue;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: 100% center;
+	background-position: 25% 100%;
 	@include media-breakpoint-up(sm) {
-		min-height: 470px;
+		min-height: 400px;
 	}
 }
 .prprty-type__intro--homes, .prprty-type__intro--industrial {
-	background-color: $ltgray;
 	@media (min-width: $screen-md) {
 		display: flex;
 		flex-direction: row-reverse;
@@ -48,20 +48,20 @@
 
 .prprty-type__headline {
 	@include fontSmooth;
-	@include boldCaps;
-	font-size: 1.25em;
-	letter-spacing: 1px;
+	font-family: $serif;
+	font-style: italic;
+	font-size: 1.75em;
 }
 .prprty-type__description {
 	@extend .intro__paragraph;
 	margin-bottom: 30px;
 }
 .prprty-type__cta {
-	@include boldCaps;	
+	@include boldCaps;
 	@include fontSmooth;
 	display: inline-block;
 	padding: 10px 20px;
-	margin-bottom: 30px;	
+	margin-bottom: 30px;
 	background: $gray;
 	font-size: .85em;
 	letter-spacing: 1px;

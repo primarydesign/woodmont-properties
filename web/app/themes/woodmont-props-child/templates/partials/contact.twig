@@ -1,50 +1,48 @@
 <h2 class="section__headline">Contact Us</h2>
-<form id="contact-form" class="container" method="post" action="{{theme.path}}/contact.php" role="form">
+<form id="contact-form" class="section__contact-form container" method="post" action="{{theme.path}}/contact.php" role="form">
     <div class="messages"></div>
     <div class="controls">
-        <div class="row">
-            <div class="col-md-6">
+        <span class="row">
+            <span class="footer__right-column col-lg-6 col-md-5">
+              <ul class="footer__contact-info">
+                <h3 class="footer__headline">Acquisitions</h3>
+                <li>David Trager</li>
+                <li>973.487.1777</li>
+                <li>dtrager@woodmontproperties.com</li>
+              </ul>
+              <ul class="footer__contact-info">
+                <h3 class="footer__headline">Asset Management Operations</h3>
+                <li>Georger Buchmann</li>
+                <li>973.487.1772</li>
+                <li>gbuchmann@woodmontproperties.com</li>
+              </ul>
+            </span>
+            <span class="footer__left-column col-lg-6 col-md-7">
                 <div class="form-group">
-                    <label for="form_name">Name *</label>
-                    <input id="form_name" type="text" name="name" class="form-control" required="required" data-error="Name is required.">
+                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Name" required="required" data-error="Name is required.">
                     <div class="help-block with-errors"></div>
                 </div>
-            </div>
-            <div class="col-md-6">
                 <div class="form-group">
-                    <label for="form_email">Email *</label>
-                    <input id="form_email" type="email" name="email" class="form-control" required="required" data-error="Valid email is required.">
+                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Email" required="required" data-error="Valid email is required.">
                     <div class="help-block with-errors"></div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
                 <div class="form-group">
-                    <label for="form_phone">Phone*</label>
-                    <input id="form_phone" type="tel" name="phone" class="form-control" required="required">
+                    <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Phone" required="required">
                     <div class="help-block with-errors"></div>
                 </div>
-            </div>
-            <div class="col-md-6">
                 <div class="form-group">
-                    <label for="form_email">How did you hear about us?</label>
-                    <input id="form_how" type="text" name="how" class="form-control" required="required" data-error="Valid email is required.">
+                    <input id="form_how" type="text" name="how" class="form-control" placeholder="How did you hear about us?" data-error="Valid email is required.">
                     <div class="help-block with-errors"></div>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
                 <div class="form-group">
-                    <label for="form_message">Message *</label>
-                    <textarea id="form_message" name="message" class="form-control" placeholder="" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Message" rows="4" required="required" data-error="Please,leave us a message."></textarea>
                     <div class="help-block with-errors"></div>
                 </div>
-            </div>
-            <div class="col-md-12">
+                <div class="form-group">
+                  <input id="form_signup" type="checkbox"></input><label class="footer__signup-message">Please sign me up to receive news and information about Woodmont Propeties.</label>
+                </div>
                 <input type="submit" class="form__submit-button" value="Send Message">
-            </div>
-        </div>
+            </span>
+        </span>
     </div>
 </form>

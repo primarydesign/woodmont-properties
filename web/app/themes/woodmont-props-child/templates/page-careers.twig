@@ -14,10 +14,10 @@
 					<h3 class="career__subheading">Education / Experience:</h3>
 					<p class="">{{ job.experience }}</p>
 					<a class="career__apply-cta" href="{{ job.post_title|replace({'.': "",' ': '-',',': ""})|lower}}">Apply Now</a>
-				</article>		
+				</article>
 			{% endfor %}
 	</section>
-	<section class="section__contact">		
+	<section class="section__contact">
 			{% include "partials/contact.twig" %}
 	</section>
 

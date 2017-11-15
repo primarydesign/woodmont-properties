@@ -1,18 +1,23 @@
-.section__about {}
+.section__our-company {
+	background: $ltgray;
+}
+.section__services {
+
+}
 .about__side-img {
 	width: 100%;
-	@include media-breakpoint-up(sm) {	
+	@include media-breakpoint-up(sm) {
 		max-width: 400px;
 	}
 }
 .about__text, .about__side-img {
-	margin-bottom: 15px;	
+	margin-bottom: 15px;
 	@include media-breakpoint-up(sm) {
 		margin-bottom: 30px;
 	}
 	@include media-breakpoint-up(lg) {
 		margin-bottom: 60px;
-	}	
+	}
 }
 .about__headline {
 	@extend .section__headline;
@@ -30,7 +35,7 @@
 	letter-spacing: 1px;
 	text-decoration: none;
 	margin-bottom: 15px;
-	padding: 15px 5px;
+	padding: 15px 0;
 }
 .link__arrow-down {
 	padding: 5px;

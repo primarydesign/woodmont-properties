@@ -7,7 +7,7 @@
 {% endblock %}
 
 	<body class="{{body_class}}" data-template="base.twig">
-		
+
 		{% include "partials/navbar.twig" %}
 
 		<section id="content" role="main">
@@ -18,7 +18,7 @@
 				{% endblock %}
 			</div>
 		</section>
-		
+
 		{% block footer %}
 			<footer id="footer" class="footer">
 				{% include 'partials/footer.twig' %}
@@ -36,10 +36,10 @@
 						current_panel = 0
 					}
 				})
-			});			
+			});
 		</script>
 		{{ function('wp_footer') }}
 		{% endblock %}
-		
+
 	</body>
 </html>

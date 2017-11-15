@@ -9,7 +9,7 @@
 	@extend .portfolio__type-toggles;
 }
 .staff__type-label {
-	@extend .portfolio__type-dropdown;
+	@extend .portfolio__type;
 
 }
 .staff__type-filter {
@@ -59,7 +59,7 @@
 	padding: 0;
 	margin: 0;
 	line-height: 1.25;
-	vertical-align: middle;	
+	vertical-align: middle;
 	color: #fff;
 }
 
@@ -69,13 +69,19 @@
 	font-family: $sans;
 	letter-spacing: 1px;
 }
-.staff-thumbnail__jobtitle, .staff-member__job-title {	
+.staff-member__name {
+  font-size: 1.25em;
+}
+.staff-thumbnail__jobtitle, .staff-member__job-title {
 	font-family: $serif;
-	font-style: italic; 
-	font-size: .85em;
+	font-style: italic;
+	font-size: .8em;
 	letter-spacing: .05em;
 }
-
+.staff-member__job-title {
+  font-size: 1em;
+  line-height: 1.25;
+}
 .staff-member__contact-info, .staff-member__email {
 	list-style: none;
 	padding: 0;
@@ -88,6 +94,10 @@
 			text-decoration: underline;
 		}
 	}
+}
+.staff-member__contact-info {
+  margin: 0;
+  font-size: .9em;
 }
 
 /* Selected Staff */

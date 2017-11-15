@@ -5,7 +5,7 @@
 	font-size: 0;
 	@include media-breakpoint-up(md) {
 		padding: 0 5px 0;
-	}	
+	}
 }
 .property__featured-img {
 	width: 100%;
@@ -38,7 +38,7 @@
 .property__name {
 	@include boldCaps;
 	@include fontSmooth;
-	margin: 0;
+	margin: 0 0 .25em 0;
 	font-size: 1.85rem;
 	line-height: 1.2;
 	letter-spacing: 0;
@@ -55,7 +55,7 @@
 	}
 }
 .property__address {
-	margin-bottom: 1em;
+	margin-bottom: .25em;
 	font-family: $serif;
 	color: $dkblue;
 	text-transform: none;
@@ -66,12 +66,13 @@
 .property__type, .property__details {
 		display: inline;
 		text-transform: uppercase;
+		font-size: .9rem;
 }
 .property__description {
 	display: inline-block;
 	font-size: .93rem;
 	line-height: 1.75;
-	margin: 1rem 0 2rem;
+	margin: .5em 0 2.5em;
 	@include media-breakpoint-up(lg) {
 		font-size: 1rem;
 	}
@@ -79,7 +80,7 @@
 .property__phone, .property__website {
 	@extend .prprty-type__cta;
 	padding-top: 8px;
-	margin-right: 10px;
+	margin: 1.5em 10px .5em 0;
 	font-size: 1rem;
 	line-height: 1.75;
 	border: 1px solid $dkblue;
