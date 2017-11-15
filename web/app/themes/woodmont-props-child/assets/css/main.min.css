@@ -695,6 +695,13 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .property__phone:hover{background:#fff;color:#084560}
 .property__website{background:#084560}
 .section__awards{margin-bottom:100px}
+.section__awards-page{margin-bottom:100px}
+.section__awards-page .section__headline,.section__awards-page .about__headline{text-align:left;font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;font-weight:700;line-height:1.25}
+.award__community-name{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;font-weight:700;letter-spacing:1px;margin:0}
+.award__list{list-style:none;padding:1em 0 0}
+.award__list-item{padding:0 0 1em 2em;font-family:"PT Serif",serif;font-style:italic;letter-spacing:.0125em;background-image:url(../img/icon_award.svg);background-repeat:no-repeat;background-size:17px;background-position:0 2px}
+.award__list-item .award__list--details{list-style:circle;padding:1em 0 0 1em}
+.award__list-item .award__list--details li{font-family:"Open Sans",sans-serif;font-size:.85em;line-height:1.2;font-style:normal;background:0}
 .section__contact{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background:#084560;color:#fefefe}
 .section__contact .form-control,.section__contact input{border-radius:0;color:#084560;border:0}
 .section__contact-form{padding-bottom:100px}
