@@ -27,3 +27,24 @@ h1, h2, h3 {
 	font-size: 1.2em;
 	line-height: 1.2;
 }
+
+.section__cta-button {
+	@include boldCaps;
+	@include fontSmooth;
+	display: inline-block;
+	padding: 12px 20px;
+	margin-bottom: 30px;
+	background: $dkblue;
+	font-size: .85em;
+	letter-spacing: 1px;
+	color: #fff;
+	text-decoration: none;
+	transition: background .3s;
+	&:hover {
+		background: $dkgray;
+	}
+}
+.section__cta-button--inverted {
+	background: $white !important;
+	color: $dkblue !important;
+}

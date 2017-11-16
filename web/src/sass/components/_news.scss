@@ -1,0 +1,9 @@
+.section__news {
+  @include fontSmooth;
+  background: $dkblue;
+  color: $white !important;
+  padding: 100px 0;
+}
+.news__apply-cta {
+  @extend .career__apply-cta;
+}

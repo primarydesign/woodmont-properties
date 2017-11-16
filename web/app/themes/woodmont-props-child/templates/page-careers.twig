@@ -2,13 +2,14 @@
 
 {% block content %}
 
-	<section class="section__slideshow">
-		{% include "partials/slideshow.twig" %}
-	</section>
-	<section class="section__careers container">
-			<h2 class="section__headline">Careers</h2>
+	<header class="section__hero" style="background-image:url('{{theme.path}}/assets/img/header-image_properties.jpg')">
+	  <h1 class="hero__headline container">Careers</h1>
+	</header>
+	<section class="section__careers-page">
+		<div class="container">
+			<span class="row">
 			{% for job in careers %}
-				<article class="career__post">
+				<article class="career__post col-md-6">
 					<h2 class="career__title">{{ job.title }}</h2>
 					<p>{{ job.content }}</p>
 					<h3 class="career__subheading">Education / Experience:</h3>
@@ -16,9 +17,8 @@
 					<a class="career__apply-cta" href="{{ job.post_title|replace({'.': "",' ': '-',',': ""})|lower}}">Apply Now</a>
 				</article>
 			{% endfor %}
-	</section>
-	<section class="section__contact">
-			{% include "partials/contact.twig" %}
+		</span>
+		</div>
 	</section>
 
 {% endblock %}

@@ -597,6 +597,9 @@ h1,h2,h3,h4,h5,h6{color:#084560;font-weight:normal;line-height:1.5}
 h1,h2,h3{font-family:"PT Serif",serif}
 .section__headline,.about__headline{text-align:center;text-transform:uppercase;font-size:2.25em;letter-spacing:2px}
 .section__subhead{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;font-weight:700;color:#084560;letter-spacing:0;font-size:1.2em;line-height:1.2}
+.section__cta-button,.prprty-type__cta,.property__phone,.property__website,.career__apply-cta,.news__apply-cta,.awards__apply-cta,.form__submit-button{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;padding:12px 20px;margin-bottom:30px;background:#084560;font-size:.85em;letter-spacing:1px;color:#fff;text-decoration:none;-webkit-transition:background .3s;transition:background .3s}
+.section__cta-button:hover,.prprty-type__cta:hover,.property__phone:hover,.property__website:hover,.career__apply-cta:hover,.news__apply-cta:hover,.awards__apply-cta:hover,.form__submit-button:hover{background:#626366}
+.section__cta-button--inverted{background:#fefefe !important;color:#084560 !important}
 .nav__navbar{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;width:100%;z-index:20;padding:15px;background:#084560;color:#fefefe}
 .nav__navbar .navbar-nav{display:block;margin-top:15px}
 .nav__navbar .navbar-toggler{border:0;border-radius:0}
@@ -610,8 +613,8 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .slideshow__container{color:#fefefe}
 .slideshow__text--italic{display:block;font-family:"PT Serif",serif;font-style:italic}
 .slideshow__text{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;letter-spacing:1px;font-size:1.85em;line-height:1.1;text-shadow:0 3px 5px rgba(0,0,0,0.5)}
-.slideshow__text--bold{text-transform:uppercase;font-weight:700;letter-spacing:0}
-.slideshow__cta-button{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;width:100%;padding:2em;margin:1em 1em 0 0;font-size:.75rem;line-height:0;text-align:center;color:#084560;background:#fefefe;box-shadow:0 3px 5px rgba(0,0,0,0.5)}
+.slideshow__text--bold{font-weight:700;letter-spacing:0}
+.slideshow__cta-button{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;width:100%;padding:2em;margin:1em 1em 0 0;font-size:.75rem;line-height:0;text-align:center;color:#084560;background:#fefefe;text-decoration:none;box-shadow:0 3px 5px rgba(0,0,0,0.5)}
 .section__intro{margin:10% 0 !important}
 .intro__headline,.intro__paragraph,.about__paragraph,.prprty-type__description{margin:0;padding:0}
 .intro__headline{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin-bottom:.5em;font-size:2em;line-height:1.25;font-family:"PT Serif",serif;font-style:italic;color:#626366}
@@ -663,8 +666,7 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .prprty-type__image{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;min-height:275px;margin:0;background-color:#084560;background-repeat:no-repeat;background-size:cover;background-position:25% 100%}
 .prprty-type__headline{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:"PT Serif",serif;font-style:italic;font-size:1.75em}
 .prprty-type__description{margin-bottom:30px}
-.prprty-type__cta,.property__phone,.property__website,.form__submit-button,.career__apply-cta{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;padding:10px 20px;margin-bottom:30px;background:#999;font-size:.85em;letter-spacing:1px;color:#fff;text-decoration:none;-webkit-transition:background .3s;transition:background .3s}
-.prprty-type__cta:hover,.property__phone:hover,.property__website:hover,.form__submit-button:hover,.career__apply-cta:hover{background:#084560}
+.section__portfolio{padding:0 0 100px}
 .portfolio__type-toggles,.staff__type-toggles{border:1px solid #ededed;margin:0 4px 10px;padding:0}
 .portfolio__thumbnails{padding:0;margin:0}
 .portfolio__type-toggles,.staff__type-toggles,.portfolio__thumbnails{list-style:none}
@@ -694,19 +696,20 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .property__phone{background:#fff;color:#084560}
 .property__phone:hover{background:#fff;color:#084560}
 .property__website{background:#084560}
-.section__awards{margin-bottom:100px}
-.section__awards-page{margin-bottom:100px}
+.awards__badges{margin:3em auto}
+.section__awards{margin-bottom:100px;background:#fefefe}
+.section__awards-page{margin:60px auto 100px}
 .section__awards-page .section__headline,.section__awards-page .about__headline{text-align:left;font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;font-weight:700;line-height:1.25}
-.award__community-name{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;font-weight:700;letter-spacing:1px;margin:0}
+.award__community-name{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;font-weight:700;letter-spacing:.025em;line-height:1.25;margin:0}
 .award__list{list-style:none;padding:1em 0 0}
-.award__list-item{padding:0 0 1em 2em;font-family:"PT Serif",serif;font-style:italic;letter-spacing:.0125em;background-image:url(../img/icon_award.svg);background-repeat:no-repeat;background-size:17px;background-position:0 2px}
+.award__list-item{padding:0 0 1em 2em;font-family:"PT Serif",serif;font-style:italic;letter-spacing:.0125em;background-image:url(../img/icon_award.svg);background-repeat:no-repeat;background-size:17px;background-position:0 5px}
 .award__list-item .award__list--details{list-style:circle;padding:1em 0 0 1em}
 .award__list-item .award__list--details li{font-family:"Open Sans",sans-serif;font-size:.85em;line-height:1.2;font-style:normal;background:0}
-.section__contact{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background:#084560;color:#fefefe}
+.section__news{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background:#084560;color:#fefefe !important;padding:100px 0}
+.section__contact{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:100px 0;background:#084560;color:#fefefe}
 .section__contact .form-control,.section__contact input{border-radius:0;color:#084560;border:0}
-.section__contact-form{padding-bottom:100px}
 .footer__signup-message{font-size:.85em;padding:.5em 0 1em .5em}
-.form__submit-button{border:0;color:#fefefe !important}
+.form__submit-button{border:0;color:#fefefe !important;background:#999}
 .footer__headline{text-transform:uppercase;font-family:"Open Sans",sans-serif;font-size:1em;line-height:1.25;font-weight:700;color:#fefefe;margin:0 0 .5em 0}
 .footer__contact-info{list-style:none;margin:0 0 2em 0;padding:0}
 .footer__contact-info li{font-size:.9em;padding-bottom:.25em}
@@ -714,10 +717,13 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .section__contact ::-moz-placeholder{color:#084560;font-size:.8em;font-family:"Open Sans",sans-serif;text-transform:uppercase;font-weight:700}
 .section__contact :-ms-input-placeholder{color:#084560;font-size:.8em;font-family:"Open Sans",sans-serif;text-transform:uppercase;font-weight:700}
 .section__contact :-moz-placeholder{color:#084560;font-size:.8em;font-family:"Open Sans",sans-serif;text-transform:uppercase;font-weight:700}
-.section__careers{margin:100px 0}
+.section__careers{padding:0 0 100px;background-color:#ededed}
+.section__careers-page{padding:60px 0}
 .career__post .intro__paragraph,.career__post .about__paragraph,.career__post .prprty-type__description{padding:0}
 .career__title{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-.career__apply-cta{margin-top:15px}
+.career__apply-cta,.news__apply-cta{margin-top:15px}
+.section__hero{background-color:#084560;background-size:cover;background-position:center;padding:3em 0;font-size:.95em;text-align:center}
+.hero__headline{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;color:#fefefe !important}
 .footer{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:30px;background:#084560;text-align:center}
 .footer__copyright{font-size:.85em;color:#fff}
 @media(min-width:52em){.section__prprty-type{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
@@ -920,6 +926,7 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .section__about--what-we-do,.section__about--who-we-are{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-webkit-flex-direction:row-reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
 .prprty-type__intro{padding:80px}
 .prprty-type__image{min-height:400px}
+.section__hero{font-size:1.5em;text-align:left}
 }@media(min-width:768px){.container{max-width:720px}
 .col-md{-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}
 .col-md-auto{-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}
@@ -1273,6 +1280,7 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .intro__statement{font-size:1.75em}
 .about__text,.about__side-img{margin-bottom:60px}
 .property__description{font-size:1rem}
+.section__hero{font-size:2em}
 }@media(min-width:1200px){.container{max-width:1140px}
 .col-xl{-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}
 .col-xl-auto{-webkit-box-flex:0;-webkit-flex:0 0 auto;-ms-flex:0 0 auto;flex:0 0 auto;width:auto;max-width:none}

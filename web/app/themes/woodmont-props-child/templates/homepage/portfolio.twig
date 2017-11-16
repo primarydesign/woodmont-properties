@@ -1,3 +1,4 @@
+<div class="container">
 	<h3 class="intro__statement">Throughout our history, Woodmont Properties has developed and invested in a diverse mix of real estate throughout New Jersey, New York and Pennsylvania. Today, our extensive portfolio comprises world-class residential, commercial and mixed-use properties.</h3>
 	<h2 class="section__headline">Our Portfolio</h2>
 	<ul class="portfolio__type-toggles row" role="group">
@@ -41,7 +42,7 @@
 						<li class="property__details">{% if property.details %}{{ property.details }}{% endif %}</li>
 						<li>
 							{% if property.website %}
-								<a class="property__website" href="http://{{ property.website }}">Visit Website</a>
+								<a class="property__website" href="http://{{ property.website }}" target="_blank">Visit Website</a>
 							{% endif %}
 							{% if property.phone_number %}
 								<a class="property__phone" href="tel:{{ property.phone_number }}">{{ property.phone_number }}</a>
@@ -63,3 +64,4 @@
 			{% endfor %}
 		</ul>
 	</section>
+</div>

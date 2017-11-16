@@ -1,8 +1,11 @@
 .section__careers {
-	margin: 100px 0;
+	padding: 0 0 100px;
+	background-color: $ltgray;
+}
+.section__careers-page {
+	padding:  60px 0;
 }
 .career__post {
-	//border-top: 1px solid $dkblue;
 	.intro__paragraph {
 			padding: 0;
 	}
@@ -12,7 +15,7 @@
 	@include fontSmooth;
 }
 .career__subheading {
-	
+
 }
 .career__apply-cta {
 	@extend .prprty-type__cta;

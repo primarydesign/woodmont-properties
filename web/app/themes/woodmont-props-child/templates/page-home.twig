@@ -3,40 +3,39 @@
 {% block content %}
 
 	<section class="section__slideshow">
-		{% include "partials/slideshow.twig" %}
+		{% include "homepage/slideshow.twig" %}
 	</section>
 	<div class="container">
-		 {% include "partials/intro.twig" %}
+		 {% include "homepage/intro.twig" %}
 	</div>
 	<section class="section__our-company post-type-{{post.post_type}}" id="our-company">
-		{% include "partials/about.twig" %}
+		{% include "homepage/about.twig" %}
 	</section>
 	<section class="section__staff-grid">
 		<div class="container">
-			{% include "partials/staff-grid.twig" %}
+			{% include "homepage/staff-grid.twig" %}
 		</div>
 	</section>
+	<section class="section__awards" id="awards">
+			{% include "homepage/awards.twig" %}
+	</section>
+	<section class="section__news" id="news">
+			{% include "homepage/news.twig" %}
+	</section>	
 	<section class="section__header" style="background-image:url('{{theme.path}}/assets/img/header-image_properties.jpg')" id="properties">
 		<div class="container">
 			<h2 class="header__title">Properties</h2>
 		</div>
 	</section>
 	<section class="section__property-types">
-		{% include "partials/property-types.twig" %}
+		{% include "homepage/property-types.twig" %}
 	</section>
 	<section class="section__portfolio">
-		<div class="container">
-			{% include "partials/portfolio.twig" %}
-		</div>
+			{% include "homepage/portfolio.twig" %}
 	</section>
 	<section class="section__careers" id="careers">
-			{% include "partials/careers.twig" %}
+			{% include "homepage/careers.twig" %}
 	</section>
-	<section class="section__awards" id="awards">
-			{% include "partials/awards.twig" %}
-	</section>
-	<section class="section__contact" id="contact">
-			{% include "partials/contact.twig" %}
-	</section>
+
 
 {% endblock %}

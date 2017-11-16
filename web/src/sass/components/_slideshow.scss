@@ -41,7 +41,7 @@
 	text-shadow: 0px 3px 5px rgba(0,0,0,0.5);
 }
 .slideshow__text--bold {
-	text-transform: uppercase;
+	//text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 0;
 }
@@ -57,6 +57,7 @@
 	text-align: center;
 	color: $dkblue;
 	background: $white;
+	text-decoration: none;
 	box-shadow: 0px 3px 5px rgba(0,0,0,0.5);
 	@include media-breakpoint-up(sm) {
 		width: auto;

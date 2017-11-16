@@ -1,0 +1,22 @@
+.section__hero {
+  background-color: $dkblue;
+  background-size: cover;
+  background-position: center;
+  padding: 3em 0;
+  font-size: .95em;
+  text-align: center;
+  @include media-breakpoint-up(sm) {
+    font-size: 1.5em;
+    text-align: left;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 2em;
+  }
+}
+.hero__headline {
+  @include fontSmooth;
+  font-family: $sans;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: $white !important;
+}

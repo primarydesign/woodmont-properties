@@ -1,8 +1,15 @@
+.awards__badges {
+	margin: 3em auto;
+}
 .section__awards {
-	margin-bottom: 100px
+	margin-bottom: 100px;
+	background: $white;
+}
+.awards__apply-cta {
+  @extend .section__cta-button;
 }
 .section__awards-page {
-	margin-bottom: 100px;
+	margin: 60px auto 100px;
 	.section__headline {
 		text-align: left;
 		@include boldCaps;
@@ -13,7 +20,8 @@
 .award__community-name {
 	@include boldCaps;
 	font-weight: 700;
-	letter-spacing: 1px;
+	letter-spacing: .025em;
+	line-height: 1.25;
 	margin: 0;
 }
 .award__list {
@@ -28,7 +36,7 @@
 	background-image: url(../img/icon_award.svg);
 	background-repeat: no-repeat;
 	background-size: 17px;
-	background-position: 0 2px;
+	background-position: 0 5px;
 }
 .award__list-item .award__list--details  {
 		list-style: circle;
