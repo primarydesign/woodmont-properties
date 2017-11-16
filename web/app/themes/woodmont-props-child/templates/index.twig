@@ -1,0 +1,14 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<header class="section__hero" style="background-image:url('{{theme.path}}/assets/img/header-image_properties.jpg')">
+		<h1 class="hero__headline container">News &amp; Events</h1>
+	</header>
+
+	<div class="container">
+	{% for post in posts %}
+		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+	{% endfor %}
+	</div>
+
+{% endblock %}

@@ -18,7 +18,7 @@
 		padding: 0;
 		border: 1px solid $ltgray;
 		border-top: 0;
-		border-radius: 0 !important;
+		border-radius: 0 !important; 
 		text-align: center;
 		width: 100%;
 		transform: translate3d(0, 39px, 0) !important;
@@ -48,9 +48,9 @@
 	padding: 10px 5px;
 	text-align: center;
 	font-size: .9em;
-	background: #fff !important;
+	background: #fff ;
 	&:hover  {
-		background: $ltgray !important;
+		background: $ltgray;
 	}
 }
 .portfolio__type--dropdown:hover .dropdown-menu {

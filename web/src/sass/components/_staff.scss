@@ -1,4 +1,6 @@
 .section__staff-grid {
+	background: $ltgray;
+	padding-bottom: 60px;
  	margin-bottom: 100px;
 	line-height: 0;
 	.modal {
@@ -7,10 +9,15 @@
 }
 .staff__type-toggles {
 	@extend .portfolio__type-toggles;
+	margin: 0 0px 10px !important;
+	border: 1px solid $white !important;
 }
 .staff__type-label {
 	@extend .portfolio__type;
-
+	background-color: $ltgray !important;
+	&:hover {
+		background-color: $white !important;
+	}
 }
 .staff__type-filter {
 	 @extend .portfolio__type-label;

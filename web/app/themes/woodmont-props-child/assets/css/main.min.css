@@ -625,8 +625,11 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .intro__statement{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:1.5em;text-align:center;font-style:italic;color:#626366;padding:3em 0 2em}
 .intro__statement--white{color:#fff}
 .section__about .section__headline,.section__about .about__headline{text-align:left !important}
-.section__staff-grid{margin-bottom:100px;line-height:0}
+.section__staff-grid{background:#ededed;padding-bottom:60px;margin-bottom:100px;line-height:0}
 .section__staff-grid .modal{padding:0 5% !important}
+.staff__type-toggles{margin:0 0 10px !important;border:1px solid #fefefe !important}
+.staff__type-label{background-color:#ededed !important}
+.staff__type-label:hover{background-color:#fefefe !important}
 .staff__type-filter{padding:10px}
 .staff-thumbnail{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 .staff-thumbnail__portrait{position:relative;display:inline-block;background-position:center 25%;margin:0;width:100%;height:300px}
@@ -653,14 +656,13 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .staff-member__job-title{margin:0}
 .staff-member__description p{font-size:.8em !important;padding-right:10px}
 .staff-member__department{text-transform:uppercase;letter-spacing:.05em}
-.section__our-company{background:#ededed}
+.section__our-company{background:#fefefe}
 .about__side-img{width:100%}
 .about__text,.about__side-img{margin-bottom:15px}
 .about__headline{margin-top:0;line-height:1}
 .about__paragraph{padding-top:0}
 .link__read-more{display:inline-block;color:#084560;text-transform:uppercase;letter-spacing:1px;text-decoration:none;margin-bottom:15px;padding:15px 0}
 .link__arrow-down{padding:5px}
-.section__property-types{margin-bottom:100px}
 .prprty-type__intro,.prprty-type__image{vertical-align:top}
 .prprty-type__intro{padding:30px;background-repeat:no-repeat;background-size:contain;background-color:#ededed;max-width:860px}
 .prprty-type__image{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;min-height:275px;margin:0;background-color:#084560;background-repeat:no-repeat;background-size:cover;background-position:25% 100%}
@@ -675,8 +677,8 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .portfolio__type .dropdown-item:hover,.staff__type-label .dropdown-item:hover{background:#ededed}
 .portfolio__type-label,.staff__type-filter{display:block}
 .portfolio__type>portfolio__type-label[aria-expanded="true"],.staff__type-label>portfolio__type-label[aria-expanded="true"]{background:#ededed}
-.portfolio__type,.staff__type-label{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;cursor:pointer;padding:10px 5px;text-align:center;font-size:.9em;background:#fff !important}
-.portfolio__type:hover,.staff__type-label:hover{background:#ededed !important}
+.portfolio__type,.staff__type-label{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;cursor:pointer;padding:10px 5px;text-align:center;font-size:.9em;background:#fff}
+.portfolio__type:hover,.staff__type-label:hover{background:#ededed}
 .portfolio__type--dropdown:hover .dropdown-menu{display:block !important;position:absolute;top:0}
 .portfolio__thumbnails{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;text-align:center}
 .portfolio__thumbnail{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:reverse;-webkit-flex-flow:column-reverse;-ms-flex-flow:column-reverse;flex-flow:column-reverse;cursor:pointer;height:250px;background-size:cover;background-repeat:no-repeat;background-clip:content-box;background-position:center;background-color:#ededed;margin-bottom:1px;padding:0 1px 0 0 !important}
@@ -705,7 +707,8 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .award__list-item{padding:0 0 1em 2em;font-family:"PT Serif",serif;font-style:italic;letter-spacing:.0125em;background-image:url(../img/icon_award.svg);background-repeat:no-repeat;background-size:17px;background-position:0 5px}
 .award__list-item .award__list--details{list-style:circle;padding:1em 0 0 1em}
 .award__list-item .award__list--details li{font-family:"Open Sans",sans-serif;font-size:.85em;line-height:1.2;font-style:normal;background:0}
-.section__news{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background:#084560;color:#fefefe !important;padding:100px 0}
+.section__news{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background:#084560;padding:100px 0}
+.section__news h2,.section__news h3,.section__news p{color:#fefefe !important}
 .section__contact{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:100px 0;background:#084560;color:#fefefe}
 .section__contact .form-control,.section__contact input{border-radius:0;color:#084560;border:0}
 .footer__signup-message{font-size:.85em;padding:.5em 0 1em .5em}

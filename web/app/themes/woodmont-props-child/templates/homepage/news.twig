@@ -1,5 +1,12 @@
 <div class="container">
   <h2 class="section__headline">In The News</h2>
   <h3>Recent News</h3>
+
+  {% for story in news %}
+		<h2>
+    {{story.title}} - {{story.get_preview(25)}}
+  </h2>
+	{% endfor %}
+
   <a class="section__cta-button section__cta-button--inverted" href="./news">See All News</a>
 </div>
