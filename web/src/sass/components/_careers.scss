@@ -13,9 +13,14 @@
 .career__title {
 	@include boldCaps;
 	@include fontSmooth;
+	font-weight: 700;
 }
 .career__subheading {
-
+	margin-top: 0;
+}
+.career__paragraph {
+	font-size: .9em;
+	line-height: 1.85;
 }
 .career__apply-cta {
 	@extend .prprty-type__cta;

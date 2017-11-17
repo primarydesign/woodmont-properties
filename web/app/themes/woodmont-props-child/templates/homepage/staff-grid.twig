@@ -37,14 +37,13 @@
 						<h4 class="staff-member__job-title">{{ member.job_title }}</h4>
 						<ul class="staff-member__contact-info">
 							{% if member.phone_number %}
-								<li class="staff-member__phone"><a href="tel:{{ member.phone_number|replace({'.': "", ' ': "", '(': "", ')': "",  '-': ""}) }}">{{member.phone_number}}{% if member.phone_number %}Ext. {{member.phone_extention}}{% endif %}</a></li>
+								<li class="staff-member__phone"><a href="tel:{{ member.phone_number|replace({'.': "", ' ': "", '(': "", ')': "",  '-': ""}) }}">{{member.phone_number}}</a> Ext. {{member.phone_extention}}</li>
 							{% endif %}
 							{% if member.email %}
 								<li class="staff-member__email"><a href="mailto:{{member.email}}">{{member.email}}</a></li>
 							{% endif %}
 						</ul>
 						<span class="staff-member__description">{{ member.content }}</span>
-						<h5 class="staff-member__department">{{ member.job_department }}</h5>
 					</figcaption>
 				</div>
 		</div>

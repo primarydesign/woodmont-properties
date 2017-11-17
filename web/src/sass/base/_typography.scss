@@ -41,10 +41,14 @@ h1, h2, h3 {
 	text-decoration: none;
 	transition: background .3s;
 	&:hover {
-		background: $dkgray;
+		background: $gold;
 	}
 }
 .section__cta-button--inverted {
 	background: $white !important;
 	color: $dkblue !important;
+	&:hover {
+		background: $gold !important;
+		color: $white !important;		
+	}
 }

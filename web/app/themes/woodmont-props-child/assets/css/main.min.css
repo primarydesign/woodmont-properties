@@ -596,10 +596,11 @@ html{font-size:16px;line-height:1.5;font-family:"Open Sans",sans-serif;color:#62
 h1,h2,h3,h4,h5,h6{color:#084560;font-weight:normal;line-height:1.5}
 h1,h2,h3{font-family:"PT Serif",serif}
 .section__headline,.about__headline{text-align:center;text-transform:uppercase;font-size:2.25em;letter-spacing:2px}
-.section__subhead{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;font-weight:700;color:#084560;letter-spacing:0;font-size:1.2em;line-height:1.2}
-.section__cta-button,.prprty-type__cta,.property__phone,.property__website,.career__apply-cta,.news__apply-cta,.awards__apply-cta,.form__submit-button{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;padding:12px 20px;margin-bottom:30px;background:#084560;font-size:.85em;letter-spacing:1px;color:#fff;text-decoration:none;-webkit-transition:background .3s;transition:background .3s}
-.section__cta-button:hover,.prprty-type__cta:hover,.property__phone:hover,.property__website:hover,.career__apply-cta:hover,.news__apply-cta:hover,.awards__apply-cta:hover,.form__submit-button:hover{background:#626366}
+.section__subhead,.news__post-title{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;font-weight:700;color:#084560;letter-spacing:0;font-size:1.2em;line-height:1.2}
+.section__cta-button,.prprty-type__cta,.property__phone,.property__website,.career__apply-cta,.section__news .section__cta-button,.awards__apply-cta,.form__submit-button{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;padding:12px 20px;margin-bottom:30px;background:#084560;font-size:.85em;letter-spacing:1px;color:#fff;text-decoration:none;-webkit-transition:background .3s;transition:background .3s}
+.section__cta-button:hover,.prprty-type__cta:hover,.property__phone:hover,.property__website:hover,.career__apply-cta:hover,.awards__apply-cta:hover,.form__submit-button:hover{background:#c5b358}
 .section__cta-button--inverted{background:#fefefe !important;color:#084560 !important}
+.section__cta-button--inverted:hover{background:#c5b358 !important;color:#fefefe !important}
 .nav__navbar{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;width:100%;z-index:20;padding:15px;background:#084560;color:#fefefe}
 .nav__navbar .navbar-nav{display:block;margin-top:15px}
 .nav__navbar .navbar-toggler{border:0;border-radius:0}
@@ -627,9 +628,9 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .section__about .section__headline,.section__about .about__headline{text-align:left !important}
 .section__staff-grid{background:#ededed;padding-bottom:60px;margin-bottom:100px;line-height:0}
 .section__staff-grid .modal{padding:0 5% !important}
-.staff__type-toggles{margin:0 0 10px !important;border:1px solid #c5b358 !important}
+.staff__type-toggles{margin:0 0 10px !important;border:0 !important}
 .staff__type-label{background-color:#ededed !important}
-.staff__type-label:hover{background-color:#c5b358 !important;color:#fefefe;font-weight:bold}
+.staff__type-label:hover{background-color:#c5b358 !important}
 .staff__type-filter{padding:10px}
 .staff-thumbnail{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 .staff-thumbnail__portrait{position:relative;display:inline-block;background-position:center 25%;margin:0;width:100%;height:300px}
@@ -639,8 +640,8 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .staff-thumbnail__name,.staff-thumbnail__jobtitle{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:0;margin:0;line-height:1.25;vertical-align:middle;color:#fff}
 .staff-thumbnail__name,.staff-member__name{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;font-size:1em;font-family:"Open Sans",sans-serif;letter-spacing:1px}
 .staff-member__name{font-size:1.25em}
-.staff-thumbnail__jobtitle,.staff-member__job-title{font-family:"PT Serif",serif;font-style:italic;font-size:.8em;letter-spacing:.05em}
-.staff-member__job-title{font-size:1em;line-height:1.25}
+.staff-thumbnail__jobtitle,.staff-member__job-title{font-family:"PT Serif",serif;font-style:italic;font-size:.8em}
+.staff-member__job-title{font-size:1em;line-height:1.5}
 .staff-member__contact-info,.staff-member__email{list-style:none;padding:0;font-family:"PT Serif",serif;color:#084560}
 .staff-member__contact-info a,.staff-member__email a{text-decoration:none;color:#084560}
 .staff-member__contact-info a:hover,.staff-member__email a:hover{text-decoration:underline}
@@ -661,8 +662,9 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .about__text,.about__side-img{margin-bottom:15px}
 .about__headline{margin-top:0;line-height:1}
 .about__paragraph{padding-top:0}
-.link__read-more{display:inline-block;color:#084560;text-transform:uppercase;letter-spacing:1px;text-decoration:none;margin-bottom:15px;padding:15px 0}
-.link__arrow-down{padding:5px}
+.link__read-more{display:inline-block;color:#084560;text-transform:uppercase;letter-spacing:1px;text-decoration:none;font-size:.85em;padding-bottom:15px}
+.link__arrow-down{padding:5px;display:inline-block}
+.link__read-more[aria-expanded="true"] .link__arrow-down{-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}
 .prprty-type__intro,.prprty-type__image{vertical-align:top}
 .prprty-type__intro{padding:30px;background-repeat:no-repeat;background-size:contain;background-color:#ededed;max-width:860px}
 .prprty-type__image{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;min-height:275px;margin:0;background-color:#084560;background-repeat:no-repeat;background-size:cover;background-position:25% 100%}
@@ -709,7 +711,11 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .award__list-item .award__list--details{list-style:circle;padding:1em 0 0 1em}
 .award__list-item .award__list--details li{font-family:"Open Sans",sans-serif;font-size:.85em;line-height:1.2;font-style:normal;background:0}
 .section__news{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background:#084560;padding:100px 0}
-.section__news h2,.section__news h3,.section__news p{color:#fefefe !important}
+.section__news h2,.section__news h3,.section__news h4,.section__news p,.section__news a{color:#fefefe}
+.section__news .read-more{font-family:"PT Serif",serif;font-style:italic}
+.news__subhead{font-family:"PT Serif",serif;font-size:1.5em;font-style:italic;text-transform:none;font-weight:normal}
+.news__post{font-size:.9rem}
+.news__post-title{color:#fefefe;font-size:1rem}
 .section__contact{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:100px 0;background:#084560;color:#fefefe}
 .section__contact .form-control,.section__contact input{border-radius:0;color:#084560;border:0}
 .footer__signup-message{font-size:.85em;padding:.5em 0 1em .5em}
@@ -724,11 +730,13 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .section__careers{padding:0 0 100px;background-color:#ededed}
 .section__careers-page{padding:60px 0}
 .career__post .intro__paragraph,.career__post .about__paragraph,.career__post .prprty-type__description{padding:0}
-.career__title{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-.career__apply-cta,.news__apply-cta{margin-top:15px}
+.career__title{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-weight:700}
+.career__subheading{margin-top:0}
+.career__paragraph{font-size:.9em;line-height:1.85}
+.career__apply-cta,.section__news .section__cta-button,.section__news .prprty-type__cta,.section__news .property__phone,.section__news .property__website,.section__news .career__apply-cta,.section__news .awards__apply-cta,.section__news .form__submit-button{margin-top:15px}
 .section__hero{background-color:#084560;background-size:cover;background-position:center;padding:3em 0;font-size:.95em;text-align:center}
 .hero__headline{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;color:#fefefe !important}
-.footer{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:30px;background:#084560;text-align:center}
+.footer{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:30px;background:#084560;border-top:1px solid #406988;text-align:center}
 .footer__copyright{font-size:.85em;color:#fff}
 @media(min-width:52em){.section__prprty-type{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 .prprty-type__intro,.prprty-type__image{display:inline-block;width:50%}

@@ -2,23 +2,82 @@
 
 {% block content %}
 
-	<header class="section__hero" style="background-image:url('{{theme.path}}/assets/img/header-image_properties.jpg')">
-	  <h1 class="hero__headline container">Careers</h1>
-	</header>
-	<section class="section__careers-page">
-		<div class="container">
-			<span class="row">
-			{% for job in careers %}
-				<article class="career__post col-md-6">
-					<h2 class="career__title">{{ job.title }}</h2>
-					<p>{{ job.content }}</p>
-					<h3 class="career__subheading">Education / Experience:</h3>
-					<p class="">{{ job.experience }}</p>
-					<a class="career__apply-cta" href="{{ job.post_title|replace({'.': "",' ': '-',',': ""})|lower}}">Apply Now</a>
-				</article>
-			{% endfor %}
-		</span>
-		</div>
-	</section>
+  <header class="section__hero" style="background-image:url('{{theme.path}}/assets/img/header-image_properties.jpg')">
+    <h1 class="hero__headline container">Careers</h1>
+  </header>
+  <section class="section__careers-page">
+    <div class="container">
+      <span class="row">
+        <span class="col-12">
+          <h2 class="section__headline">Open Positions</h2>
+          <h3 class="career__subheading">Ready to build your career from the ground up? Here’s where you start.</h3>
+        </span>
+      </span>
+      <span class="row">
+        {% for job in careers %}
+          <article class="career__post col-md-6">
+            <h2 class="career__title">{{ job.title }}</h2>
+            <span class="career__paragraph">{{ job.content }}</span>
+            <h3 class="career__subheading">Education / Experience:</h3>
+            <p class="career__paragraph">{{ job.experience }}</p>
+            <a class="career__apply-cta" href="{{ job.post_title|replace({'.': " ",' ': '-',',': " "})|lower}}">Apply Now</a>
+          </article>
+        {% endfor %}
+      </span>
+    </div>
+    <section style="background:#ededed; padding:60px 0;">
+      <div class="container">
+        <span class="row">
+          <h2 class="section__headline">Core Purpose &amp; Values</h2>
+          <h3 class="career__subheading">
+            <strong>Our Core Purpose</strong>
+            &mdash; We create great environments for people to live, work and shop. Our purpose moves us forward.</h3>
+          <h3 class="career__subheading">
+            <strong>Our Core Values</strong>
+            &mdash; The rules defining our culture, which are reinforced through our people and our actions on a daily basis. Our values keep us grounded.</h3>
+          <ul class="career__paragraph">
+            <li>G — Good Judgement - Do the right thing in the right way. Solve problems to satisfaction of all parties, while protecting the company.</li>
+            <li>O — Ownership - Take complete responsibility for your actions. Be accountable and thoroughly execute your mission for the benefit of the company, customers and residents.</li>
+            <li>T — Tenacious - Be persistent in finding the right solutions and achieving objectives in a cost-effective manner. Overcome obstacles. Excel through discipline and innovation.</li>
+            <li>T — Team Player - Work with and support your teammates to assure success of the entire company. We win by the power of working together.</li>
+          </ul>
+				  <h3 class="career__subheading">Ready to show us everything you’ve GOTT? We’re looking forward to seeing what you bring to the table.</h3>
+        </span>
+      </div>
+    </section>
+    <div class="container">
+      <span class="row">
+        <h2 class="section__headline">Employee Benefits</h2>
+        <h3 class="career__subheading">As the heart of our company, you deserve the best. Become eligible for a great benefits package after two months of employment. We offer a competitive and comprehensive benefits package that includes:</h3>
+        <ul class="career__paragraph">
+          <li>Medical Insurance</li>
+          <li>Dental Insurance</li>
+          <li>Vision Insurance</li>
+          <li>Company Paid and Voluntary Life AD&amp;D Insurance</li>
+          <li>Short-term Disability Plan</li>
+          <li>Employee Assistance Plan</li>
+          <li>Flexible Spending Accounts</li>
+          <li>Health Reimbursement Arrangement</li>
+          <li>AFLAC Voluntary Insurance Plans
+          </li>
+          <li>401(k) Plan</li>
+        </ul>
+				<h3 class="career__subheading">Want to learn more about other positions we have available? Send your resume to careers@woodmontproperties.com to apply for these commonly available positions:</h3>
+				<ul class="career__paragraph">
+					<li>Community Manager</li>
+					<li>Leasing Professional</li>
+					<li>Maintenance Supervisor</li>
+					<li>Maintenance Technician</li>
+					<li>Construction Project Manager</li>
+					<li>Accountant</li>
+					<li>Other Positions Available:</li>
+					<li>Construction Handyman</li>
+					<li>Construction Laborer</li>
+					<li>Field Construction Coordinator</li>
+				</ul>
+				<h3 class="career__subheading">We’re interested in what every candidate has to bring to the table. If your skills and background match our needs, we’ll be in touch!</h3>
+      </span>
+    </div>
+  </section>
 
 {% endblock %}
