@@ -10,13 +10,16 @@
 .staff__type-toggles {
 	@extend .portfolio__type-toggles;
 	margin: 0 0px 10px !important;
-	border: 1px solid $white !important;
+	border: 1px solid $gold !important;
+
 }
 .staff__type-label {
 	@extend .portfolio__type;
 	background-color: $ltgray !important;
 	&:hover {
-		background-color: $white !important;
+		background-color: $gold !important;
+		color: $white;
+		font-weight: bold;
 	}
 }
 .staff__type-filter {

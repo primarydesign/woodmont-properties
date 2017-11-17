@@ -34,6 +34,11 @@
 		<div id="panel" class="panel">
 			<article class="property--selected collapse" id="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}" role="tabpanel" aria-labelledby="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}">
 					<img class="property__featured-img" src="{{ property.thumbnail }}" width="600">
+					{% if property.award_winner %}
+						<a class="property__award-badge" href="./awards">
+							<img src="{{theme.path}}/assets/img/icon_award-badge.svg">
+						</a>
+					{% endif %}
 					<span class="property__status">{{ property.current_status }}</span>
 					<ul class="property__specs">
 						<a class="portfolio__next-button"> > </a>
