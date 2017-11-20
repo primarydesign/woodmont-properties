@@ -595,7 +595,7 @@ template{display:none}
 html{font-size:16px;line-height:1.5;font-family:"Open Sans",sans-serif;color:#626366}
 h1,h2,h3,h4,h5,h6{color:#084560;font-weight:normal;line-height:1.5}
 h1,h2,h3{font-family:"PT Serif",serif}
-.section__headline,.about__headline{text-align:center;text-transform:uppercase;font-size:2.25em;letter-spacing:2px}
+.section__headline,.about__headline{text-align:center;font-size:2.25em;letter-spacing:1px}
 .section__subhead,.news__post-title{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;font-weight:700;color:#084560;letter-spacing:0;font-size:1.2em;line-height:1.2}
 .section__cta-button,.prprty-type__cta,.property__phone,.property__website,.career__apply-cta,.section__news .section__cta-button,.awards__apply-cta,.form__submit-button{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;padding:12px 20px;margin-bottom:30px;background:#084560;font-size:.85em;letter-spacing:1px;color:#fff;text-decoration:none;-webkit-transition:background .3s;transition:background .3s}
 .section__cta-button:hover,.prprty-type__cta:hover,.property__phone:hover,.property__website:hover,.career__apply-cta:hover,.awards__apply-cta:hover,.form__submit-button:hover{background:#c5b358}
@@ -607,14 +607,16 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .nav__navbar .nav-link{display:block;padding:1em !important;text-align:center;color:#fff !important;font-size:1em;text-decoration:none;text-transform:uppercase;letter-spacing:2px}
 .nav__navbar .nav-link:hover{opacity:.5}
 .navbar__logo{width:150px;line-height:0}
-.section__slideshow{background-color:#084560;background-image:url(../img/slideshow-1_woodmont-cove-rendering.jpg);background-size:cover;background-position:center;padding:3em 0;font-size:.95em;text-align:center}
+.section__slideshow{position:relative;background-color:#084560;background:url(../img/slideshow-1_woodmont-cove-rendering.jpg) center;background-size:cover;background-repeat:no-repeat;min-height:50vh;font-size:.95em;text-align:center}
+.section__slideshow .slideshow__container{min-height:50vh}
 .section__slideshow .carousel-indicators{bottom:-45px}
 .section__slideshow .carousel-indicators li{height:15px;width:15px}
 .section__slideshow .carousel-control-prev,.section__slideshow .carousel-control-next{width:10% !important;opacity:1}
-.slideshow__container{color:#fefefe}
+.slideshow__borders{position:absolute;z-index:2;width:100%;height:100%;background:url(../img/carousel_angle-left.png) top left,url(../img/carousel_angle-right.png) bottom right;background-repeat:no-repeat;background-blend-mode:multiply}
+.slideshow__container{color:#fefefe;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:left;-webkit-align-items:left;-ms-flex-align:left;align-items:left;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;margin:0 5%}
 .slideshow__text--italic{display:block;font-family:"PT Serif",serif;font-style:italic}
 .slideshow__text{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;letter-spacing:1px;font-size:1.85em;line-height:1.1;text-shadow:0 3px 5px rgba(0,0,0,0.5)}
-.slideshow__text--bold{font-weight:700;letter-spacing:0}
+.slideshow__text--bold{font-weight:800;letter-spacing:0}
 .slideshow__cta-button{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block;width:100%;padding:2em;margin:1em 1em 0 0;font-size:.75rem;line-height:0;text-align:center;color:#084560;background:#fefefe;text-decoration:none;box-shadow:0 3px 5px rgba(0,0,0,0.5)}
 .section__intro{margin:10% 0 !important}
 .intro__headline,.intro__paragraph,.about__paragraph,.prprty-type__description{margin:0;padding:0}
@@ -648,8 +650,11 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .staff-member__contact-info{margin:0;font-size:.9em}
 .section__staff{background:#084560;margin-bottom:100px;padding:100px 0}
 .staff-member__modal{position:relative;margin:0 auto !important;max-width:1070px !important}
-.staff-member__modal-exit{position:absolute;right:0;padding:25px 35px;color:#999;cursor:pointer;z-index:1}
-.staff-member__modal-exit .close{width:1.25em;height:1.25em;background:#fff;padding:0 5px;border-radius:1.5em;line-height:auto}
+.staff-member__modal .carousel-control-prev-icon,.staff-member__modal .carousel-control-next-icon{position:absolute;top:48.5%;padding:20px;background-color:#084560;background-size:12px;cursor:pointer}
+.staff-member__modal .carousel-control-prev-icon{left:-4.5%}
+.staff-member__modal .carousel-control-next-icon{right:-4.5%}
+.staff-member__modal-exit{position:absolute;right:0;padding:25px 35px;color:#999;z-index:1}
+.staff-member__modal-exit .close{width:1.25em;height:1.25em;background:#fff;padding:0 5px;border-radius:1.5em;line-height:auto;cursor:pointer}
 .staff-modal__portrait,.staff-modal__text{height:60vh;margin:0;background-color:#fff}
 .staff-modal__portrait{background-size:cover !important;background-position:top center;background-repeat:no-repeat}
 .staff-modal__text{box-sizing:border-box;overflow-y:auto;padding:45px !important;line-height:1.75}
@@ -1288,7 +1293,8 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .text-lg-left{text-align:left !important}
 .text-lg-right{text-align:right !important}
 .text-lg-center{text-align:center !important}
-.section__slideshow{font-size:2em}
+.section__slideshow{font-size:2em;min-height:75vh}
+.section__slideshow .slideshow__container{min-height:75vh}
 .intro__statement{font-size:1.75em}
 .about__text,.about__side-img{margin-bottom:60px}
 .property__description{font-size:1rem}

@@ -26,13 +26,13 @@ $post = new TimberPost();
 $context['post'] = $post;
 
 
-/** Custom Post Types! */
+/** Custom Post Types! set posts_per_page to -1 for unlimited */
 $propertyArgs = array(
-	'posts_per_page'   => -1,
+	'posts_per_page'   => 8,
 	'post_type' => 'properties'
 );
 $staffArgs = array(
-	'posts_per_page'   => -1,
+	'posts_per_page'   => 8,
 	'post_type' => 'staff'
 );
 $newsArgs = array(

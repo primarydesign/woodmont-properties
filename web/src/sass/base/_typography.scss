@@ -14,10 +14,10 @@ h1, h2, h3 {
 }
 .section__headline {
 	text-align: center;
-	text-transform: uppercase;
+	//text-transform: uppercase;
 	//font-style: italic;
 	font-size: 2.25em;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 }
 .section__subhead {
 	@include boldCaps;
@@ -49,6 +49,6 @@ h1, h2, h3 {
 	color: $dkblue !important;
 	&:hover {
 		background: $gold !important;
-		color: $white !important;		
+		color: $white !important;
 	}
 }

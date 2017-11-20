@@ -23,7 +23,7 @@
 	</div>
 	<!-- Modal -->
 	<div class="modal fade" id="{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog staff-member__modal" role="document">
+		<figure class="modal-dialog staff-member__modal" role="document">
 				<span class="staff-member__modal-exit" >
 					<button type="button" class="close" aria-label="Close" data-dismiss="modal">
 						<span aria-hidden="true">&times;</span>
@@ -46,7 +46,9 @@
 						<span class="staff-member__description">{{ member.content }}</span>
 					</figcaption>
 				</div>
-		</div>
+				<span class="carousel-control-prev-icon"></span>
+				<span class="carousel-control-next-icon"></span>
+		</figure>
 	</div>
 {% endfor %}
 </div>
