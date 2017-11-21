@@ -14,9 +14,14 @@
 }
 .staff__type-label {
 	@extend .portfolio__type;
+	@include fontSmooth;
 	background-color: $ltgray !important;
+	letter-spacing: .05em;
 	&:hover {
 		background-color: $gold !important;
+		color: $white;
+		font-weight: 700;
+		letter-spacing: 0;
 	}
 }
 .staff__type-filter {

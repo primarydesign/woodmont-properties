@@ -1,5 +1,7 @@
 .awards__badges {
-	margin: 3em auto;
+	margin: 1em auto;
+	padding-top: 3em;
+	border-top: 1px solid $gray;
 }
 .section__awards {
 	margin-bottom: 100px;
@@ -7,6 +9,13 @@
 }
 .awards__apply-cta {
   @extend .section__cta-button;
+}
+.awards__headline {
+	@extend .prprty-type__headline;
+}
+.awards__subheading {
+	@extend .award__community-name;
+	font-size: 1em;
 }
 .section__awards-page {
 	margin: 60px auto 100px;

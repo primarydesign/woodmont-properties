@@ -106,4 +106,7 @@
 }
 .property__website  {
 	background: $dkblue;
+	&:hover {
+		border: 1px solid $gold;
+	}
 }

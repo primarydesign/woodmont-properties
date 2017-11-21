@@ -17,6 +17,7 @@
 }
 .career__subheading {
 	margin-top: 0;
+	font-style: italic;
 }
 .career__paragraph {
 	font-size: .9em;
@@ -25,4 +26,27 @@
 .career__apply-cta {
 	@extend .prprty-type__cta;
 	margin-top: 15px;
+}
+.core-value__list {
+	list-style: none;
+	margin: 1em 0 4em;
+	padding: 0;
+	li {
+		margin-bottom: 1em;
+	}
+}
+.core-value__title {
+	font-size: 1.5em;
+	font-weight: 700;
+	color: $dkblue;
+	border-bottom: 1px solid $gray;
+	margin-bottom: 1em;
+}
+.core-value__letter {
+	font-size: 1.5em;
+	font-weight: 700;
+	color: $dkblue;
+}
+.core-value__description {
+	display: inline-block;
 }

@@ -5,9 +5,30 @@
 		<h1 class="hero__headline container">News &amp; Events</h1>
 	</header>
 
-	<div class="container">
+	<div class="news__stories container">
 	{% for post in posts %}
-		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+		<figure class="news__post">
+			{% if post.thumbnail.src %}
+				<a href="{{post.link}}"><img class="news__featured-img" src="{{post.thumbnail.src}}" /></a>
+			{% endif %}
+			<figcaption class="news__post-text">
+				<p class="news__post-date">{{post.date}}</p>
+				<h2 class="news__post-title"><a href="{{post.link}}">{{post.title}}</a></h2>
+				<p class="news__post-preview">{{post.get_preview(35)}}</p>
+			</figcaption>
+		</figure>
+	{% endfor %}
+	{% for post in posts %}
+		<figure class="news__post">
+			{% if post.thumbnail.src %}
+				<a href="{{post.link}}"><img class="news__featured-img" src="{{post.thumbnail.src}}" /></a>
+			{% endif %}
+			<figcaption class="news__post-text">
+				<p class="news__post-date">{{post.date}}</p>
+				<h2 class="news__post-title"><a href="{{post.link}}">{{post.title}}</a></h2>
+				<p class="news__post-preview">{{post.get_preview(35)}}</p>
+			</figcaption>
+		</figure>
 	{% endfor %}
 	</div>
 
