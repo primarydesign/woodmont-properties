@@ -630,7 +630,7 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .section__about .section__headline,.section__about .about__headline{text-align:left !important}
 .section__staff-grid{background:#ededed;padding-bottom:60px;margin-bottom:100px;line-height:0}
 .section__staff-grid .modal{padding:0 5% !important}
-.staff__type-toggles{margin:0 0 10px !important;border:0 !important}
+.staff__type-toggles{margin:0 !important;border:0 !important}
 .staff__type-label{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background-color:#ededed !important;letter-spacing:.05em}
 .staff__type-label:hover{background-color:#c5b358 !important;color:#fefefe;font-weight:700;letter-spacing:0}
 .staff__type-filter{padding:10px}
@@ -753,7 +753,7 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .core-value__list{list-style:none;margin:1em 0 4em;padding:0}
 .core-value__list li{margin-bottom:1em}
 .core-value__title{font-size:1.5em;font-weight:700;color:#084560;border-bottom:1px solid #999;margin-bottom:1em}
-.core-value__letter{font-size:1.5em;font-weight:700;color:#084560}
+.core-value__letter{font-size:1.25em;font-weight:700;color:#084560}
 .core-value__description{display:inline-block}
 .section__hero{background-color:#084560;background-size:cover;background-position:center;padding:3em 0;font-size:.95em;text-align:center}
 .hero__headline{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;color:#fefefe !important}

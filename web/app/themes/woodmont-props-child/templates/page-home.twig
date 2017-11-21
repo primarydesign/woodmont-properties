@@ -8,13 +8,11 @@
 	<div class="container">
 		 {% include "homepage/intro.twig" %}
 	</div>
-	<section class="section__our-company post-type-{{post.post_type}}" id="our-company">
+	<section class="section__our-company" id="our-company">
 		{% include "homepage/about.twig" %}
 	</section>
 	<section class="section__staff-grid">
-		<div class="container">
 			{% include "homepage/staff-grid.twig" %}
-		</div>
 	</section>
 	<section class="section__awards" id="awards">
 			{% include "homepage/awards.twig" %}
@@ -31,6 +29,5 @@
 	<section class="section__careers" id="careers">
 			{% include "homepage/careers.twig" %}
 	</section>
-
 
 {% endblock %}
