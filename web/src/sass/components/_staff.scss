@@ -17,7 +17,7 @@
 	@include fontSmooth;
 	background-color: $ltgray !important;
 	letter-spacing: .05em;
-	&:hover, &:focus, &:active, &.active {
+	&:hover, &:active, &.active {
 		background-color: $gold !important;
 		color: $white;
 		font-weight: 700;

@@ -11,12 +11,7 @@ $(function() {
 
 $('.modal .carousel-control-prev-icon').on('click tap', function() {
 
-});
-
-$('.modal .carousel-control-prev-icon').on('click tap', function() {
-
-    var staffList = $('.staff-thumbnail.visible');
-    console.log(staffList);
+	var staffList = $('.staff-thumbnail.visible');
 
     var idArray = new Array();
 
@@ -24,26 +19,69 @@ $('.modal .carousel-control-prev-icon').on('click tap', function() {
 
         idArray.push(staffList[i].getAttribute('data-target'));
 
-    }
+    };
 
-    var currentStaffId = $('.modal.show').attr('id');
-    console.log(currentStaffId);
+    var currentStaffId = '#' + $('.modal.show').attr('id');
 
     var currentModal = $('.modal.show');
-    console.log(currentModal);
 
     var currentIndex = idArray.indexOf(currentStaffId);
-    console.log(currentIndex);
 
     var newIndex = currentIndex - 1;
-    console.log(newIndex);
+
+    var maxIndex = idArray.length - 1;
+
+    if(newIndex < 0) {
+    	newIndex = maxIndex;
+    } else if (newIndex > maxIndex ) {
+    	newIndex = 0;
+    } else {
+
+    };
 
     var newItemId = idArray[newIndex];
-    console.log(newItemId);
 
-    currentModal.removeClass('show');
+    currentModal.modal('hide');
 
-    $(newItemId).addClass('show');
+    $(newItemId).modal('show');
+
+});
+
+$('.modal .carousel-control-next-icon').on('click tap', function() {
+
+    var staffList = $('.staff-thumbnail.visible');
+
+    var idArray = new Array();
+
+    for (i = 0; i < staffList.length; i++) {
+
+        idArray.push(staffList[i].getAttribute('data-target'));
+
+    };
+
+    var currentStaffId = '#' + $('.modal.show').attr('id');
+
+    var currentModal = $('.modal.show');
+
+    var currentIndex = idArray.indexOf(currentStaffId);
+
+    var newIndex = currentIndex + 1;
+
+    var maxIndex = idArray.length - 1;
+
+    if(newIndex < 0) {
+    	newIndex = maxIndex;
+    } else if (newIndex > maxIndex ) {
+    	newIndex = 0;
+    } else {
+
+    };
+
+    var newItemId = idArray[newIndex];
+
+    currentModal.modal('hide');
+
+    $(newItemId).modal('show');
 
 });
 

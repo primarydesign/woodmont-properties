@@ -20,7 +20,7 @@
 				</div>
 			</section>
 			<section class="section__about section__about--history row justify-content-center">
-				<div class="col-lg-4 col-md-6">
+				<div class="col-lg-4 col-md-6" data-target="#modal__video" data-toggle="modal">
 					<img class="about__side-img rounded" src="{{theme.path}}/assets/img/history-of-woodmont-properties.jpg">
 				</div>
 				<div class="about__text col-lg-6 col-md-6">
@@ -30,7 +30,22 @@
 					<div class="collapse" id="collapseHistory">
 						<p class="about__paragraph">Under the leadership of our CEO, Eric Witmondt, Woodmont has become one of the leading regional developers with a diverse portfolio of residential and commercial properties. Eric was instrumental in growing the company by expanding the range, scale and locations of development.</p>
 					</div>
-
+				</div>
+				<div class="modal fade" id="modal__video" tabindex="-1" role="dialog" aria-hidden="true">
+					<figure class="modal-dialog staff-member__modal" role="document">
+							<span class="staff-member__modal-exit" >
+								<button type="button" class="close" aria-label="Close" data-dismiss="modal">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</span>
+							<div class="row no-gutters">
+								<div class="staff-modal__portrait col-sm-5">
+								</div>
+								<figcaption class="staff-modal__text col-sm-7">
+									Video Goes Here
+								</figcaption>
+							</div>
+					</figure>
 				</div>
 			</section>
 			<section class="section__about section__about--what-we-do row justify-content-center">
