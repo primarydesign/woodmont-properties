@@ -1,7 +1,7 @@
 <div class="container">
 	<h2 class="section__headline">Our Portfolio</h2>
 	<ul class="portfolio__type-toggles row" role="group">
-			<li class="portfolio__type portfolio__type--dropdown col-lg-3 col-6">
+			<li class="portfolio__type LuxuryApartment portfolio__type--dropdown col-lg-3 col-6">
 				<span class="portfolio__type-label" id="btnGroupApartments" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="group">Luxury Apartments</span>
 				<div class="dropdown-menu" aria-labelledby="btnGroupApartments">
 					<a class="dropdown-item" href="">View All</a>
@@ -10,13 +10,13 @@
 					<a class="dropdown-item" href="#">Past Accomplishments</a>
 				</div>
 			</li>
-			<li class="portfolio__type col-lg-3 col-6">
+			<li class="portfolio__type LuxuryHome col-lg-3 col-6">
 				<span class="portfolio__type-label">Luxury Homes</span>
 			</li>
-			<li class="portfolio__type col-lg-3 col-6">
+			<li class="portfolio__type Industrial col-lg-3 col-6">
 				<span class="portfolio__type-label">Industrial</span>
 			</li>
-			<li class="portfolio__type portfolio__type--dropdown col-lg-3 col-6">
+			<li class="portfolio__type OfficeRetail portfolio__type--dropdown col-lg-3 col-6">
 				<span class="portfolio__type-label" id="btnGroupOffice" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Office/Retail</span>
 				<div class="dropdown-menu" aria-labelledby="btnGroupOffice">
 					<a class="dropdown-item" href="">View All</a>
@@ -29,7 +29,7 @@
 	<section id="portfolio__grid">
 		<ul class="portfolio__thumbnails row">
 			{% for property in properties %}
-			<div class="panel {{property.property_type}} {{property.currnet_status|replace({'.': "", ' ': "", ',': "", '-': ""}) }}">
+			<div class="panel {{property.property_type}} {{property.currnet_status|replace({'.': "", ' ': "", ',': "", '-': "", '/': ""}) }}">
 				<article class="property--selected collapse" id="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}" role="tabpanel" aria-labelledby="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}">
 					{% if property.award_winner %}
 						<a class="property__award-badge" href="./awards">
@@ -86,8 +86,8 @@
 					</ul>
 				</article>
 			</div>
-			<li class="portfolio__thumbnail thumb col-lg-3 col-md-4 col-6" style="background-image:url({{ property.thumbnail.src }})" data-toggle="collapse" data-target="#{{ property.post_title|replace({'.': "", ' ': "", ',': ""}) }}" aria-expanded="false" aria-controls="collapseExample" data-parent="#portfolio__grid">
-				<div class="portfolio-thumbnail__text {{ property.current_status|replace({'.': "", ' ': "", ',': ""}) }}">
+			<li class="portfolio__thumbnail {{ property.property_type|replace({'.': "", ' ': "", ',': ""}) }} col-lg-3 col-md-4 col-6" style="background-image:url({{ property.thumbnail.src }})" data-toggle="collapse" data-target="#{{ property.post_title|replace({'.': "", ' ': "", ',': ""}) }}" aria-expanded="false" aria-controls="collapseExample" data-parent="#portfolio__grid">
+				<div class="portfolio-thumbnail__text">
 					<span class="portfolio-thumbnail__name">{{ property.title }}</span>
 					<span class="portfolio-thumbnail__place">{{ property.city_state }}</span>
 				</div>

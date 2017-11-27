@@ -65,3 +65,33 @@ $("a.portfolio__next-button").on('click tap', function() {
       $(newPropertyId).collapse('show');
 
     });
+
+    $('li.portfolio__type').on('click tap', function() {
+
+        $('li.portfolio__type').removeClass('active');
+        $(this).addClass('active');
+
+        var currentFilter = $(this).attr('class');
+        var addVisibles = function(name) {
+            $('.portfolio__thumbnail').removeClass('visible');
+            $('.portfolio__thumbnail.' + name).addClass('visible');
+        };
+
+        var createArray = function(name) {
+            var domElements = $('.portfolio__thumbnail.' + name);
+        };
+
+        if (currentFilter.indexOf('LuxuryApartment') !== -1) {
+            addVisibles('LuxuryApartment');
+        } else if (currentFilter.indexOf('LuxuryHome') !== -1) {
+            addVisibles('LuxuryHome');
+        } else if (currentFilter.indexOf('Industrial') !== -1) {
+            addVisibles('Industrial');
+        } else if (currentFilter.indexOf('OfficeRetail') !== -1) {
+            addVisibles('OfficeRetail');
+        } else if (currentFilter.indexOf('all') !== -1) {
+            $('.portfolio__thumbnail').addClass('visible');
+        } else {
+            return false;
+        }
+    });

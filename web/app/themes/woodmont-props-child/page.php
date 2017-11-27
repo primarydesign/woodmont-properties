@@ -28,7 +28,7 @@ $context['post'] = $post;
 
 /** Custom Post Types! set posts_per_page to -1 for unlimited */
 $propertyArgs = array(
-	'posts_per_page'   => 8,
+	'posts_per_page'   => -1,
 	'post_type' => 'properties'
 );
 $staffArgs = array(

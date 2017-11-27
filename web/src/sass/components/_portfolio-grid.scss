@@ -49,7 +49,7 @@
 	text-align: center;
 	font-size: .9em;
 	background: #fff ;
-	&:hover  {
+	&:hover, &.active  {
 		background: $ltgray;
 	}
 }
@@ -67,7 +67,6 @@
 
 }
 .portfolio__thumbnail {
-	display: flex;
 	flex-flow: column-reverse;
 	cursor: pointer;
 	height: 250px;
@@ -83,6 +82,12 @@
 		padding: 0 5px !important;
 		height: 300px;
 	}
+}
+.portfolio__thumbnail {
+	display: none;
+}
+.portfolio__thumbnail.visible {
+	display: flex;
 }
 .portfolio-thumbnail__text {
 	display: flex;
