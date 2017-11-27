@@ -17,7 +17,7 @@
 	@include fontSmooth;
 	background-color: $ltgray !important;
 	letter-spacing: .05em;
-	&:hover {
+	&:hover, &:focus, &:active, &.active {
 		background-color: $gold !important;
 		color: $white;
 		font-weight: 700;
@@ -27,8 +27,12 @@
 .staff__type-filter {
 	 @extend .portfolio__type-label;
 	 padding: 10px;
+	 line-height: 1;
 }
 .staff-thumbnail {
+	display: none;
+}
+.staff-thumbnail.visible {
 	display: flex;
 }
 .staff-thumbnail__portrait {

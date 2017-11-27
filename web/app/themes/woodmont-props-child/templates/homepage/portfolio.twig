@@ -30,7 +30,7 @@
 
 		{% for property in properties %}
 
-		<div id="panel" class="panel">
+		<div class="panel {{property.property_type}} {{property.currnet_status|replace({'.': "", ' ': "", ',': "", '-': ""}) }}}}">
 			<article class="property--selected collapse" id="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}" role="tabpanel" aria-labelledby="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}">
 				{% if property.award_winner %}
 					<a class="property__award-badge" href="./awards">

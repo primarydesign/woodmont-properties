@@ -32,7 +32,7 @@ $propertyArgs = array(
 	'post_type' => 'properties'
 );
 $staffArgs = array(
-	'posts_per_page'   => 8,
+	'posts_per_page'   => -1,
 	'post_type' => 'staff'
 );
 $newsArgs = array(

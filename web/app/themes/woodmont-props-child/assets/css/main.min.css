@@ -632,9 +632,10 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .section__staff-grid .modal{padding:0 5% !important}
 .staff__type-toggles{margin:0 !important;border:0 !important}
 .staff__type-label{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background-color:#ededed !important;letter-spacing:.05em}
-.staff__type-label:hover{background-color:#c5b358 !important;color:#fefefe;font-weight:700;letter-spacing:0}
-.staff__type-filter{padding:10px}
-.staff-thumbnail{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+.staff__type-label:hover,.staff__type-label:focus,.staff__type-label:active,.staff__type-label.active{background-color:#c5b358 !important;color:#fefefe;font-weight:700;letter-spacing:0}
+.staff__type-filter{padding:10px;line-height:1}
+.staff-thumbnail{display:none}
+.staff-thumbnail.visible{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 .staff-thumbnail__portrait{position:relative;display:inline-block;background-position:center 25%;margin:0;width:100%;height:300px}
 .staff-thumbnail:hover .staff-thumbnail__text{height:100%}
 .staff-thumbnail__text{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;text-align:center;position:absolute;width:100%;bottom:0;box-sizing:border-box;padding:10px;background-color:rgba(17,68,107,0.8);-webkit-transition:height .3s ease-out;transition:height .3s ease-out;height:35%;cursor:pointer}
