@@ -27,16 +27,15 @@
 			</li>
 	</ul>
 	<section id="portfolio__grid">
-
-		{% for property in properties %}
-
-		<div class="panel {{property.property_type}} {{property.currnet_status|replace({'.': "", ' ': "", ',': "", '-': ""}) }}}}">
-			<article class="property--selected collapse" id="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}" role="tabpanel" aria-labelledby="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}">
-				{% if property.award_winner %}
-					<a class="property__award-badge" href="./awards">
-						<img src="{{theme.path}}/assets/img/icon_award-badge.svg">
-					</a>
-				{% endif %}
+		<ul class="portfolio__thumbnails row">
+			{% for property in properties %}
+			<div class="panel {{property.property_type}} {{property.currnet_status|replace({'.': "", ' ': "", ',': "", '-': ""}) }}">
+				<article class="property--selected collapse" id="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}" role="tabpanel" aria-labelledby="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}">
+					{% if property.award_winner %}
+						<a class="property__award-badge" href="./awards">
+							<img src="{{theme.path}}/assets/img/icon_award-badge.svg">
+						</a>
+					{% endif %}
 					{% if property.property_photos %}
 						<div id="galleryExampleIndicators" class="carousel slide" data-ride="carousel">
 							<ol class="carousel-indicators">
@@ -68,7 +67,10 @@
 					{% endif %}
 					<span class="property__status">{{ property.current_status }}</span>
 					<ul class="property__specs">
+
 						<a class="portfolio__next-button"> > </a>
+						<a class="portfolio__prev-button"> < </a>
+
 						<li><h3 class="property__name">{{ property.title }}</h3></li>
 						<li class="property__address">{% if property.street_address %}{{property.street_address}}, {% endif %}{{ property.city_state }}</li>
 						<li class="property__details">{% if property.details %}{{ property.details }}{% endif %}</li>
@@ -82,17 +84,16 @@
 						</li>
 						<li><span class="property__description">{{ property.content }}</span></li>
 					</ul>
-			</article>
-		</div>
-		{% endfor %}
-		<ul class="portfolio__thumbnails row">
-			{% for counter, thumbmails in properties %}
-				<li class="portfolio__thumbnail thumb{{counter+1}} col-lg-3 col-md-4 col-6" style="background-image:url({{ thumbmails.thumbnail.src }})" data-toggle="collapse" data-target="#{{ thumbmails.post_title|replace({'.': "", ' ': "", ',': ""}) }}" aria-expanded="false" aria-controls="collapseExample" data-parent="#portfolio__grid">
-					<div class="portfolio-thumbnail__text {{ thumbmails.current_status|replace({'.': "", ' ': "", ',': ""}) }}">
-						<span class="portfolio-thumbnail__name">{{ thumbmails.title }}</span>
-						<span class="portfolio-thumbnail__place">{{ thumbmails.city_state }}</span>
-					</div>
-				</li>
+				</article>
+			</div>
+			<li class="portfolio__thumbnail thumb col-lg-3 col-md-4 col-6" style="background-image:url({{ property.thumbnail.src }})" data-toggle="collapse" data-target="#{{ property.post_title|replace({'.': "", ' ': "", ',': ""}) }}" aria-expanded="false" aria-controls="collapseExample" data-parent="#portfolio__grid">
+				<div class="portfolio-thumbnail__text {{ property.current_status|replace({'.': "", ' ': "", ',': ""}) }}">
+					<span class="portfolio-thumbnail__name">{{ property.title }}</span>
+					<span class="portfolio-thumbnail__place">{{ property.city_state }}</span>
+				</div>
+			</li>
+
+
 			{% endfor %}
 		</ul>
 	</section>

@@ -697,7 +697,7 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .property__award-badge{position:absolute;right:5%;z-index:2;width:15%;max-width:125px}
 .property__featured-img{width:100%;margin-bottom:0;padding:0}
 .property__status{display:block;margin:0 0 2rem 0;padding:.75em 1rem;font-size:1rem;letter-spacing:1px;color:#fff;text-transform:uppercase;background:#084560}
-.portfolio__next-button{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;float:right;color:#084560;font-size:2rem;padding-right:1rem;cursor:pointer}
+.portfolio__prev-button,.portfolio__next-button{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;float:right;color:#084560;font-size:2rem;padding-right:1rem;cursor:pointer}
 .property__name{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin:0 0 .25em 0;font-size:1.85rem;line-height:1.2;letter-spacing:0}
 .property__specs{list-style:none;text-align:left;padding:0 15px;font-size:1rem;letter-spacing:.02rem;margin:0}
 .property__address{margin-bottom:.25em;font-family:"PT Serif",serif;color:#084560;text-transform:none;font-size:1.25rem;display:block;font-weight:normal}

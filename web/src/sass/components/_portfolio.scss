@@ -37,7 +37,7 @@
 	.collapsing {}
 	.show {}
 }
-.portfolio__next-button {
+.portfolio__prev-button, .portfolio__next-button  {
 	@include boldCaps;
 	@include fontSmooth;
 	float: right;
@@ -46,6 +46,7 @@
 	padding-right: 1rem;
 	cursor: pointer;
 }
+
 .property__name {
 	@include boldCaps;
 	@include fontSmooth;
