@@ -6,10 +6,6 @@
   h2, h3, h4, p, a {
     color: $white;
   }
-  .read-more {
-    font-family: $serif;
-    font-style: italic;
-  }
   .section__cta-button {
     @extend .career__apply-cta;
   }
@@ -28,11 +24,33 @@
   @extend .section__subhead;
   color: $white;
   font-size: 1rem;
+  a {
+    text-decoration: none;
+    &:hover{ text-decoration: underline; }
+  }
 }
-
-
+.news__home-post-title, .news__home-post-preview {
+  display: inline;
+  p {
+    font-size: .9em;
+    display: inline;
+  }
+}
+.news__read-more {
+  display: block;
+  margin: .5em 0 1em;
+  padding-bottom: 1em;
+  font-family: $serif;
+  font-style: italic;
+  line-height: 1em;
+  a {
+    text-decoration: none;
+    &:hover{ text-decoration: underline; }
+  }
+}
 .news__stories {
   margin: 2em auto;
+  text-align: center;
 }
 .news__post {
   @include fontSmooth;
@@ -42,12 +60,19 @@
   min-height: 350px;
   background: $ltgray;
   vertical-align: top;
+  text-align: left;
   padding: 0;
   margin: 0 .5em 1em;
   border-radius: 3px;
   a {
     color: $dkblue;
     text-decoration: none;
+  }
+  @include media-breakpoint-only(sm) {
+      max-width: 235px;
+  }
+  @include media-breakpoint-only(md) {
+      max-width: 325px;
   }
 }
 .news__featured-img {

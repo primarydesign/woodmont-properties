@@ -1,8 +1,3 @@
-$(function() {
-    $('li.staff__type-label.principals').click();
-});
-
-
 $('.modal .carousel-control-prev-icon').on('click tap', function() {
 
 	var staffList = $('.staff-thumbnail.visible');
@@ -79,6 +74,9 @@ $('.modal .carousel-control-next-icon').on('click tap', function() {
 
 });
 
+$(function() {
+    $('li.staff__type-label.principals').click();
+});
 
 $('li.staff__type-label').on('click tap', function() {
 

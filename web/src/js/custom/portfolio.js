@@ -66,6 +66,10 @@ $("a.portfolio__next-button").on('click tap', function() {
 
     });
 
+    $(function() {
+        $('li.portfolio__type.LuxuryApartment').click();
+    });
+
     $('li.portfolio__type').on('click tap', function() {
 
         $('li.portfolio__type').removeClass('active');

@@ -3,7 +3,21 @@
   <h3 class="news__subhead">Recent Stories</h3>
 
   {% for story in news %}
-    <h4 class="news__home-post"><span class="news__home-post-title">{{story.title}}</span> - {{story.get_preview(25)}}</h4>
+    <h4 class="news__home-post-title">
+      {% if story.external_link %}
+        <a href="{{story.external_link}}" target="_blank">
+      {% else %}
+        <a href="{{story.link}}">
+      {% endif %}{{story.title}}</a></h4>
+        <span class="news__home-post-preview"> &mdash; {{story.content(35)}}
+      <span class="news__read-more">
+        {% if story.external_link %}
+          <a href="{{story.external_link}}" target="_blank">
+        {% else %}
+          <a href="{{story.link}}">
+        {% endif %}
+        Read More</a>
+      </span>
   {% endfor %}
 
   <a class="section__cta-button section__cta-button--inverted" href="./news">See All News</a>

@@ -9,24 +9,56 @@
 	{% for post in posts %}
 		<figure class="news__post">
 			{% if post.thumbnail.src %}
-				<a href="{{post.link}}"><img class="news__featured-img" src="{{post.thumbnail.src}}" /></a>
+				{% if post.external_link %}
+					<a href="{{post.external_link}}" target="_blank">
+				{% else %}
+					<a href="{{post.link}}">
+				{% endif %}
+				<img class="news__featured-img" src="{{post.thumbnail.src}}" /></a>
 			{% endif %}
 			<figcaption class="news__post-text">
 				<p class="news__post-date">{{post.date}}</p>
-				<h2 class="news__post-title"><a href="{{post.link}}">{{post.title}}</a></h2>
-				<p class="news__post-preview">{{post.get_preview(35)}}</p>
+				<h2 class="news__post-title">
+					{% if post.external_link %}
+						<a href="{{post.external_link}}" target="_blank">
+					{% else %}
+						<a href="{{post.link}}">
+					{% endif %}
+					{{post.title}}</a></h2>
+				<span class="news__post-preview">{{post.content(35)}}</span>
+				{% if post.external_link %}
+					<a class="news__read-more" href="{{post.external_link}}" target="_blank">Published by {{post.publisher}}</a>
+				{% else %}
+					<a class="news__read-more" href="{{post.link}}">Read More</a>
+				{% endif %}
 			</figcaption>
 		</figure>
 	{% endfor %}
 	{% for post in posts %}
 		<figure class="news__post">
 			{% if post.thumbnail.src %}
-				<a href="{{post.link}}"><img class="news__featured-img" src="{{post.thumbnail.src}}" /></a>
+				{% if post.external_link %}
+					<a href="{{post.external_link}}" target="_blank">
+				{% else %}
+					<a href="{{post.link}}">
+				{% endif %}
+				<img class="news__featured-img" src="{{post.thumbnail.src}}" /></a>
 			{% endif %}
 			<figcaption class="news__post-text">
 				<p class="news__post-date">{{post.date}}</p>
-				<h2 class="news__post-title"><a href="{{post.link}}">{{post.title}}</a></h2>
-				<p class="news__post-preview">{{post.get_preview(35)}}</p>
+				<h2 class="news__post-title">
+					{% if post.external_link %}
+						<a href="{{post.external_link}}" target="_blank">
+					{% else %}
+						<a href="{{post.link}}">
+					{% endif %}
+					{{post.title}}</a></h2>
+				<span class="news__post-preview">{{post.content(35)}}</span>
+				{% if post.external_link %}
+					<a class="news__read-more" href="{{post.external_link}}" target="_blank">Published by {{post.publisher}}</a>
+				{% else %}
+					<a class="news__read-more" href="{{post.link}}">Read More</a>
+				{% endif %}
 			</figcaption>
 		</figure>
 	{% endfor %}

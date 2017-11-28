@@ -72,6 +72,10 @@ $("a.portfolio__next-button").on('click tap', function() {
 
     });
 
+    $(function() {
+        $('li.portfolio__type.LuxuryApartment').click();
+    });
+
     $('li.portfolio__type').on('click tap', function() {
 
         $('li.portfolio__type').removeClass('active');
@@ -101,11 +105,6 @@ $("a.portfolio__next-button").on('click tap', function() {
             return false;
         }
     });
-
-$(function() {
-    $('li.staff__type-label.principals').click();
-});
-
 
 $('.modal .carousel-control-prev-icon').on('click tap', function() {
 
@@ -183,6 +182,9 @@ $('.modal .carousel-control-next-icon').on('click tap', function() {
 
 });
 
+$(function() {
+    $('li.staff__type-label.principals').click();
+});
 
 $('li.staff__type-label').on('click tap', function() {
 

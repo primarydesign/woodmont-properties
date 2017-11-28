@@ -1,0 +1,16 @@
+.four-o-four__nav-menu {
+  list-style: none;
+  text-align: center;
+  margin: 0 0 100px 0;
+  padding: 0;
+}
+.four-o-four__nav-menu-item {
+  font-style: italic;
+  font-family: $serif;
+  font-size: 1.75em;
+  line-height: 2em;
+  a {
+    text-decoration: none;
+    color: $dkblue;
+  }
+}

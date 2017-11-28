@@ -22,7 +22,6 @@
 		}
 	}
 	.carousel-indicators {
-    bottom: -45px;
 		li {
 			height: 15px;
 			width: 15px;
@@ -76,9 +75,9 @@
 	@include boldCaps;
 	@include fontSmooth;
 	display: inline-block;
-	width: 100%;
+	width: 90%;
 	padding: 2em;
-	margin: 1em 1em 0 0;
+	margin: 3em auto 0;
 	font-size: .75rem;
 	line-height: 0;
 	text-align: center;

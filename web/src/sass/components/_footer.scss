@@ -4,8 +4,42 @@
 	background: $dkblue;
 	border-top: 1px solid #406988;
 	text-align: center;
+	@include media-breakpoint-up(sm) {
+			display: flex;
+			justify-content: space-between;
+	}
+	@include media-breakpoint-only(md) {
+	}
+}
+.footer__nav {
+	@include media-breakpoint-up(sm) {
+		margin-left: 1em;
+	}
+}
+.footer__nav-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 1em 0;
+	@include media-breakpoint-up(sm) {
+		margin: 0;
+	}
+}
+.footer__nav-item {
+	font-size: .85em;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	@include media-breakpoint-up(sm) {
+		display: inline;
+	}
+}
+.footer__nav-link {
+	display: inline-block;
+	color: $white;
+	padding: 1em;
+	text-decoration: none;
 }
 .footer__copyright {
 	font-size: .85em;
 	color: #fff;
+	padding: 1em;
 }
