@@ -46,6 +46,7 @@ $(function() {
     $('li.portfolio__type.LuxuryApartment').click();
 });
 $('li.portfolio__type').on('click tap', function() {
+    $('.property--selected').collapse('hide');
     $('li.portfolio__type').removeClass('active');
     $(this).addClass('active');
     var currentFilter = $(this).attr('class');
