@@ -19,12 +19,6 @@
 }
 .section__awards-page {
 	margin: 60px auto 100px;
-	.section__headline {
-		text-align: left;
-		@include boldCaps;
-		font-weight: 700;
-		line-height: 1.25;
-	}
 }
 .award__community-name {
 	@include boldCaps;

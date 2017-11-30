@@ -2,7 +2,7 @@
 .section__news {
   @include fontSmooth;
   background: $dkblue;
-  padding: 100px 0;
+  padding: 100px 0 200px;
   h2, h3, h4, p, a {
     color: $white;
   }
@@ -11,11 +11,7 @@
   }
 }
 .news__subhead {
-  font-family: $serif;
-  font-size: 1.5em;
-  font-style: italic;
-  text-transform: none;
-  font-weight: normal;
+  @extend .prprty-type__headline;
 }
 .news__home-post {
   font-size: .9rem;
