@@ -6,44 +6,48 @@ $('.portfolio__thumbnail').on('click tap', function() {
         }, 'slow');
     }, 10);
 });
+var thumbObj = new Object();
+thumbObj.thumbList = '';
+thumbObj.thumbArray = new Array();
+$(function() {
+    $('li.portfolio__type.LuxuryApartment').click();
+    thumbObj.thumbList = $('li.portfolio__thumbnail.LuxuryApartment');
+    for (i = 0; i < thumbObj.thumbList.length; i++) {
+        thumbObj.thumbArray.push(thumbObj.thumbList[i].getAttribute('data-target'));
+    };
+});
+var rebuildThumbArray = function(name) {
+    thumbObj.thumbArray = new Array();
+    thumbObj.thumbList = $('li.portfolio__thumbnail.' + name);
+    for (i = 0; i < thumbObj.thumbList.length; i++) {
+        thumbObj.thumbArray.push(thumbObj.thumbList[i].getAttribute('data-target'));
+    };
+};
 $("a.portfolio__prev-button").on('click tap', function() {
     var currentPropertyId = '#' + $('.property--selected.show').attr('id');
     var currentSelectedProperty = $('.property--selected.show');
     $('.property--selected').collapse('hide');
-    var thumbList = $('li.portfolio__thumbnail');
-    var thumbArray = new Array();
-    for (i = 0; i < thumbList.length; i++) {
-        thumbArray.push(thumbList[i].getAttribute('data-target'));
-    };
-    var currentIndex = thumbArray.indexOf(currentPropertyId);
+    var currentIndex = thumbObj.thumbArray.indexOf(currentPropertyId);
     var newIndex = currentIndex - 1;
-    var maxIndex = thumbArray.length - 1;
+    var maxIndex = thumbObj.thumbArray.length - 1;
     if (newIndex < 0) {
         newIndex = maxIndex;
     }
-    var newPropertyId = thumbArray[newIndex];
+    var newPropertyId = thumbObj.thumbArray[newIndex];
     $(newPropertyId).collapse('show');
 });
 $("a.portfolio__next-button").on('click tap', function() {
     var currentPropertyId = '#' + $('.property--selected.show').attr('id');
     var currentSelectedProperty = $('.property--selected.show');
     $('.property--selected').collapse('hide');
-    var thumbList = $('li.portfolio__thumbnail');
-    var thumbArray = new Array();
-    for (i = 0; i < thumbList.length; i++) {
-        thumbArray.push(thumbList[i].getAttribute('data-target'));
-    };
-    var currentIndex = thumbArray.indexOf(currentPropertyId);
+    var currentIndex = thumbObj.thumbArray.indexOf(currentPropertyId);
     var newIndex = currentIndex + 1;
-    var maxIndex = thumbArray.length - 1;
+    var maxIndex = thumbObj.thumbArray.length - 1;
     if (newIndex > maxIndex) {
         newIndex = 0;
     }
-    var newPropertyId = thumbArray[newIndex];
+    var newPropertyId = thumbObj.thumbArray[newIndex];
     $(newPropertyId).collapse('show');
-});
-$(function() {
-    $('li.portfolio__type.LuxuryApartment').click();
 });
 $('li.portfolio__type').on('click tap', function() {
     $('.property--selected').collapse('hide');
@@ -59,19 +63,22 @@ $('li.portfolio__type').on('click tap', function() {
     };
     if (currentFilter.indexOf('LuxuryApartment') !== -1) {
         addVisibles('LuxuryApartment');
+        rebuildThumbArray('LuxuryApartment');
     } else if (currentFilter.indexOf('LuxuryHome') !== -1) {
         addVisibles('LuxuryHome');
+        rebuildThumbArray('LuxuryHome');
     } else if (currentFilter.indexOf('Industrial') !== -1) {
         addVisibles('Industrial');
+        rebuildThumbArray('Industrial');
     } else if (currentFilter.indexOf('OfficeRetail') !== -1) {
         addVisibles('OfficeRetail');
+        rebuildThumbArray('OfficeRetail');
     } else if (currentFilter.indexOf('all') !== -1) {
         $('.portfolio__thumbnail').addClass('visible');
     } else {
         return false;
     }
 });
-
 //headroom
 $(function() {
     var myElement = document.querySelector("#mainNav");
