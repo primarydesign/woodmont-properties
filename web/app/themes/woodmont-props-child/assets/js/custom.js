@@ -82,6 +82,10 @@ $(function() {
     var headroom = new Headroom(myElement, { offset: 85 });
     headroom.init();
 });
+//pause video
+$('body').on('hidden.bs.modal', '.modal', function() {
+    $('video').trigger('pause');
+});
 
 // ------------------------------------------
 // Rellax.js - v1.0.0
