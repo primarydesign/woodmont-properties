@@ -71,6 +71,7 @@ $('li.portfolio__type').on('click tap', function() {
         return false;
     }
 });
+
 //headroom
 $(function() {
     var myElement = document.querySelector("#mainNav");
