@@ -61,7 +61,7 @@
 
 .portfolio__thumbnails {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	text-align: center;
 
@@ -111,4 +111,18 @@
 	@include media-breakpoint-up(md) {
 		font-size: .9em;
 	}
+}
+
+
+//headroom
+
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
 }

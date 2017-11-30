@@ -28,7 +28,11 @@
 	</ul>
 	<section id="portfolio__grid">
 		<ul class="portfolio__thumbnails row">
+			
 			{% for property in properties %}
+
+			{# Panel #}
+
 			<div class="panel {{property.property_type|replace({' ': "", '/': ""}) }} {{property.currnet_status|replace({'.': "", ' ': "", ',': "", '-': "" }) }}">
 				<article class="property--selected collapse" id="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}" role="tabpanel" aria-labelledby="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}">
 					{% if property.award_winner %}
@@ -86,6 +90,12 @@
 					</ul>
 				</article>
 			</div>
+
+			{% endfor %}
+
+			{% for property in properties %}
+
+			{# thumb #}
 			<li class="portfolio__thumbnail {{ property.property_type|replace({' ': "", '/': ""}) }} col-lg-3 col-md-4 col-6" style="background-image:url({{ property.thumbnail.src }})" data-toggle="collapse" data-target="#{{ property.post_title|replace({'.': "", ' ': "", ',': ""}) }}" aria-expanded="false" aria-controls="collapseExample" data-parent="#portfolio__grid">
 				<div class="portfolio-thumbnail__text">
 					<span class="portfolio-thumbnail__name">{{ property.title }}</span>
@@ -93,8 +103,8 @@
 				</div>
 			</li>
 
-
 			{% endfor %}
+
 		</ul>
 	</section>
 </div>
