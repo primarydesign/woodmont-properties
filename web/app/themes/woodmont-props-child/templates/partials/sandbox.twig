@@ -1,0 +1,27 @@
+<h4>percentage = 0.5</h4>
+<h4>speed = -1000 / speed = -5</h4>
+<section>
+  <div class="col">
+    <div class="container"><div class="block">#3<span class="rellax" data-rellax-speed="-1000" data-rellax-percentage="0.5">#3</span></div></div>
+  </div>
+  <div class="col">
+    <div class="container"><div class="block">#3<span class="rellax" data-rellax-speed="-5" data-rellax-percentage="0.5">#3</span></div></div>
+  </div>
+</section>
+<script src="{{theme.link}}/assets/js/rellax.min.js"></script>
+<script>
+  // Center all the things!
+  var rellax = new Rellax('.rellax', {
+    center: true
+  });
+</script>
+<script>
+  // Also can pass in optional settings block
+  var rellax = new Rellax('.rellax', {
+    speed: -2,
+    center: false,
+    round: true,
+    vertical: true,
+    horizontal: false
+  });
+</script>

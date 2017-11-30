@@ -8,8 +8,6 @@
 			display: flex;
 			justify-content: space-between;
 	}
-	@include media-breakpoint-only(md) {
-	}
 }
 .footer__nav {
 	@include media-breakpoint-up(sm) {
