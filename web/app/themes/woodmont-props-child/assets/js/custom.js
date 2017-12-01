@@ -96,6 +96,7 @@ $('body').on('hidden.bs.modal', '.modal', function() {
     $('video').trigger('pause');
 });
 
+
 // ------------------------------------------
 // Rellax.js - v1.0.0
 // Buttery smooth parallax library
