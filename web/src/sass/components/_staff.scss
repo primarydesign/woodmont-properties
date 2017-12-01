@@ -1,7 +1,6 @@
 .section__staff-grid {
 	background: $ltgray;
 	padding-bottom: 60px;
- 	margin-bottom: 100px;
 	line-height: 0;
 	.modal {
 		padding: 0 5% !important;
@@ -28,12 +27,6 @@
 	 @extend .portfolio__type-label;
 	 padding: 10px;
 	 line-height: 1;
-}
-.staff-thumbnail {
-	display: none;
-}
-.staff-thumbnail.visible {
-	display: flex;
 }
 .staff-thumbnail__portrait {
 	position: relative;

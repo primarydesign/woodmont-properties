@@ -395,7 +395,7 @@ $('body').on('hidden.bs.modal', '.modal', function() {
 
 $('.modal .carousel-control-prev-icon').on('click tap', function() {
 
-	var staffList = $('.staff-thumbnail.visible');
+	var staffList = $('.staff-thumbnail');
 
     var idArray = new Array();
 
@@ -433,7 +433,7 @@ $('.modal .carousel-control-prev-icon').on('click tap', function() {
 
 $('.modal .carousel-control-next-icon').on('click tap', function() {
 
-    var staffList = $('.staff-thumbnail.visible');
+    var staffList = $('.staff-thumbnail');
 
     var idArray = new Array();
 
@@ -469,34 +469,34 @@ $('.modal .carousel-control-next-icon').on('click tap', function() {
 
 });
 
-$(function() {
-    $('li.staff__type-label.principals').click();
-});
-
-$('li.staff__type-label').on('click tap', function() {
-
-    $('li.staff__type-label').removeClass('active');
-    $(this).addClass('active');
-
-    var currentItem = $(this).attr('class');
-    var addVisible = function(name) {
-        $('.staff-thumbnail').removeClass('visible');
-        $('.staff-thumbnail.' + name).addClass('visible');
-    };
-
-    var createArray = function(name) {
-        var domElements = $('.staff-thumbnail.' + name);
-    };
-
-    if (currentItem.indexOf('principals') !== -1) {
-        addVisible('principals');
-    } else if (currentItem.indexOf('executives') !== -1) {
-        addVisible('executives');
-    } else if (currentItem.indexOf('management') !== -1) {
-        addVisible('management');
-    } else if (currentItem.indexOf('all') !== -1) {
-        $('.staff-thumbnail').addClass('visible');
-    } else {
-        return false;
-    }
-});
+// $(function() {
+//     $('li.staff__type-label.principals').click();
+// });
+//
+// $('li.staff__type-label').on('click tap', function() {
+//
+//     $('li.staff__type-label').removeClass('active');
+//     $(this).addClass('active');
+//
+//     var currentItem = $(this).attr('class');
+//     var addVisible = function(name) {
+//         $('.staff-thumbnail').removeClass('visible');
+//         $('.staff-thumbnail.' + name).addClass('visible');
+//     };
+//
+//     var createArray = function(name) {
+//         var domElements = $('.staff-thumbnail.' + name);
+//     };
+//
+//     if (currentItem.indexOf('principals') !== -1) {
+//         addVisible('principals');
+//     } else if (currentItem.indexOf('executives') !== -1) {
+//         addVisible('executives');
+//     } else if (currentItem.indexOf('management') !== -1) {
+//         addVisible('management');
+//     } else if (currentItem.indexOf('all') !== -1) {
+//         $('.staff-thumbnail').addClass('visible');
+//     } else {
+//         return false;
+//     }
+// });

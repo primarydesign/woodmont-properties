@@ -4,11 +4,11 @@
 	background: url(../img/slideshow-1_woodmont-cove-rendering.jpg) center;
 	background-size: cover;
 	background-repeat: no-repeat;
-	min-height: 85vh;
+	min-height: 93vh;
 	font-size: .95em;
 	text-align: center;
 	.slideshow__container {
-		min-height: 85vh;
+		min-height: 93vh;
 	}
 	@include media-breakpoint-up(sm) {
 		font-size: 1.25em;
@@ -16,10 +16,6 @@
 	}
 	@include media-breakpoint-up(lg) {
 		font-size: 2em;
-		min-height: 75vh;
-		.slideshow__container {
-			min-height: 75vh;
-		}
 	}
 	.carousel-indicators {
 		li {
@@ -51,11 +47,7 @@
 	align-items: left;
 	justify-content: center;
 	margin: 0 5%;
-}
-.slideshow__text--italic {
-	display: block;
-	font-family: $serif;
-	font-style: italic;
+	height: 100vh;
 }
 .slideshow__text {
 	@include fontSmooth;
@@ -63,6 +55,8 @@
 	font-size: 1.85em;
 	line-height: 1.1;
 	text-shadow: 0px 3px 5px rgba(0,0,0,0.5);
+	height: 30vh;
+	flex-direction: column;
 	@include media-breakpoint-up(sm) {
 	}
 }
@@ -74,8 +68,9 @@
 .slideshow__cta-button {
 	@include boldCaps;
 	@include fontSmooth;
-	display: inline-block;
+	display: block;
 	width: 90%;
+	max-width: 250px;
 	padding: 2em;
 	margin: 3em auto 0;
 	font-size: .75rem;
