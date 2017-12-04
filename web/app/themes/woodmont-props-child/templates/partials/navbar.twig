@@ -1,26 +1,46 @@
 <nav class="nav__navbar navbar navbar-expand-md navbar-dark" id="mainNav">
-	<div class="container">
-		<div class="navbar__logo">
-			<a alt="Home" href="/">{% include "svg/woodmont-logo.twig" %}</a>
-		</div>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="#our-company">Our Company</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#properties">Properties</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#careers">Careers</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#contact">Contact Us</a>
-				</li>
-			</ul>
-		</div>
-	</div>
+  <div class="container">
+    <div class="navbar__logo">
+      <a alt="Home" href="/">{% include "svg/woodmont-logo.twig" %}</a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item nav-item--dropdown" id="ourCompanyBtn" aria-haspopup="true" aria-expanded="false" role="group">
+          <a class="nav-link" href="#our-company">Our Company</a>
+
+          <div class="dropdown-menu" aria-labelledby="ourCompanyBtn">
+            <a href="#who-we-are" class="dropdown-item">Who We Are</a>
+            <a href="#history" class="dropdown-item">Storied Story</a>
+            <a href="#what-we-do" class="dropdown-item">What We Do</a>
+            <a href="#leadership" class="dropdown-item">Leadership</a>
+          </div>
+        </li>
+
+        <li class="nav-item nav-item--dropdown" id="propertiesBtn" aria-haspopup="true" aria-expanded="false" role="group">
+          <a class="nav-link" href="#properties">Properties</a>
+
+          <div class="dropdown-menu" aria-labelledby="propertiesBtn">
+            <a href="#portfolio" class="dropdown-item">Portfolio</a>
+          </div>
+        </li>
+
+        <li class="nav-item nav-item--dropdown" id="careersBtn" aria-haspopup="true" aria-expanded="false" role="group">
+          <a class="nav-link" href="#careers">Careers</a>
+
+          <div class="dropdown-menu" aria-labelledby="careersBtn">
+            <a href="#" class="dropdown-item">Core Values</a>
+            <a href="#" class="dropdown-item">Benefits</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>

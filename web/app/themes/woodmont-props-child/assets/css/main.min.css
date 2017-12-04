@@ -605,10 +605,12 @@ h1,h2,h3{font-family:"PT Serif",serif}
 .four-o-four__nav-menu-item{font-style:italic;font-family:"PT Serif",serif;font-size:1.75em;line-height:2em}
 .four-o-four__nav-menu-item a{text-decoration:none;color:#084560}
 .nav__navbar{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;width:100%;z-index:20;padding:15px;background:#084560;color:#fefefe}
-.nav__navbar .navbar-nav{display:block;margin-top:15px}
+.nav__navbar .navbar-nav{display:block;margin-top:15px;position:relative}
 .nav__navbar .navbar-toggler{border:0;border-radius:0}
 .nav__navbar .nav-link{display:block;padding:1em !important;text-align:center;color:#fff !important;font-size:1em;text-decoration:none;text-transform:uppercase;letter-spacing:2px}
 .nav__navbar .nav-link:hover{opacity:.5}
+.nav__navbar .nav-item--dropdown:hover .dropdown-menu{display:block !important;position:absolute;margin-top:85px;top:-36px}
+.nav__navbar #propertiesBtn,.nav__navbar #careersBtn{position:relative}
 .navbar__logo{width:150px;line-height:0}
 #mainNav{position:fixed}
 section#content{border-top:68px solid #084560}
