@@ -9,6 +9,7 @@
     .navbar-nav {
         display: block;
         margin-top: 15px;
+        background: $dkblue !important;
         @include media-breakpoint-up(md) {
             display: inherit;
             margin-top: 0;

@@ -6,9 +6,7 @@
 }
 .about__side-img {
 	width: 100%;
-	@include media-breakpoint-up(sm) {
-		max-width: 400px;
-	}
+
 }
 .about__text, .about__side-img {
 	margin-bottom: 15px;

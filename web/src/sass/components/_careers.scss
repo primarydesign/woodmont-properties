@@ -1,6 +1,16 @@
 .section__careers {
 	padding: 0 0 100px;
 	background-color: $ltgray;
+	.intro__statement {
+		padding: 0 0 2em ;
+		span {
+			display: block;
+			@include boldCaps;
+			font-style: normal;
+			color: $dkblue;
+			font-size: 1.2rem;
+		}
+	}
 }
 .section__careers-page {
 	padding:  60px 0;

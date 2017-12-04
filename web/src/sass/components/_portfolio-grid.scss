@@ -5,6 +5,9 @@
 	border: 1px solid $ltgray;
 	margin: 0 4px 10px;
 	padding: 0;
+	.col-md-3 {
+		max-width: 20%; // five categories, 20% each
+	}
 }
 .portfolio__thumbnails {
 	padding: 0;

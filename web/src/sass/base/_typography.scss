@@ -44,6 +44,12 @@ h1, h2, h3 {
 		background: $gold;
 	}
 }
+.cta__arrow {
+	width: 8px;
+	height: 12px;
+	font-size: 0;
+	margin-left: 12px;
+}
 .section__cta-button--inverted {
 	background: $white !important;
 	color: $dkblue !important;

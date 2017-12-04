@@ -25,6 +25,8 @@ $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
 
+//Get a term by its ID
+$context['term'] = new TimberTerm(6);
 
 /** Custom Post Types! set posts_per_page to -1 for unlimited */
 $propertyArgs = array(

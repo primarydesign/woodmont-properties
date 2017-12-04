@@ -79,6 +79,9 @@ $('li.portfolio__type').on('click tap', function() {
     } else if (currentFilter.indexOf('OfficeRetail') !== -1) {
         addVisibles('OfficeRetail');
         rebuildThumbArray('OfficeRetail');
+    } else if (currentFilter.indexOf('Hospitality') !== -1) {
+        addVisibles('Hospitality');
+        rebuildThumbArray('Hospitality');
     } else if (currentFilter.indexOf('all') !== -1) {
         $('.portfolio__thumbnail').addClass('visible');
     } else {
