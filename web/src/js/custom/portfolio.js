@@ -23,7 +23,7 @@ var rebuildThumbArray = function(name) {
         thumbObj.thumbArray.push(thumbObj.thumbList[i].getAttribute('data-target'));
     };
 };
-$("a.portfolio__prev-button").on('click tap', function() {
+$(".portfolio__prev-button").on('click tap', function() {
     var currentPropertyId = '#' + $('.property--selected.show').attr('id');
     var currentSelectedProperty = $('.property--selected.show');
     $('.property--selected').collapse('hide');
@@ -36,7 +36,7 @@ $("a.portfolio__prev-button").on('click tap', function() {
     var newPropertyId = thumbObj.thumbArray[newIndex];
     $(newPropertyId).collapse('show');
 });
-$("a.portfolio__next-button").on('click tap', function() {
+$(".portfolio__next-button").on('click tap', function() {
     var currentPropertyId = '#' + $('.property--selected.show').attr('id');
     var currentSelectedProperty = $('.property--selected.show');
     $('.property--selected').collapse('hide');

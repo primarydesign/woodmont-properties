@@ -14,9 +14,9 @@
 				{% else %}
 					<a href="{{post.link}}">
 				{% endif %}
-				<img class="news__featured-img" src="{{post.thumbnail.src}}" /></a>
+				<div class="news__featured-img" style="background-image:url({{post.thumbnail.src}})" /></div>
 				{% else %}
-				<div class="news__category-bg"></div>
+				<div class="news__featured-img"/></div>
 			{% endif %}
 			<figcaption class="news__post-text">
 				<p class="news__post-date">{{post.date}}</p>

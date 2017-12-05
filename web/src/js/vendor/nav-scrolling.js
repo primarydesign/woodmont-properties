@@ -6,7 +6,7 @@
 			.not('[href="#collapseHistory"]')
 			.not('[href="#collapseServices"]')
 			.not('[href="#collapseWho"]')
-			.not('[href="#carouselExampleIndicators"]')
+			.not('[href="#newSlide"]')
 
 			.click(function(event) {
 				// On-page links
@@ -27,7 +27,7 @@
 						}, 1000, function() {
 							// Callback after animation
 							// Must change focus?
-							
+
 							// var $target = $(target);
 							// $target.focus();
 							// if ($target.is(":focus")) { // Checking if the target was focused

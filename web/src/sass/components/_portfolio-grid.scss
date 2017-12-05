@@ -115,3 +115,21 @@
 		font-size: .9em;
 	}
 }
+.portfolio-thumbnail__place {
+	letter-spacing: .05em;
+	padding-top: 3px;
+}
+.portfolio-thumbnail__status {
+	padding: 5px 12px;
+	font-size: .725em;
+	line-height: 1.25;
+	text-align: left;
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	background: $ltgray;
+	color: $dkblue;
+	position: absolute;
+	top: 2em;
+	right: 5px;
+	max-width: 75%;
+}

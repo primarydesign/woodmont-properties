@@ -1,4 +1,5 @@
 .section__property-types {
+	background-color: $ltgray;
 }
 .section__prprty-type {
 	@media (min-width: $screen-md) {
@@ -17,14 +18,15 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-color: $ltgray;
-	max-width: 860px;
+	max-width: 800px;
 	@include media-breakpoint-up(sm) {
-		padding: 80px;
+		padding: 50px 80px;
 	}
 }
 .prprty-type__image {
 	flex: 1;
 	min-height: 275px;
+	max-width: 800px;
 	margin: 0;
 	background-color: $dkblue;
 	background-repeat: no-repeat;
@@ -39,6 +41,8 @@
 		display: flex;
 		flex-direction: row-reverse;
 	}
+	background: $white;
+	.prprty-type__intro { background: $white;}
 }
 .prprty-type__intro--apts {}
 .prprty-type__intro--commercial {}
@@ -54,6 +58,7 @@
 .prprty-type__description {
 	@extend .intro__paragraph;
 	margin-bottom: 30px;
+	font-size: .9em ;
 }
 .prprty-type__cta {
   @extend .section__cta-button;

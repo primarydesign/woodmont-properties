@@ -38,9 +38,10 @@
 	@include boldCaps;
 	@include fontSmooth;
 	float: right;
+	height: 25px;
 	color: $dkblue;
 	font-size: 2rem;
-	padding-right: 1rem;
+	padding-left: 2rem;
 	cursor: pointer;
 }
 

@@ -71,8 +71,8 @@
 					<span class="property__status">{{ property.current_status }}</span>
 					<ul class="property__specs">
 
-						<a class="portfolio__next-button"> > </a>
-						<a class="portfolio__prev-button"> < </a>
+						<a><img class="portfolio__next-button" src="{{theme.link}}/assets/img/icon_next-arrow.svg"> </a>
+						<a><img class="portfolio__prev-button" src="{{theme.link}}/assets/img/icon_prev-arrow.svg"> </a>
 
 						<li><h3 class="property__name">{{ property.title }}</h3></li>
 						<li class="property__address">{% if property.street_address %}{{property.street_address}}, {% endif %}{{ property.city_state }}</li>
@@ -96,6 +96,7 @@
 
 			{# thumb #}
 			<li class="portfolio__thumbnail {{ property.property_type|replace({' ': "", '/': ""}) }} col-lg-3 col-md-4 col-6" style="background-image:url({{ property.thumbnail.src }})" data-toggle="collapse" data-target="#{{ property.post_title|replace({'.': "", ' ': "", ',': ""}) }}" aria-expanded="false" aria-controls="collapseExample" data-parent="#portfolio__grid">
+        <span class="portfolio-thumbnail__status">{{ property.current_status }}</span>
 				<div class="portfolio-thumbnail__text">
 					<span class="portfolio-thumbnail__name">{{ property.title }}</span>
 					<span class="portfolio-thumbnail__place">{{ property.city_state }}</span>

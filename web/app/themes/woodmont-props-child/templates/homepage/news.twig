@@ -9,7 +9,7 @@
 				{% else %}
 					<a href="{{post.link}}">
 				{% endif %}
-				<img class="news__featured-img" src="{{post.thumbnail.src}}" /></a>
+				<div class="news__featured-img" style="background-image:url({{post.thumbnail.src}})" /></div>
 			{% endif %}
 			<figcaption class="news__post-text">
 				<p class="news__post-date">{{post.date}}</p>
@@ -29,5 +29,5 @@
 			</figcaption>
 		</figure>
 	{% endfor %}
-  <a class="section__cta-button section__cta-button--inverted" href="./news" style="display:block;max-width:250px;text-align:center">See All News <span class="cta__arrow">&#8594;</span></a>
+  <a class="section__cta-button section__cta-button--inverted" href="./news" style="display:block;max-width:250px;text-align:center">See All News</a>
 </div>

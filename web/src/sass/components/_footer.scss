@@ -40,7 +40,15 @@
 	font-size: .85em;
 	color: #fff;
 	padding: 1em;
+	a {
+		color: $white;
+		text-decoration: none;
+		letter-spacing: 2px;
+	}
 }
 .footer__right-column {
 	margin-bottom: 1em;
+}
+.footer__map {
+	max-width: 200px;
 }

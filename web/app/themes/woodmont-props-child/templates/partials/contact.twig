@@ -1,13 +1,22 @@
 <form id="contact-form" class="section__contact-form container" method="post" action="{{theme.path}}/contact.php" role="form">
     <div class="messages"></div>
     <div class="controls">
-        <span class="row">
-            <span class="footer__right-column col-lg-6 col-md-5">
-              <a target="_blank" href="https://www.google.com/maps/place/Woodmont+Properties/@40.869681,-74.2794034,17z/data=!3m1!4b1!4m5!3m4!1s0x89c3af728c4c7d45:0xa5b128ecdf2d29f3!8m2!3d40.869677!4d-74.2772147">
-                <img class="rounded" src="{{theme.path}}/assets/img/woodmont_map.jpg">
-              </a>
+      <span class="row">
+          <span class="footer__right-column col-lg-6 col-md-5">
+            <ul class="footer__contact-info">
+              <h3 class="footer__headline">Driving Directions</h3>
+              <li><a target="_blank" href="https://www.google.com/maps/place/Woodmont+Properties/@40.869681,-74.2794034,17z/data=!3m1!4b1!4m5!3m4!1s0x89c3af728c4c7d45:0xa5b128ecdf2d29f3!8m2!3d40.869677!4d-74.2772147"><img class="footer__map rounded" src="{{theme.path}}/assets/img/woodmont_map.jpg"></a></li>
+              <li>&nbsp;</li>
+              <h3 class="footer__headline">Woodmont Properties</h3>
+              <li>Greenbrook Executive Center</li>
+              <li>100 Passaic Avenue, Suite 240</li>
+              <li>Fairfield, NJ 07004</li>
+              <li>Phone: 973.487.1777</li>
+              <li>Fax: 973.316.5520</li>
+            </ul>
             </span>
             <span class="footer__left-column col-lg-6 col-md-7">
+                <h3 class="footer__headline">Contact Us</h3>
                 <div class="form-group">
                     <input id="form_name" type="text" name="name" class="form-control" placeholder="Name" required="required" data-error="Name is required.">
                     <div class="help-block with-errors"></div>
