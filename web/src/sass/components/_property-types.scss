@@ -5,6 +5,10 @@
 		display: flex;
 	}
 }
+.prprty-type__lazy-load {
+	min-height: 5px;
+	min-width: 5px;
+}
 .prprty-type__intro, .prprty-type__image {
 	vertical-align: top;
 	@media (min-width: $screen-md) {

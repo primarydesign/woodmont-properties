@@ -97,12 +97,12 @@
 			{% for property in properties %}
 
 			{# thumb #}
-			<li class="portfolio__thumbnail {{ property.property_type|replace({' ': "", '/': ""}) }} col-lg-3 col-md-4 col-6" style="background-image:url({{ property.thumbnail.src }})" data-toggle="collapse" data-target="#{{ property.post_title|replace({'.': "", ' ': "", ',': ""}) }}" aria-expanded="false" aria-controls="collapseExample" data-parent="#portfolio__grid">
+			<div class="portfolio__lazy-load portfolio__thumbnail {{ property.property_type|replace({' ': "", '/': ""}) }} col-lg-3 col-md-4 col-6" data-src="{{property.thumbnail.src}}" data-toggle="collapse" data-target="#{{ property.post_title|replace({'.': "", ' ': "", ',': ""}) }}" aria-expanded="false" aria-controls="collapseExample" data-parent="#portfolio__grid">
 				<div class="portfolio-thumbnail__text">
 					<span class="portfolio-thumbnail__name">{{ property.title }}</span>
 					<span class="portfolio-thumbnail__place">{{ property.city_state }}</span>
 				</div>
-			</li>
+			</div>
 
 			{% endfor %}
 

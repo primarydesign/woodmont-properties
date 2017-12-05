@@ -641,6 +641,7 @@ section#content{border-top:68px solid #084560}
 .staff__type-label:hover,.staff__type-label:active,.staff__type-label.active{background-color:#c5b358 !important;color:#fefefe;font-weight:700;letter-spacing:0}
 .staff__type-filter{padding:10px;line-height:1}
 .staff-thumbnail{display:none}
+.staff__lazy-load{min-width:5px;min-height:5px}
 .staff-thumbnail.visible{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 .staff-thumbnail__portrait{position:relative;display:inline-block;background-position:center 25%;margin:0;width:100%;height:300px}
 .staff-thumbnail:hover .staff-thumbnail__text{height:100%}
@@ -670,6 +671,7 @@ section#content{border-top:68px solid #084560}
 .staff-member__description p{font-size:.8em !important;padding-right:10px}
 .staff-member__department{text-transform:uppercase;letter-spacing:.05em}
 .section__our-company{background:#fefefe}
+.lazy{min-width:5px;min-height:5px}
 .about__side-img{width:100%}
 .about__text,.about__side-img{margin-bottom:15px}
 .about__headline{margin-top:0;line-height:1}
@@ -677,6 +679,7 @@ section#content{border-top:68px solid #084560}
 .link__read-more{display:inline-block;color:#084560;text-transform:uppercase;letter-spacing:1px;text-decoration:none;font-size:.85em;padding-bottom:15px}
 .link__arrow-down{padding:5px;display:inline-block}
 .link__read-more[aria-expanded="true"] .link__arrow-down{-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}
+.prprty-type__lazy-load{min-height:5px;min-width:5px}
 .prprty-type__intro,.prprty-type__image{vertical-align:top}
 .prprty-type__intro{padding:30px;background-repeat:no-repeat;background-size:contain;background-color:#ededed;max-width:860px}
 .prprty-type__image{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;min-height:275px;margin:0;background-color:#084560;background-repeat:no-repeat;background-size:cover;background-position:25% 100%}
@@ -698,6 +701,7 @@ section#content{border-top:68px solid #084560}
 .portfolio__thumbnail{-webkit-box-orient:vertical;-webkit-box-direction:reverse;-webkit-flex-flow:column-reverse;-ms-flex-flow:column-reverse;flex-flow:column-reverse;cursor:pointer;height:250px;background-size:cover;background-repeat:no-repeat;background-clip:content-box;background-position:center;background-color:#ededed;margin-bottom:1px;padding:0 1px 0 0 !important}
 .portfolio__thumbnail{display:none}
 .portfolio__thumbnail.visible{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+.portfolio__lazy-load{min-width:5px;min-height:5px}
 .portfolio-thumbnail__text{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding:10px 0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#fff;background-color:rgba(17,68,107,0.8);-webkit-transition:opacity .3s;transition:opacity .3s}
 .portfolio-thumbnail__name,.portfolio-thumbnail__place{display:block;padding:0 10px 3px;font-size:.8em;line-height:1.2}
 .portfolio-thumbnail__name{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;font-weight:700}

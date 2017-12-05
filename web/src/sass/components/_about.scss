@@ -4,6 +4,10 @@
 .section__services {
 
 }
+.lazy {
+	min-width: 5px;
+	min-height: 5px
+}
 .about__side-img {
 	width: 100%;
 	@include media-breakpoint-up(sm) {

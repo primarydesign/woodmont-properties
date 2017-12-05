@@ -18,7 +18,7 @@
 	<div class="row no-gutters">
 	{% for member in staff %}
 		<div class="staff-thumbnail {{member.job_department}} col-lg-3 col-md-4 col-6" data-toggle="modal" data-target="#{{ member.post_title|replace({'.': "", ' ': "", ',': ""}) }}">
-			<figure class="staff-thumbnail__portrait" style="background-image: url({{ member.thumbnail.src }});background-size:cover;">
+			<figure class="staff__lazy-load staff-thumbnail__portrait" data-src="{{ member.thumbnail.src }}">
 				<figcaption class="staff-thumbnail__text">
 					<h3 class="staff-thumbnail__name">{{ member.title }}</h3>
 					<h4 class="staff-thumbnail__jobtitle">{{ member.job_title }}</h4>

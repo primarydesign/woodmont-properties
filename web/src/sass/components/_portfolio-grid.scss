@@ -89,6 +89,12 @@
 .portfolio__thumbnail.visible {
 	display: flex;
 }
+
+.portfolio__lazy-load {
+	min-width: 5px;
+	min-height: 5px;
+}
+
 .portfolio-thumbnail__text {
 	display: flex;
 	flex-direction: column;

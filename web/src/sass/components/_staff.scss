@@ -32,6 +32,10 @@
 .staff-thumbnail {
 	display: none;
 }
+.staff__lazy-load {
+	min-width: 5px;
+	min-height: 5px;
+}
 .staff-thumbnail.visible {
 	display: flex;
 }
