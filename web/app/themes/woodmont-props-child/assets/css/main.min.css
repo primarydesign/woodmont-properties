@@ -727,6 +727,8 @@ section#content{border-top:68px solid #084560}
 .awards__subheading{font-size:1em}
 .section__awards-page{margin:60px auto 100px}
 .award__community-name,.awards__subheading{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;font-weight:700;letter-spacing:.025em;line-height:1.25;margin:0}
+.award__community-name:hover,.awards__subheading:hover{cursor:pointer}
+.award__community-name:hover:before,.awards__subheading:hover:before{content:'+ '}
 .award__list{list-style:none;padding:1em 0 0}
 .award__list-item{padding:0 0 1em 2em;font-family:"PT Serif",serif;font-style:italic;letter-spacing:.0125em;background-image:url(../img/icon_award.svg);background-repeat:no-repeat;background-size:17px;background-position:0 5px}
 .award__list-item .award__list--details{list-style:circle;padding:1em 0 0 1em}
@@ -979,7 +981,7 @@ section#content{border-top:68px solid #084560}
 .text-sm-center{text-align:center !important}
 .section__slideshow{font-size:1.25em;text-align:left}
 .slideshow__cta-button{width:auto;margin:2em 1em 0 0;padding:1.25em 2em;font-size:1rem}
-.section__header{padding:300px 0 60px 0}
+.section__header{padding:400px 0 60px 0}
 .header__title{font-size:4.5em}
 .staff-thumbnail__portrait{height:375px}
 .staff-thumbnail__text{height:25%}

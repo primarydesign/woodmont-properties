@@ -26,6 +26,12 @@
 	letter-spacing: .025em;
 	line-height: 1.25;
 	margin: 0;
+	&:hover {
+		cursor: pointer;
+	}
+	&:hover:before {
+		content: '+ '
+	}
 }
 .award__list {
 	list-style: none;
