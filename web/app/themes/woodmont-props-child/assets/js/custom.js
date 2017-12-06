@@ -36,7 +36,14 @@ var rebuildThumbArray = function(name) {
         thumbObj.thumbArray.push(thumbObj.thumbList[i].getAttribute('data-target'));
     };
 };
-$(".portfolio__prev-button").on('click tap', function() {
+var narrowThumbArray = function(name) {
+    thumbObj.thumbArray = new Array();
+    thumbObj.thumbList = $('li.portfolio__thumbnail.' + name);
+    for (i = 0; i < thumbObj.thumbList.length; i++) {
+        thumbObj.thumbArray.push(thumbObj.thumbList[i].getAttribute('data-target'));
+    };
+};
+$("a.portfolio__prev-button").on('click tap', function() {
     var currentPropertyId = '#' + $('.property--selected.show').attr('id');
     var currentSelectedProperty = $('.property--selected.show');
     $('.property--selected').collapse('hide');
@@ -49,7 +56,7 @@ $(".portfolio__prev-button").on('click tap', function() {
     var newPropertyId = thumbObj.thumbArray[newIndex];
     $(newPropertyId).collapse('show');
 });
-$(".portfolio__next-button").on('click tap', function() {
+$("a.portfolio__next-button").on('click tap', function() {
     var currentPropertyId = '#' + $('.property--selected.show').attr('id');
     var currentSelectedProperty = $('.property--selected.show');
     $('.property--selected').collapse('hide');
@@ -62,6 +69,10 @@ $(".portfolio__next-button").on('click tap', function() {
     var newPropertyId = thumbObj.thumbArray[newIndex];
     $(newPropertyId).collapse('show');
 });
+var reduceFiltered = function(name) {
+    $('.portfolio__thumbnail').removeClass('visible');
+    $('.portfolio__thumbnail.' + name).addClass('visible');
+};
 $('li.portfolio__type').on('click tap', function() {
     $('.property--selected').collapse('hide');
     $('li.portfolio__type').removeClass('active');
@@ -94,6 +105,14 @@ $('li.portfolio__type').on('click tap', function() {
     } else {
         return false;
     }
+});
+$('li.portfolio__type .dropdown-item').on('click tap', function() {
+    var filteredThumbs = $(this).html().replace(/\s/g, '');
+    console.log(filteredThumbs);
+    setTimeout(function() {
+        reduceFiltered(filteredThumbs);
+        narrowThumbArray(filteredThumbs);
+    }, 10);
 });
 //headroom
 $(function() {
