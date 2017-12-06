@@ -7,6 +7,9 @@
 	padding: 0;
 	.col-md-3 {
 		max-width: 20%; // five categories, 20% each
+		justify-content: center;
+		display: flex;
+		align-items: center;
 	}
 }
 .portfolio__thumbnails {
@@ -129,7 +132,10 @@
 	background: $ltgray;
 	color: $dkblue;
 	position: absolute;
-	top: 2em;
-	right: 5px;
 	max-width: 75%;
+	top: 2em;
+	right: 1px;
+	@include media-breakpoint-up(md) {
+		right: 5px;
+	}
 }

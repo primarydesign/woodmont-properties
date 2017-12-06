@@ -29,8 +29,9 @@
 	&:hover {
 		cursor: pointer;
 	}
+
 	&:hover:before {
-		content: '+ '
+		content: ' + '
 	}
 }
 .award__list {
@@ -38,7 +39,7 @@
 	padding: 1em 0 0;
 }
 .award__list-item {
-	padding: 0 0 1em 2em;
+	padding: 0 1em 1.25em 2em;
 	font-family: $serif;
 	font-style: italic;
   letter-spacing: .0125em;
@@ -49,12 +50,13 @@
 }
 .award__list-item .award__list--details  {
 		list-style: circle;
-		padding: 1em 0 0 1em;
+		padding: 0;
 		li {
 			font-family: $sans;
 			font-size: .85em;
 			line-height: 1.2;
 			font-style: normal;
 			background: none;
+			padding: 1.5em 0 0 .5em;
 		}
 }
