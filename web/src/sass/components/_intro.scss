@@ -28,7 +28,7 @@
 	background: $dkblue;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
+	// background-attachment: fixed;
 	text-shadow: 0px 3px 5px rgba(0,0,0,0.5);
 	@include media-breakpoint-up(sm) {
 			padding: 400px 0 60px 0;
