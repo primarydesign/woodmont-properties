@@ -630,7 +630,7 @@ section#content{border-top:68px solid #084560}
 .intro__headline,.intro__paragraph,.about__paragraph,.prprty-type__description{margin:0;padding:0}
 .intro__headline{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin-bottom:.5em;font-size:2.5em;line-height:1.5;font-family:"PT Serif",serif;font-style:italic;color:#626366}
 .intro__paragraph,.about__paragraph,.prprty-type__description{line-height:2;font-size:.9em;padding:5px 0;margin-bottom:10px}
-.section__header{padding:100px 0 30px 0;background:#084560;background-size:cover;background-repeat:no-repeat;background-attachment:fixed;text-shadow:0 3px 5px rgba(0,0,0,0.5)}
+.section__header{padding:100px 0 30px 0;background:#084560;background-size:cover;background-repeat:no-repeat;text-shadow:0 3px 5px rgba(0,0,0,0.5)}
 .header__title{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#fefefe;font-size:2.5em;line-height:1}
 .header__title,.intro__statement{margin:0;max-width:1000px}
 .intro__statement{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:1.2em;line-height:1.5em;text-align:center;font-style:italic;color:#626366;padding:4em 0 4em;margin:0 auto}
