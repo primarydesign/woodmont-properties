@@ -40,6 +40,6 @@ $postArgs = array(
 );
 
 $context['pagination'] = Timber::get_pagination();
-$context['posts'] = Timber::get_posts($postArgs);
+$context['posts'] = Timber::get_posts();
 
 Timber::render( $templates, $context );

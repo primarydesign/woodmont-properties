@@ -25,6 +25,9 @@ $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
 
+//Get a term by its ID
+$context['term'] = new TimberTerm(6);
+
 /** Custom Post Types! set posts_per_page to -1 for unlimited */
 $propertyArgs = array(
 	'posts_per_page'   => -1,
@@ -41,6 +44,5 @@ $newsArgs = array(
 $context['news'] = Timber::get_posts($newsArgs);
 $context['properties'] = Timber::get_posts($propertyArgs);
 $context['staff'] = Timber::get_posts($staffArgs);
-// $context['careers'] = Timber::get_posts('post_type=careers');
 
 Timber::render( array('page-' . $post->post_name . '.twig',	'page.twig'), $context );
