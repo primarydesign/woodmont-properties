@@ -32,7 +32,8 @@
 					{% else %}
 						<a href="{{post.link}}">
 					{% endif %}
-					{{post.title}}</a></h2>
+					{{post.title}}</a>
+				</h2>
 				<span class="news__post-preview">{{post.content(20)}}</span>
 				{% if post.external_link %}
 					<a class="news__read-more" href="{{post.external_link}}" target="_blank">Published by {{post.publisher}}</a>

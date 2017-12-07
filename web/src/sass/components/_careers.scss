@@ -29,12 +29,13 @@
 	font-weight: 700;
 }
 .career__subheading {
-	margin-top: 0;
+	@extend .prprty-type__headline;
+	margin: 0 0 .5em 0;
 	font-style: italic;
 }
 .career__paragraph {
-	font-size: .9em;
-	line-height: 1.85;
+	@extend .intro__paragraph;
+	margin-bottom: 2em;
 }
 .career__apply-cta {
 	@extend .prprty-type__cta;
