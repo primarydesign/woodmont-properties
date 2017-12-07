@@ -1,11 +1,8 @@
 
 .section__news {
   @include fontSmooth;
-  background: $dkblue;
+  background: $ltgray;
   padding: 100px 0 200px;
-  h2, h3, h4, p, a {
-    color: $white;
-  }
   .section__cta-button {
     @extend .career__apply-cta;
   }
@@ -18,7 +15,6 @@
 }
 .news__home-post-title {
   @extend .section__subhead;
-  color: $white;
   font-size: 1rem;
   a {
     text-decoration: none;
@@ -36,18 +32,18 @@
   color: $dkgray !important;
   display: block;
   margin: .5em 0 1em;
+  font-size: .85em;
+  letter-spacing: .025em;
   padding-bottom: 1em;
-  font-family: $serif;
-  font-style: italic;
   line-height: 1em;
-  a {
-    text-decoration: none;
-    &:hover{ text-decoration: underline; }
-  }
+  text-decoration: none;
 }
 .news__stories {
   margin: 2em auto;
   text-align: center;
+  .news__post {
+    background: $ltgray;
+  }
 }
 .news__post {
   @include fontSmooth;
@@ -56,7 +52,7 @@
   width: 95%;
   max-width: 350px;
   min-height: 425px;
-  background: $ltgray;
+  background: $white;
   vertical-align: top;
   text-align: left;
   padding: 0;

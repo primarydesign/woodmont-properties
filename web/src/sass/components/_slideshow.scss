@@ -20,13 +20,20 @@
 	.carousel-indicators {
 		bottom: 10%;
 		li {
-			height: 15px;
-			width: 15px;
+			height: 20px;
+	    width: 20px;
+	    border-radius: 10px;
 		}
 	}
 	.carousel-control-prev, .carousel-control-next {
 		width: 10% !important;
 		opacity: 1;
+	}
+	.carousel-control-prev-icon, .carousel-control-next-icon {
+		@include media-breakpoint-up(lg) {
+			width: 30px;
+			height: 30px;
+		}
 	}
 }
 .slideshow__borders {
@@ -82,7 +89,7 @@
 	text-decoration: none;
 	box-shadow: 0px 3px 5px rgba(0,0,0,0.5);
 	text-shadow: none;
-	background-image: url(../img/icon_next-arrow.svg);
+	background-image: url(../img/icons/icon_next-arrow.svg);
 	background-repeat: no-repeat;
 	background-position:  90% 50%;
 	background-size: 8px;

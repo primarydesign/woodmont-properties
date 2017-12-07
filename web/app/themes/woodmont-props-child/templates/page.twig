@@ -4,15 +4,15 @@
 
 	<section class="section__our-company post-type-{{post.post_type}}" id="post-{{post.ID}}">
 		{% if post.thumbnail.src %}
-		<section class="section__header" style="background-position:center;background-attachment:inherit;background-image:url('{{post.thumbnail.src}});">
+		<section class="page__header" style="background-position:center;background-attachment:inherit;background-image:url('{{post.thumbnail.src}});">
 			{% else %}
-		<section class="section__header" style="background-image:url('{{theme.path}}/assets/img/header-image_our-company.jpg')">
+		<section class="page__header" style="background-image:url('{{theme.path}}/assets/img/header-image_our-company.jpg')">
 		{% endif %}
 			<div class="container">
 				<h1 class="header__title">{{post.title}}</h1>
 			</div>
 		</section>
-		<article class="container" style="padding:100px 0;">
+		<article class="container" style="padding-top:50px;padding-bottom:50px;">
 			<p class="intro__paragraph">{{post.content}}</p>
 		</article>
 	</section>

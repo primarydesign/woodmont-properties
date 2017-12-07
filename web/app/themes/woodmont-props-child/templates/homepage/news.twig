@@ -2,32 +2,37 @@
   <h2 class="section__headline">News &amp; Events</h2>
   <h3 class="news__subhead">Recent Stories</h3>
   {% for post in news %}
-		<figure class="news__post">
-			{% if post.thumbnail.src %}
-				{% if post.external_link %}
-					<a href="{{post.external_link}}" target="_blank">
-				{% else %}
-					<a href="{{post.link}}">
-				{% endif %}
-				<div class="news__featured-img" style="background-image:url({{post.thumbnail.src}})" /></div>
-			{% endif %}
-			<figcaption class="news__post-text">
-				<p class="news__post-date">{{post.date}}</p>
-				<h2 class="news__post-title">
-					{% if post.external_link %}
-						<a href="{{post.external_link}}" target="_blank">
-					{% else %}
-						<a href="{{post.link}}">
-					{% endif %}
-					{{post.title}}</a></h2>
-				<span class="news__post-preview">{{post.content(35)}}</span>
-				{% if post.external_link %}
-					<a class="news__read-more" href="{{post.external_link}}" target="_blank">Published by {{post.publisher}}</a>
-				{% else %}
-					<a class="news__read-more" href="{{post.link}}">Read More</a>
-				{% endif %}
-			</figcaption>
-		</figure>
-	{% endfor %}
-  <a class="section__cta-button section__cta-button--inverted" href="./news" style="display:block;max-width:250px;text-align:center">See All News</a>
+    <figure class="news__post">
+      {% if post.thumbnail.src %}
+        {% if post.external_link %}
+          <a href="{{post.external_link}}" target="_blank">
+        {% else %}
+          <a href="{{post.link}}">
+        {% endif %}
+        <div class="news__featured-img" style="background-image:url({{post.thumbnail.src}})" /></div>
+        {% else %}
+        <div class="news__featured-img"/></div>
+      {% endif %}
+      <figcaption class="news__post-text">
+        <p class="news__post-date">{{post.date}}</p>
+        <h2 class="news__post-title">
+          {% if post.external_link %}
+            <a href="{{post.external_link}}" target="_blank">
+          {% else %}
+            <a href="{{post.link}}">
+          {% endif %}
+          {{post.title}}</a></h2>
+        <span class="news__post-preview">{{post.content(20)}}</span>
+        {% if post.external_link %}
+          <a class="news__read-more" href="{{post.external_link}}" target="_blank">Published by {{post.publisher}}</a>
+        {% else %}
+          <a class="news__read-more" href="{{post.link}}">Read More</a>
+        {% endif %}
+        <a class="news__post-category" href="{{site.link}}/news/category/{{ post.terms('category') | join(', ') }}">
+          {{ post.terms('category') | join(', ') }}
+        </a>
+      </figcaption>
+    </figure>
+  {% endfor %}
+  <a class="section__cta-button" href="./news" style="display:block;max-width:250px;text-align:center">See All News</a>
 </div>

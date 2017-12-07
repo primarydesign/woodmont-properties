@@ -44,6 +44,7 @@
 }
 .portfolio__type-label {
 	display: block;
+	line-height: 1.5;
 }
 .portfolio__type > portfolio__type-label[aria-expanded="true"] {
 	background: $ltgray;
@@ -54,7 +55,6 @@
 	padding: 10px 5px;
 	text-align: center;
 	font-size: .9em;
-	background: #fff ;
 	&:hover, &.active  {
 		background: $ltgray;
 	}
@@ -62,7 +62,11 @@
 .portfolio__type--dropdown:hover .dropdown-menu {
 	display: block !important;
 	position: absolute;
-	top: 0;
+	top: 20px;
+	width: 100%;
+		@include media-breakpoint-up(lg) {
+			top: 0;
+		}
 }
 
 .portfolio__thumbnails {

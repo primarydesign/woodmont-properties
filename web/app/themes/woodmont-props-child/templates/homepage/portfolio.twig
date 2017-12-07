@@ -35,17 +35,15 @@
 
 			{% for property in properties %}
 
-			{# Panel #}
-
 			<div class="panel {{property.property_type|replace({' ': "", '/': ""}) }} {{property.currnet_status|replace({'.': "", ' ': "", ',': "", '-': "" }) }}">
 				<article class="property--selected collapse" id="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}" role="tabpanel" aria-labelledby="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}">
 					{% if property.award_winner %}
 						<a class="property__award-badge" href="./awards">
-							<img src="{{theme.path}}/assets/img/icon_award-badge.svg">
+							<img src="{{theme.path}}/assets/img/icons/icon_award-badge.svg">
 						</a>
 					{% endif %}
 					{% if property.property_photos %}
-						<div id="galleryExampleIndicators" class="carousel slide" data-ride="carousel">
+						<div id="newgGalleryImage" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner">
 								<div class="carousel-item active">
 									 <img class="property__featured-img" src="{{ property.thumbnail }}" width="600">
@@ -56,11 +54,11 @@
 								</div>
 								{% endfor %}
 							</div>
-							<a class="carousel-control-prev" href="#galleryExampleIndicators" role="button" data-slide="prev">
+							<a class="carousel-control-prev" href="#newgGalleryImage" role="button" data-slide="prev">
 								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 								<span class="sr-only">Previous</span>
 							</a>
-							<a class="carousel-control-next" href="#galleryExampleIndicators" role="button" data-slide="next">
+							<a class="carousel-control-next" href="#newgGalleryImage" role="button" data-slide="next">
 								<span class="carousel-control-next-icon" aria-hidden="true"></span>
 								<span class="sr-only">Next</span>
 							</a>
@@ -71,8 +69,8 @@
 					<span class="property__status">{{ property.current_status }}</span>
 					<ul class="property__specs">
 
-						<a><img class="portfolio__next-button" src="{{theme.link}}/assets/img/icon_next-arrow.svg"> </a>
-						<a><img class="portfolio__prev-button" src="{{theme.link}}/assets/img/icon_prev-arrow.svg"> </a>
+						<a><img class="portfolio__next-button" src="{{theme.link}}/assets/img/icons/icon_next-arrow.svg"> </a>
+						<a><img class="portfolio__prev-button" src="{{theme.link}}/assets/img/icons/icon_prev-arrow.svg"> </a>
 
 						<li><h3 class="property__name">{{ property.title }}</h3></li>
 						<li class="property__address">{% if property.street_address %}{{property.street_address}}, {% endif %}{{ property.city_state }}</li>
@@ -94,9 +92,8 @@
 
 			{% for property in properties %}
 
-			{# thumb #}
 			<li class="portfolio__thumbnail {{ property.property_type|replace({' ': "", '/': ""}) }} {{ property.current_status|replace({' ': "", '/': ""}) }} col-lg-3 col-md-4 col-6" style="background-image:url({{ property.thumbnail.src }})" data-toggle="collapse" data-target="#{{ property.post_title|replace({'.': "", ' ': "", ',': ""}) }}" aria-expanded="false" aria-controls="collapseExample" data-parent="#portfolio__grid">
-        <span class="portfolio-thumbnail__status">{{ property.current_status }}</span>
+        <span class="portfolio-thumbnail__status">{{ property.property_filter }}</span>
 				<div class="portfolio-thumbnail__text">
 					<span class="portfolio-thumbnail__name">{{ property.title }}</span>
 					<span class="portfolio-thumbnail__place">{{ property.city_state }}</span>

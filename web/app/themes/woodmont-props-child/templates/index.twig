@@ -2,7 +2,13 @@
 
 {% block content %}
 	<header class="section__hero" style="background-image:url('{{theme.path}}/assets/img/header-image_properties.jpg')">
-		<h1 class="hero__headline container">News &amp; Events</h1>
+		<h1 class="hero__headline container">
+		{% if title %}
+		{{title}}
+		{% else %}
+		News &amp; Events
+		{% endif %}
+		</h1>
 	</header>
 
 	<div class="news__stories container">
@@ -27,7 +33,7 @@
 						<a href="{{post.link}}">
 					{% endif %}
 					{{post.title}}</a></h2>
-				<span class="news__post-preview">{{post.content(35)}}</span>
+				<span class="news__post-preview">{{post.content(20)}}</span>
 				{% if post.external_link %}
 					<a class="news__read-more" href="{{post.external_link}}" target="_blank">Published by {{post.publisher}}</a>
 				{% else %}

@@ -59,3 +59,26 @@
 		flex-direction: row-reverse;
 	}
 }
+.services__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.services__list-item {
+	display: inline-block;
+	margin: 2em 0;
+	vertical-align: top;
+	@include media-breakpoint-up(md) {
+		width: 45%;
+		padding-right: 8%;
+	}
+	@include media-breakpoint-up(lg) {
+		width: 33%;
+		padding-right: 6%;
+	}
+}
+.services__icon {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+}

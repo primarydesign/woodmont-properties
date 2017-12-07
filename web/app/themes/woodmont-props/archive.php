@@ -35,7 +35,11 @@ if ( is_day() ) {
 	$context['title'] = post_type_archive_title( '', false );
 	array_unshift( $templates, 'archive-' . get_post_type() . '.twig' );
 }
+$postArgs = array(
+	'posts_per_page'   => -1
+);
 
-$context['posts'] = Timber::get_posts();
+$context['pagination'] = Timber::get_pagination();
+$context['posts'] = Timber::get_posts($postArgs);
 
 Timber::render( $templates, $context );

@@ -15,6 +15,9 @@
 .section__careers-page {
 	padding:  60px 0;
 }
+.section__about-careers {
+	margin-bottom: 2em;
+}
 .career__post {
 	.intro__paragraph {
 			padding: 0;
@@ -56,21 +59,17 @@
 }
 .core-value__title {
 	font-family: $sans;
-	font-size: 1.5em;
+	font-size: 1.75em;
 	font-weight: 700;
 	color: $dkblue;
 	margin: 0;
 	padding: 0;
-
+	text-transform: uppercase;
+	letter-spacing: 1px;
 	@include media-breakpoint-up(sm) {
 		display: inline-block;
 		width: auto;
 	}
-}
-.core-value__letter {
-	font-size: 1.25em;
-	font-weight: 700;
-	color: $dkblue;
 }
 .core-value__description {
 	display: inline-block;

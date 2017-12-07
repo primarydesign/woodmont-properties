@@ -189,3 +189,7 @@
 	text-transform: uppercase;
 	letter-spacing: .05em;
 }
+.staff__headline {
+	@extend .prprty-type__headline;
+	margin-top: 1.5em;
+}

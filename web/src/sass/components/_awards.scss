@@ -1,11 +1,11 @@
+.section__awards {
+	margin-bottom: 150px;
+	background: $white;
+}
 .awards__badges {
 	margin: 1em auto 3em;
 	padding-top: 2em;
 	border-top: 1px solid $gray;
-}
-.section__awards {
-	margin-bottom: 100px;
-	background: $white;
 }
 .awards__apply-cta {
   @extend .section__cta-button;
@@ -29,9 +29,13 @@
 	&:hover {
 		cursor: pointer;
 	}
-
 	&:hover:before {
 		content: ' + '
+	}
+	&[aria-expanded="true"] {
+		&:hover:before {
+			content: ' – '
+		}
 	}
 }
 .award__list {
@@ -43,7 +47,7 @@
 	font-family: $serif;
 	font-style: italic;
   letter-spacing: .0125em;
-	background-image: url(../img/icon_award.svg);
+	background-image: url(../img/icons/icon_award.svg);
 	background-repeat: no-repeat;
 	background-size: 17px;
 	background-position: 0 5px;
