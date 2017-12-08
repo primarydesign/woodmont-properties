@@ -23,9 +23,9 @@ var rebuildThumbArray = function(name) {
         thumbObj.thumbArray.push(thumbObj.thumbList[i].getAttribute('data-target'));
     };
 };
-var narrowThumbArray = function(name) {
+var narrowThumbArray = function(parent, name) {
     thumbObj.thumbArray = new Array();
-    thumbObj.thumbList = $('li.portfolio__thumbnail.' + name);
+    thumbObj.thumbList = $('li.portfolio__thumbnail.' + parent + '.' + name);
     for (i = 0; i < thumbObj.thumbList.length; i++) {
         thumbObj.thumbArray.push(thumbObj.thumbList[i].getAttribute('data-target'));
     };
@@ -56,9 +56,10 @@ $(".portfolio__next-button").on('click tap', function() {
     var newPropertyId = thumbObj.thumbArray[newIndex];
     $(newPropertyId).collapse('show');
 });
-var reduceFiltered = function(name) {
+var reduceFiltered = function(parent, name) {
     $('.portfolio__thumbnail').removeClass('visible');
-    $('.portfolio__thumbnail.' + name).addClass('visible');
+    var elemIdentifier = '.portfolio__thumbnail.' + parent + '.' + name;
+    $(elemIdentifier).addClass('visible');
 };
 $('li.portfolio__type').on('click tap', function() {
     $('.property--selected').collapse('hide');
@@ -95,9 +96,9 @@ $('li.portfolio__type').on('click tap', function() {
 });
 $('li.portfolio__type .dropdown-item').on('click tap', function() {
     var filteredThumbs = $(this).html().replace(/\s/g, '');
-    console.log(filteredThumbs);
+    var parentFilter = $(this).parent().siblings('span.portfolio__type-label').html().replace(/\s/g, '').replace(/\//g, '');
     setTimeout(function() {
-        reduceFiltered(filteredThumbs);
-        narrowThumbArray(filteredThumbs);
+        reduceFiltered(parentFilter, filteredThumbs);
+        narrowThumbArray(parentFilter, filteredThumbs);
     }, 10);
 });

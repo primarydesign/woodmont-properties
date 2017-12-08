@@ -17,8 +17,17 @@ $('body').on('hidden.bs.modal', '.modal', function() {
 });
 
 //parallax
-$('.section__header, .section__hero').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/header-image_properties.jpg', zIndex: 1});
-$('.section__header h2, .section__hero h1').css({'z-index': 2, 'position': 'relative'});
+// $('.section__header, .section__hero').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/header-image_properties.jpg', zIndex: 1});
+
+
+setTimeout(function() {
+  $('.section__header h2, .section__hero h1').css({'z-index': 2, 'position': 'relative'});
+  $('#our-company-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/construction.jpg', zIndex: 1});
+  $('#properties').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/woodmont-metro-view.jpg', zIndex: 1});
+  $('#careers-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/woodmont-staff.jpg', zIndex: 1});
+  $('#parallax-page-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/luxury-apt-sofa.jpg', zIndex: 1});
+  $('#awards-page-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/lux-apt-common-area.jpg', zIndex: 1});
+}, 10);
 
 $('.portfolio__thumbnail').on('click tap', function() {
     $('.property--selected').collapse('hide');
@@ -45,9 +54,9 @@ var rebuildThumbArray = function(name) {
         thumbObj.thumbArray.push(thumbObj.thumbList[i].getAttribute('data-target'));
     };
 };
-var narrowThumbArray = function(name) {
+var narrowThumbArray = function(parent, name) {
     thumbObj.thumbArray = new Array();
-    thumbObj.thumbList = $('li.portfolio__thumbnail.' + name);
+    thumbObj.thumbList = $('li.portfolio__thumbnail.' + parent + '.' + name);
     for (i = 0; i < thumbObj.thumbList.length; i++) {
         thumbObj.thumbArray.push(thumbObj.thumbList[i].getAttribute('data-target'));
     };
@@ -78,9 +87,10 @@ $(".portfolio__next-button").on('click tap', function() {
     var newPropertyId = thumbObj.thumbArray[newIndex];
     $(newPropertyId).collapse('show');
 });
-var reduceFiltered = function(name) {
+var reduceFiltered = function(parent, name) {
     $('.portfolio__thumbnail').removeClass('visible');
-    $('.portfolio__thumbnail.' + name).addClass('visible');
+    var elemIdentifier = '.portfolio__thumbnail.' + parent + '.' + name;
+    $(elemIdentifier).addClass('visible');
 };
 $('li.portfolio__type').on('click tap', function() {
     $('.property--selected').collapse('hide');
@@ -117,10 +127,10 @@ $('li.portfolio__type').on('click tap', function() {
 });
 $('li.portfolio__type .dropdown-item').on('click tap', function() {
     var filteredThumbs = $(this).html().replace(/\s/g, '');
-    console.log(filteredThumbs);
+    var parentFilter = $(this).parent().siblings('span.portfolio__type-label').html().replace(/\s/g, '').replace(/\//g, '');
     setTimeout(function() {
-        reduceFiltered(filteredThumbs);
-        narrowThumbArray(filteredThumbs);
+        reduceFiltered(parentFilter, filteredThumbs);
+        narrowThumbArray(parentFilter, filteredThumbs);
     }, 10);
 });
 
