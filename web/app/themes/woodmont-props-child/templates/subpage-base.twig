@@ -1,0 +1,34 @@
+{% block html_head_container %}
+
+{% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+	<body class="{{body_class}}" data-template="base.twig">
+
+		{% include "partials/subpage-navbar.twig" %}
+
+		<section id="content" role="main">
+			{% if title %}{% endif %}
+			<div class="wrapper">
+				{% block content %}
+					Sorry, no content
+				{% endblock %}
+			</div>
+		</section>
+		<section class="section__contact" id="contact">
+				{% include "partials/contact.twig" %}
+		</section>
+		{% block footer %}
+			<footer id="footer" class="footer">
+				{% include 'partials/footer.twig' %}
+			</footer>
+			<script src="{{theme.path}}/assets/js/vendors.min.js"></script>
+			<script src="{{theme.path}}/assets/js/custom.js"></script>
+		{{ function('wp_footer') }}
+		{% endblock %}
+
+	</body>
+</html>

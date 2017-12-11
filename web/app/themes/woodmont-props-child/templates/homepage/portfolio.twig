@@ -2,7 +2,7 @@
   <h3 class="intro__statement">Throughout our history, Woodmont Properties has developed and invested in a diverse mix of real estate throughout New Jersey, New York and Pennsylvania. Today, our extensive portfolio comprises world-class residential, commercial and mixed-use properties.</h3>
 	<h2 class="section__headline" id="portfolio">Our Portfolio</h2>
 	<ul class="portfolio__type-toggles row" role="group">
-			<li class="portfolio__type LuxuryApartment portfolio__type--dropdown col-md-3 col-6">
+			<li class="portfolio__type LuxuryApartments portfolio__type--dropdown col-md-3 col-6">
 				<span class="portfolio__type-label" id="btnGroupApartments" aria-haspopup="true" aria-expanded="false" role="group">Luxury Apartments</span>
 				<div class="dropdown-menu" aria-labelledby="btnGroupApartments">
 					{# <a class="dropdown-item">View All</a> #}
@@ -11,7 +11,7 @@
 					<a class="dropdown-item">Past Accomplishments</a>
 				</div>
 			</li>
-			<li class="portfolio__type LuxuryHome col-md-3 col-6">
+			<li class="portfolio__type LuxuryHomes col-md-3 col-6">
 				<span class="portfolio__type-label">Luxury Homes</span>
 			</li>
 			<li class="portfolio__type Industrial col-md-3 col-6">
@@ -92,7 +92,7 @@
 
 			{% for property in properties %}
 
-			<li class="portfolio__thumbnail {{ property.property_type|replace({' ': "", '/': ""}) }} {{ property.current_status|replace({' ': "", '/': ""}) }} col-lg-3 col-md-4 col-6" style="background-image:url({{ property.thumbnail.src }})" data-toggle="collapse" data-target="#{{ property.post_title|replace({'.': "", ' ': "", ',': ""}) }}" aria-expanded="false" aria-controls="collapseExample" data-parent="#portfolio__grid">
+			<li class="portfolio__thumbnail {{ property.property_type|replace({' ': "", '/': ""}) }} {{ property.property_filter|replace({' ': "", '/': ""}) }} col-lg-3 col-md-4 col-6" style="background-image:url({{ property.thumbnail.src }})" data-toggle="collapse" data-target="#{{ property.post_title|replace({'.': "", ' ': "", ',': "", '-': ""}) }}" aria-expanded="false" aria-controls="collapseExample" data-parent="#portfolio__grid">
         <span class="portfolio-thumbnail__status">{{ property.property_filter }}</span>
 				<div class="portfolio-thumbnail__text">
 					<span class="portfolio-thumbnail__name">{{ property.title }}</span>

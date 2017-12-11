@@ -89,15 +89,21 @@
 	text-decoration: none;
 	box-shadow: 0px 3px 5px rgba(0,0,0,0.5);
 	text-shadow: none;
-	background-image: url(../img/icons/icon_next-arrow.svg);
-	background-repeat: no-repeat;
-	background-position:  90% 50%;
-	background-size: 8px;
+
 	opacity: .85;
+	transition: background .3s;
 	@include media-breakpoint-up(sm) {
 		width: auto;
 		margin: 2em 1em 0 0;
 		padding: 1.25em 2em;
 		font-size: 1rem;
+	}
+	&:hover {
+		color: $white;
+		background: $dkblue;
+		background-image: url(../img/icons/icon_next-arrow-white.svg);
+		background-repeat: no-repeat;
+		background-position:  90% 50%;
+		background-size: 8px;
 	}
 }

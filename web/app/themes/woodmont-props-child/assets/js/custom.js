@@ -27,7 +27,7 @@ setTimeout(function() {
   $('#careers-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/woodmont-staff.jpg', zIndex: 1});
   $('#parallax-page-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/luxury-apt-sofa.jpg', zIndex: 1});
   $('#awards-page-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/lux-apt-common-area.jpg', zIndex: 1});
-}, 10);
+}, 250);
 
 $('.portfolio__thumbnail').on('click tap', function() {
     $('.property--selected').collapse('hide');
@@ -41,8 +41,8 @@ var thumbObj = new Object();
 thumbObj.thumbList = '';
 thumbObj.thumbArray = new Array();
 $(function() {
-    $('li.portfolio__type.LuxuryApartment').click();
-    thumbObj.thumbList = $('li.portfolio__thumbnail.LuxuryApartment');
+    $('li.portfolio__type.LuxuryApartments').click();
+    thumbObj.thumbList = $('li.portfolio__thumbnail.LuxuryApartments');
     for (i = 0; i < thumbObj.thumbList.length; i++) {
         thumbObj.thumbArray.push(thumbObj.thumbList[i].getAttribute('data-target'));
     };
@@ -104,12 +104,12 @@ $('li.portfolio__type').on('click tap', function() {
     var createArray = function(name) {
         var domElements = $('.portfolio__thumbnail.' + name);
     };
-    if (currentFilter.indexOf('LuxuryApartment') !== -1) {
-        addVisibles('LuxuryApartment');
-        rebuildThumbArray('LuxuryApartment');
-    } else if (currentFilter.indexOf('LuxuryHome') !== -1) {
-        addVisibles('LuxuryHome');
-        rebuildThumbArray('LuxuryHome');
+    if (currentFilter.indexOf('LuxuryApartments') !== -1) {
+        addVisibles('LuxuryApartments');
+        rebuildThumbArray('LuxuryApartments');
+    } else if (currentFilter.indexOf('LuxuryHomes') !== -1) {
+        addVisibles('LuxuryHomes');
+        rebuildThumbArray('LuxuryHomes');
     } else if (currentFilter.indexOf('Industrial') !== -1) {
         addVisibles('Industrial');
         rebuildThumbArray('Industrial');
