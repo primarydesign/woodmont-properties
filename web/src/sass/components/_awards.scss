@@ -86,7 +86,7 @@
 .carousel--awards {
 	margin: 2em 0;
 }
-.carousel--awards, .carousel--awards .carousel-inner, .carousel--awards .slideshow__container, .carousel--awards .carousel-control-prev, .carousel-control-next, .carousel--awards .slideshow__text {
+.carousel--awards, .carousel--awards .carousel-inner, .carousel--awards .slideshow__container, .carousel--awards .carousel-control-prev, .carousel--awards .carousel-control-next, .carousel--awards .slideshow__text {
 	height: 300px !important;
 	@include media-breakpoint-up(md) {
 		height: 500px !important;
