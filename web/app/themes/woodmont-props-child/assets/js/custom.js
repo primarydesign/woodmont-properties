@@ -27,7 +27,7 @@ setTimeout(function() {
   $('#careers-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/woodmont-staff.jpg', zIndex: 1});
   $('#parallax-page-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/luxury-apt-sofa.jpg', zIndex: 1});
   $('#awards-page-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/lux-apt-common-area.jpg', zIndex: 1});
-}, 250);
+}, 500);
 
 $('.portfolio__thumbnail').on('click tap', function() {
     $('.property--selected').collapse('hide');

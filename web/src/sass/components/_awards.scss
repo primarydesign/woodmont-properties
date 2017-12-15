@@ -20,12 +20,31 @@
 .section__awards-page {
 	margin: 60px auto 100px;
 }
+.award__img-heading {
+	position: relative;
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+}
+.award__list-image, .award__community-name {
+		width: 95%;
+}
 .award__community-name {
 	@include boldCaps;
+	@include fontSmooth;
+	font-size: 1rem;
+	bottom: 0;
+	margin: 0;
+	padding: 1em;
+	color: $white;
+	background: $dkblue;
 	font-weight: 700;
 	letter-spacing: .025em;
 	line-height: 1.25;
-	margin: 0;
+	@include media-breakpoint-up(lg) {
+		position: absolute;
+		background: $tpdkblue;
+	}
 	&:hover {
 		cursor: pointer;
 	}
@@ -63,4 +82,40 @@
 			background: none;
 			padding: 1.5em 0 0 .5em;
 		}
+}
+.carousel--awards {
+	margin: 2em 0;
+}
+.carousel--awards, .carousel--awards .carousel-inner, .carousel--awards .slideshow__container, .carousel--awards .carousel-control-prev, .carousel-control-next, .carousel--awards .slideshow__text {
+	height: 300px !important;
+	@include media-breakpoint-up(md) {
+		height: 500px !important;
+	}
+}
+.carousel--awards .slideshow__text {
+	display: flex;
+	height: 250px !important;
+	max-width: 500px;
+	padding: 1em;
+	width: 75%;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	background: #C5B358E6;
+	font-size: 1rem;
+	@include media-breakpoint-up(md) {
+		font-size: 1.5rem
+	}
+}
+.carousel--awards .slideshow__cta-button {
+	box-shadow: none;
+	width: 75%;
+}
+.award-slider__award-name {
+	margin-top: 1em;
+	font-size: .8em;
+	line-height: 1.25;
+}
+.carousel--awards .carousel-item {
+	background-size: cover;
 }
