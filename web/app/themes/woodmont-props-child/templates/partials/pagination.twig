@@ -1,0 +1,20 @@
+<div class="tool-pagination">
+  <ul class="pages news__pagination--list">
+    {% if pagination.prev %}
+        <a class="news__pagination news__pagination--prev {{pagination.prev.link|length ? '' : 'invisible'}}" href="{{pagination.prev.link}}">Newer Posts</a>
+    {% endif %}
+        {% for page in pagination.pages %}
+            <li class="news__pagination news__pagination--list-item">
+                {% if page.link %}
+                    <a href="{{page.link}}" class="news__pagination news__pagination--page-number {{page.class}}">{{page.title}}</a>
+                {% else %}
+                    <span class="news__pagination news__pagination--page-number {{page.class}}">{{page.title}}</span>
+                {% endif %}
+            </li>
+        {% endfor %}
+
+    {% if pagination.next %}
+        <a class="news__pagination news__pagination--next {{pagination.next.link|length ? '' : 'invisible'}}" href="{{pagination.next.link}}">Older Posts</a>
+    {% endif %}
+    </ul>
+</div>

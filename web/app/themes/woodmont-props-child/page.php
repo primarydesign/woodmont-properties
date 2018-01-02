@@ -45,4 +45,5 @@ $context['news'] = Timber::get_posts($newsArgs);
 $context['properties'] = Timber::get_posts($propertyArgs);
 $context['staff'] = Timber::get_posts($staffArgs);
 
+
 Timber::render( array('page-' . $post->post_name . '.twig',	'page.twig'), $context );

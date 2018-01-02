@@ -78,9 +78,11 @@
   background-color: $dkblue;
 }
 .news__read-more {
+  display: inline-block;
   font-size: .8em;
   text-transform: uppercase;
   font-weight: bold;
+  line-height: 1.25;
 }
 .news__post-text {
   padding: 1.75em;
@@ -123,4 +125,27 @@
   background: $ltgray;
   padding: .75em;
   color: $dkblue !important;
+}
+.news__pagination {
+  display: inline-block;
+  @include fontSmooth;
+  font-weight: 600;
+}
+a.news__pagination {
+  background: $dkblue;
+}
+span.news__pagination {
+  background: #999;
+}
+.news__pagination--page-number, .news__pagination--prev, .news__pagination--next {
+  display: inline-block;
+  color: $white;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+.news__pagination--prev, .news__pagination--next {
+  background: $dkblue;
+}
+.news__pagination--list {
+  list-style: none;
 }
