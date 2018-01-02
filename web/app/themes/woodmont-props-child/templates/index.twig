@@ -11,6 +11,20 @@
 		</h1>
 	</header>
 
+	<div class="container">
+		<div class="category__dropdown">
+			<button class="category__dropbtn">Browse by Category
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="category__dropdown-content">
+				<a href="/news/category/News/">Woodmont News</a>
+				<a href="/news/category/Events/">Woodmont Events</a>
+				<a href="/news/category/Industrial/">Woodmont Industrial News</a>
+				<a href="/news/">All News &amp; Events</a>
+			</div>
+		</div>
+	</div>
+
 	<div class="news__stories container">
 	{% for post in posts %}
 		<figure class="news__post">
@@ -49,8 +63,6 @@
 
 	{% include 'partials/pagination.twig' %}
 
-	</div>
-
-
+ </div>
 
 {% endblock %}

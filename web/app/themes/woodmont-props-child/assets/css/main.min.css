@@ -777,6 +777,13 @@ span.news__pagination{background:#999}
 .news__pagination--page-number,.news__pagination--prev,.news__pagination--next{display:inline-block;color:#fefefe;text-decoration:none;padding:10px 15px}
 .news__pagination--prev,.news__pagination--next{background:#084560}
 .news__pagination--list{list-style:none}
+.category__dropdown{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin-top:2em;display:inline-block}
+.category__dropdown .category__dropbtn{font-size:.9em;color:#084560;border:0;outline:0;padding:1em}
+.category__dropdown:hover .category__dropbtn{background-color:#084560;color:white}
+.category__dropdown-content{display:none;position:absolute;background-color:#f9f9f9;min-width:160px;box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);z-index:1;font-size:.9em}
+.category__dropdown-content a{color:#084560;padding:12px 16px;text-decoration:none;display:block;text-align:left}
+.category__dropdown-content a:hover{background-color:#ddd}
+.category__dropdown:hover .category__dropdown-content{display:block}
 .section__contact{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:100px 0;background:#084560;color:#fefefe}
 .section__contact .form-control,.section__contact input{border-radius:0;color:#084560;border:0}
 .footer__signup-message{font-size:.85em;padding:.5em 0 1em .5em}
