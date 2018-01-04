@@ -64,4 +64,10 @@
 }
 .prprty-type__cta {
   @extend .section__cta-button;
+  border: 2px solid $dkblue !important;
+	margin-right: 1em;
+}
+.prprty-type__cta--ghost {
+	background-color: $ltgray !important;
+	color: $dkblue;
 }

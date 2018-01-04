@@ -33,7 +33,7 @@
     submit.prop('disabled', true).val('SENDING');
     $.ajax({
       type: 'POST',
-      url: '/app/themes/woodmont-props-child/submit.php',
+      url: 'app/themes/woodmont-props-child/submit.php',
       data: $(this).serialize(),
       success: function (data) {
         closeForm();
@@ -68,7 +68,7 @@
     return clearance;
   }
   function closeForm() {
-    $(form).html('<h3 class="footer__headline">Thank You! Your Message Has Been Sent.</h3>');
+    $(form).html('<h3 class="footer__headline">Thank You! Your Message Has Been Sent. Someone from our staff will contact you soon.</h3>');
   }
   window.close = closeForm;
 

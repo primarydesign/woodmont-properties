@@ -5,8 +5,7 @@ if (isset($_POST)) {
 	$name = $_POST['name'];
 	$phone = $_POST['phone'];
 	$email = $_POST['email'];
-    $message = $_POST['comment'];
-    $topic = $_POST['topic'];
+  $comments = $_POST['comments'];
 	$clearance = 0;
 
 	//Validate Requireds
@@ -33,7 +32,7 @@ if (isset($_POST)) {
 		$message .= "Name: " . $name . "\n";
 		$message .= "Email: " . $email . "\n";
 		$message .= "Phone: " . $phone . "\n";
-    $message .= "Message: " . $message . "\n";
+    $message .= "Message: " . $comments . "\n";
 
 		if( mail($address, $subject, $message) ) {
 			echo "Successful submission from " . $_SERVER['HTTP_HOST'];

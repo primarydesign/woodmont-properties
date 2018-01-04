@@ -40,7 +40,7 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap's JavaScript requires j
     submit.prop('disabled', true).val('SENDING');
     $.ajax({
       type: 'POST',
-      url: '/app/themes/woodmont-props-child/submit.php',
+      url: 'app/themes/woodmont-props-child/submit.php',
       data: $(this).serialize(),
       success: function (data) {
         closeForm();
@@ -75,7 +75,7 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap's JavaScript requires j
     return clearance;
   }
   function closeForm() {
-    $(form).html('<h3 class="footer__headline">Thank You! Your Message Has Been Sent.</h3>');
+    $(form).html('<h3 class="footer__headline">Thank You! Your Message Has Been Sent. Someone from our staff will contact you soon.</h3>');
   }
   window.close = closeForm;
 
