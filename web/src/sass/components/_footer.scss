@@ -35,6 +35,9 @@
 	color: $white;
 	padding: 1em;
 	text-decoration: none;
+	&:hover {
+		color: $gold;
+	}
 }
 .footer__copyright {
 	font-size: .85em;

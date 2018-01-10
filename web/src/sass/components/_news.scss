@@ -160,18 +160,15 @@ span.news__pagination {
 .category__dropdown .category__dropbtn {
  font-size: .9em;
  color: $dkblue;
+ background-color: $ltgray;
  border: none;
  outline: none;
  padding: 1em;
 }
-
-/* Add a red background color to navbar links on hover */
 .category__dropdown:hover .category__dropbtn {
  background-color: $dkblue;
  color: white;
-
 }
-
 /* Dropdown content (hidden by default) */
 .category__dropdown-content {
  display: none;
@@ -182,7 +179,6 @@ span.news__pagination {
  z-index: 1;
  font-size: .9em;
 }
-
 /* Links inside the dropdown */
 .category__dropdown-content a {
  color: $dkblue;
