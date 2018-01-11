@@ -67,11 +67,12 @@
 	padding: 0 1em;
 	font-size: 2em;
 	font-weight: 700;
-	line-height: 1;
+	line-height: 1.15;
 	text-shadow: 0px 5px 20px rgba(0,0,0,0.75);
 	height: 30vh;
 	flex-direction: column;
-	@include media-breakpoint-up(sm) {
+	@media (min-width: 1400px) {
+		padding-left: 10px;
 	}
 }
 .slideshow__cta-button {

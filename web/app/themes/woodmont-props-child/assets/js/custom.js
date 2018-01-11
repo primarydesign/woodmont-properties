@@ -98,11 +98,11 @@ $('body').on('hidden.bs.modal', '.modal', function() {
 var parallax = function() {
   setTimeout(function() {
     $('.section__header h2, .section__hero h1').css({'z-index': 2, 'position': 'relative'});
-    $('#our-company-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/construction.jpg', zIndex: 1});
-    $('#properties').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/woodmont-metro-view.jpg', zIndex: 1});
-    $('#careers-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/woodmont-staff.jpg', zIndex: 1});
-    $('#parallax-page-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/luxury-apt-sofa.jpg', zIndex: 1});
-    $('#awards-page-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/lux-apt-common-area.jpg', zIndex: 1});
+    $('#our-company-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/header__our-company.jpg', zIndex: 1});
+    $('#properties').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/header__properties.jpg', zIndex: 1});
+    $('#careers-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/header__careers.jpg', zIndex: 1});
+    $('#parallax-page-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/header__news.jpg', zIndex: 1});
+    $('#awards-page-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/header__awards.jpg', zIndex: 1});
   }, 250);
 };
 

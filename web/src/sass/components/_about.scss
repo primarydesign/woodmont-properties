@@ -66,21 +66,27 @@
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	text-align: center;
 	.about__paragraph {
 		font-size: .85em;
+	}
+	@include media-breakpoint-up(lg) {
+			display: flex;
 	}
 }
 .services__list-item {
 	display: inline-block;
-	margin: 2em 0;
+	padding: 2em;
+	margin: 1em 0;
 	vertical-align: top;
-	@include media-breakpoint-up(md) {
-		width: 45%;
-		padding-right: 8%;
-	}
+	background: $ltgray;
+	border-radius: 3px;
 	@include media-breakpoint-up(lg) {
 		width: 33%;
-		padding-right: 6%;
+		margin-right: 2%;
+	}
+	.about__paragraph {
+		text-align: left;
 	}
 }
 .services__icon {

@@ -95,6 +95,9 @@
 }
 .portfolio__thumbnail {
 	display: none;
+	&:hover .portfolio-thumbnail__text {
+		height: 100%;
+	}
 }
 .portfolio__thumbnail.visible {
 	display: flex;
@@ -103,11 +106,12 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	height: 80px;
 	padding: 10px 0;
 	@include fontSmooth;
 	color: #fff;
 	background-color: $tpdkblue;
-	transition: opacity .3s;
+	transition: height .3s;
 }
 .portfolio-thumbnail__name, .portfolio-thumbnail__place {
 	display: block;
