@@ -10,7 +10,7 @@
 	vertical-align: top;
 	@media (min-width: $screen-md) {
 		display: inline-block;
-		width: 50%;
+		width: 30%;
 	}
 }
 .prprty-type__intro {
@@ -21,6 +21,9 @@
 	max-width: 800px;
 	@include media-breakpoint-up(sm) {
 		padding: 50px 80px;
+	}
+	@media (min-width: $screen-md) {
+		width: 70%;
 	}
 }
 .prprty-type__image {
@@ -35,6 +38,9 @@
 	@include media-breakpoint-up(sm) {
 		min-height: 400px;
 	}
+	@include media-breakpoint-up(lg) {
+		max-width: 700px;
+	}
 }
 .prprty-type__intro--homes, .prprty-type__intro--industrial {
 	@media (min-width: $screen-md) {
@@ -44,11 +50,6 @@
 	background: $white;
 	.prprty-type__intro { background: $white;}
 }
-.prprty-type__intro--apts {}
-.prprty-type__intro--commercial {}
-.prprty-type__intro--homes {}
-.prprty-type__intro--industrial {}
-
 .prprty-type__headline {
 	@include fontSmooth;
 	font-family: $serif;
@@ -64,10 +65,19 @@
 }
 .prprty-type__cta {
   @extend .section__cta-button;
-  border: 2px solid $dkblue !important;
+  border: 2px solid $dkblue;
 	margin-right: 1em;
+	&:hover {
+  	border: 2px solid $gold;
+		transition: border 0s;
+	}
 }
 .prprty-type__cta--ghost {
-	background-color: $ltgray !important;
+	background-color: $ltgray;
 	color: $dkblue;
+	cursor: pointer;
+	&:hover {
+  	border: 2px solid $gold;
+		color: $white;
+	}
 }

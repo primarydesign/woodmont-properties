@@ -663,11 +663,11 @@ section#content{border-top:68px solid #084560}
 .staff-member__modal .carousel-control-prev-icon,.staff-member__modal .carousel-control-next-icon{position:absolute;top:48.5%;padding:20px;background-color:#fefefe;background-size:12px;cursor:pointer}
 .staff-member__modal .carousel-control-prev-icon{left:-4.5%;background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23084560' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")}
 .staff-member__modal .carousel-control-next-icon{right:-4.5%;background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23084560' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E")}
-.staff-member__modal-exit{position:absolute;right:0;padding:25px 35px;color:#999;z-index:1}
-.staff-member__modal-exit .close{width:1.25em;height:1.25em;background:#fff;padding:0 5px;border-radius:1.5em;line-height:auto;cursor:pointer}
+.staff-member__modal-exit{position:absolute;right:4%;top:3%;padding:0;color:#999;z-index:1}
+.staff-member__modal-exit .close{width:1.25em;height:1.25em;background:#fff;padding:0;line-height:0 !important;border-radius:1.5em;line-height:auto;cursor:pointer}
 .staff-modal__portrait,.staff-modal__text{height:60vh;margin:0;background-color:#fff}
 .staff-modal__portrait{background-size:cover !important;background-position:top center;background-repeat:no-repeat}
-.staff-modal__text{box-sizing:border-box;overflow-y:auto;padding:45px !important;line-height:1.75}
+.staff-modal__text{box-sizing:border-box;overflow-y:auto;padding:5% !important;line-height:1.75}
 .staff-member__name{margin:0;line-height:1;color:#084560;margin-bottom:5px}
 .staff-member__job-title{margin:0}
 .staff-member__description p{font-size:.8em !important;padding-right:10px}
@@ -695,8 +695,10 @@ section#content{border-top:68px solid #084560}
 .prprty-type__intro--homes .prprty-type__intro,.prprty-type__intro--industrial .prprty-type__intro{background:#fefefe}
 .prprty-type__headline,.staff__headline,.awards__headline,.news__subhead,.career__subheading{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:"PT Serif",serif;font-style:italic;font-size:2.25em;line-height:1.25;margin-bottom:1.25em}
 .prprty-type__description{margin-bottom:30px;font-size:.9em}
-.prprty-type__cta,.property__phone,.property__website,.career__apply-cta,.section__news .section__cta-button,.section__news .prprty-type__cta,.section__news .awards__apply-cta,.section__news .form__submit-button{border:2px solid #084560 !important;margin-right:1em}
-.prprty-type__cta--ghost{background-color:#ededed !important;color:#084560}
+.prprty-type__cta,.property__phone,.property__website,.career__apply-cta,.section__news .section__cta-button,.section__news .prprty-type__cta,.section__news .awards__apply-cta,.section__news .form__submit-button{border:2px solid #084560;margin-right:1em}
+.prprty-type__cta:hover,.property__phone:hover,.property__website:hover,.career__apply-cta:hover,.section__news .section__cta-button:hover,.section__news .awards__apply-cta:hover,.section__news .form__submit-button:hover{border:2px solid #c5b358;-webkit-transition:border 0s;transition:border 0s}
+.prprty-type__cta--ghost{background-color:#ededed;color:#084560;cursor:pointer}
+.prprty-type__cta--ghost:hover{border:2px solid #c5b358;color:#fefefe}
 .section__portfolio{padding:60px 0 0}
 .portfolio__type-toggles,.staff__type-toggles{border:1px solid #ededed;margin:0 4px 10px;padding:0}
 .portfolio__type-toggles .col-md-3,.staff__type-toggles .col-md-3{max-width:20%;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
@@ -708,7 +710,7 @@ section#content{border-top:68px solid #084560}
 .portfolio__type-label,.staff__type-filter{display:block;line-height:1.5}
 .portfolio__type>portfolio__type-label[aria-expanded="true"],.staff__type-label>portfolio__type-label[aria-expanded="true"]{background:#ededed}
 .portfolio__type,.staff__type-label{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;cursor:pointer;padding:10px 5px;text-align:center;font-size:.9em}
-.portfolio__type:hover,.staff__type-label:hover,.portfolio__type.active,.active.staff__type-label{background:#ededed}
+.portfolio__type:hover,.staff__type-label:hover,.portfolio__type.active,.active.staff__type-label{background:#084560;color:#fefefe}
 .portfolio__type--dropdown:hover .dropdown-menu{display:block !important;position:absolute;top:20px;width:100%}
 .portfolio__thumbnails{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:start;-webkit-justify-content:flex-start;-ms-flex-pack:start;justify-content:flex-start;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;text-align:center}
 .portfolio__thumbnail{-webkit-box-orient:vertical;-webkit-box-direction:reverse;-webkit-flex-flow:column-reverse;-ms-flex-flow:column-reverse;flex-flow:column-reverse;cursor:pointer;height:250px;background-size:cover;background-repeat:no-repeat;background-clip:content-box;background-position:center;background-color:#ededed;margin-bottom:1px;padding:0 1px 0 0 !important}
@@ -723,10 +725,10 @@ section#content{border-top:68px solid #084560}
 .property--selected{position:relative;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-align:left;padding:0;font-size:0}
 .property__award-badge{position:absolute;right:10%;z-index:2;width:15%;max-width:125px}
 .property__featured-img{width:100%;margin-bottom:0;padding:0}
-.property__status{display:block;margin:0 0 2rem 0;padding:.75em 1rem;font-size:1rem;letter-spacing:1px;color:#fff;text-transform:uppercase;background:#084560}
+.property__status{position:absolute;right:0;top:2em;min-width:150px;margin:0 0 2rem 0;padding:.75em 1rem;font-size:1rem;font-weight:600;letter-spacing:1px;color:#fff;text-transform:uppercase;background:#c5b358}
 .portfolio__prev-button,.portfolio__next-button{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;float:right;height:25px;color:#084560;font-size:2rem;padding-left:2rem;cursor:pointer}
 .property__name{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin:0 0 .25em 0;font-size:1.85rem;line-height:1.2;letter-spacing:0}
-.property__specs{list-style:none;text-align:left;padding:0 15px;font-size:1rem;letter-spacing:.02rem;margin:0}
+.property__specs{list-style:none;text-align:left;padding:0 15px;font-size:1rem;letter-spacing:.02rem;margin:1em 0 0 0}
 .property__address{margin-bottom:.25em;font-family:"PT Serif",serif;color:#084560;text-transform:none;font-size:1.25rem;display:block;font-weight:normal}
 .property__type,.property__details{display:inline;text-transform:uppercase;font-size:.9rem}
 .property__description{display:inline-block;font-size:.93rem;line-height:1.75;margin:.5em 0 2.5em}
@@ -830,7 +832,8 @@ span.news__pagination{background:#999}
 .footer__right-column{margin-bottom:1em}
 .footer__map{max-width:200px}
 @media(min-width:52em){.section__prprty-type{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
-.prprty-type__intro,.prprty-type__image{display:inline-block;width:50%}
+.prprty-type__intro,.prprty-type__image{display:inline-block;width:30%}
+.prprty-type__intro{width:70%}
 .prprty-type__intro--homes,.prprty-type__intro--industrial{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-webkit-flex-direction:row-reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
 }@media(min-width:100em){.intro__paragraph,.about__paragraph,.prprty-type__description,.career__paragraph{font-size:1.1em}
 }@media(min-width:576px){.container{max-width:540px}
@@ -1210,9 +1213,9 @@ span.news__pagination{background:#999}
 .text-md-center{text-align:center !important}
 .nav__navbar{height:85px}
 .nav__navbar .navbar-nav{position:relative;display:inherit;margin-top:0}
-.nav__navbar .navbar-nav .dropdown-menu{border-radius:0}
-.nav__navbar .navbar-nav .nav-item--dropdown:hover .dropdown-menu{display:block !important;position:absolute;margin-top:85px;top:-36px;padding:0}
-.nav__navbar .navbar-nav .dropdown-item{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-decoration:none;cursor:pointer !important;text-transform:uppercase;font-size:.85em;letter-spacing:.05em;color:#084560 !important;padding:15px;font-weight:600}
+.nav__navbar .navbar-nav .dropdown-menu{border-radius:0;background:#fefefe;cursor:pointer;border:0}
+.nav__navbar .navbar-nav .nav-item--dropdown:hover .dropdown-menu{display:block !important;position:absolute;margin-top:85px;top:-32px;padding:0}
+.nav__navbar .navbar-nav .dropdown-item{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-decoration:none;text-transform:uppercase;font-size:.85em;letter-spacing:.05em;color:#084560 !important;padding:15px;font-weight:600}
 .nav__navbar .navbar-nav .dropdown-item:active,.nav__navbar .navbar-nav .dropdown-item:hover{background:#ededed}
 .nav__navbar .nav-link{display:inline-block;padding:20px 0 15px 30px !important;font-size:.8em;letter-spacing:1px}
 .navbar__logo{width:200px;padding-left:0}
@@ -1223,6 +1226,7 @@ section#content{border-top:68px solid #084560}
 .portfolio-thumbnail__name{font-size:.9em}
 .portfolio-thumbnail__status{right:5px}
 .property--selected{padding:0 5px 0}
+.property__status{right:5px}
 .property__specs{padding:0}
 .carousel--awards,.carousel--awards .carousel-inner,.carousel--awards .slideshow__container,.carousel--awards .carousel-control-prev,.carousel--awards .carousel-control-next,.carousel--awards .slideshow__text{height:500px !important}
 .carousel--awards .slideshow__text{font-size:1.5rem}
@@ -1406,6 +1410,7 @@ section#content{border-top:68px solid #084560}
 .about__text,.about__side-img{margin-bottom:60px}
 .services__list{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 .services__list-item{width:33%;margin-right:2%}
+.prprty-type__image{max-width:700px}
 .portfolio__type--dropdown:hover .dropdown-menu{top:0}
 .property__description{font-size:1rem}
 .award__community-name,.awards__subheading{position:absolute;background:rgba(17,68,107,0.8)}
