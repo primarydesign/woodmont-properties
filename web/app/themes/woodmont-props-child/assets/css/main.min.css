@@ -742,11 +742,12 @@ section#content{border-top:68px solid #084560}
 .awards__subheading{font-size:1em}
 .section__awards-page{margin:60px auto 100px}
 .award__img-heading{position:relative;font-size:0;margin:0;padding:0}
+.award__img-heading:hover .award__community-name:after,.award__img-heading:hover .awards__subheading:after{content:' (Show Details)'}
+.award__img-heading:hover .award__community-name[aria-expanded="true"]:after,.award__img-heading:hover [aria-expanded="true"].awards__subheading:after{content:' (Hide Details)'}
 .award__list-image,.award__community-name,.awards__subheading{width:95%}
 .award__community-name,.awards__subheading{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:1rem;bottom:0;margin:0;padding:1em;color:#fefefe;background:#084560;font-weight:700;letter-spacing:.025em;line-height:1.25}
 .award__community-name:hover,.awards__subheading:hover{cursor:pointer}
-.award__community-name:hover:before,.awards__subheading:hover:before{content:' > '}
-.award__community-name[aria-expanded="true"]:hover:before,[aria-expanded="true"].awards__subheading:hover:before{content:' – '}
+.award__community-name:after,.awards__subheading:after{display:block;font-size:.8em;padding-top:5px}
 .award__list{width:95%;margin-top:0;list-style:none;background-color:#ededed}
 .award__list--name{padding:2em;margin-bottom:2em}
 .award__list-item{padding:0 1em 1.25em 2em;font-family:"PT Serif",serif;font-style:italic;letter-spacing:.0125em;background-image:url(../img/icons/icon_award.svg);background-repeat:no-repeat;background-size:17px;background-position:0 5px}
@@ -1413,7 +1414,6 @@ section#content{border-top:68px solid #084560}
 .prprty-type__image{max-width:700px}
 .portfolio__type--dropdown:hover .dropdown-menu{top:0}
 .property__description{font-size:1rem}
-.award__community-name,.awards__subheading{position:absolute;background:rgba(17,68,107,0.8)}
 .section__hero{font-size:2em}
 }@media(min-width:1200px){.container{max-width:1140px}
 .col-xl{-webkit-flex-basis:0;-ms-flex-preferred-size:0;flex-basis:0;-webkit-box-flex:1;-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;max-width:100%}

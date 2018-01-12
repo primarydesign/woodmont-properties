@@ -25,6 +25,14 @@
 	font-size: 0;
 	margin: 0;
 	padding: 0;
+	&:hover .award__community-name:after {
+		content: ' (Show Details)'
+	}
+	&:hover .award__community-name[aria-expanded="true"] {
+		&:after {
+			content: ' (Hide Details)'
+		}
+	}
 }
 .award__list-image, .award__community-name {
 		width: 95%;
@@ -41,21 +49,15 @@
 	font-weight: 700;
 	letter-spacing: .025em;
 	line-height: 1.25;
-	@include media-breakpoint-up(lg) {
-		position: absolute;
-		background: $tpdkblue;
-	}
 	&:hover {
 		cursor: pointer;
 	}
-	&:hover:before {
-		content: ' > '
+	&:after {
+		display: block;
+		font-size: .8em;
+		padding-top: 5px;
 	}
-	&[aria-expanded="true"] {
-		&:hover:before {
-			content: ' – '
-		}
-	}
+
 }
 .award__list {
 	width: 95%;
