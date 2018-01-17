@@ -30,6 +30,7 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap's JavaScript requires j
 			.not('[href="#collapseServices"]')
 			.not('[href="#collapseWho"]')
 			.not('[href="#newSlide"]')
+			.not('[href="#newgGalleryImage"]')
 
 			.click(function(event) {
 				// On-page links
@@ -63,6 +64,11 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap's JavaScript requires j
 					}
 				}
 			});
+			$(document).ready(function () {
+	        $("li.dropdown ul.dropdown-menu li").click(function (event) {
+	            event.toElement.parentElement.click();
+	        })
+	    })
 
 /*!
  * parallax.js v1.5.0 (http://pixelcog.github.io/parallax.js/)

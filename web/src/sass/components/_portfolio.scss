@@ -10,7 +10,7 @@
 }
 .property__award-badge {
 	position: absolute;
-	right: 10%;
+	left: 10%;
 	z-index: 2;
 	width: 15%;
 	max-width: 125px;
@@ -21,20 +21,25 @@
 	padding: 0;
 }
 .property__status {
-	position: absolute;
+	display: block;
 	right: 0;
-	top: 2em;
-	min-width: 150px;
-	margin: 0 0 2rem 0;
-	padding: .75em 1rem;
-	font-size: 1rem;
 	font-weight: 600;
-	letter-spacing: 1px;
 	color: #fff;
 	text-transform: uppercase;
 	background: $gold;
+	margin: 0 0 2rem 0;
+	padding: .5rem;
+	font-size: .75rem;
 	@include media-breakpoint-up(md) {
+		top: 3em;
+		position: absolute;
+		min-width: 150px;
+		margin: 0 0 2rem 0;
+		padding: .75em 1rem;
+		font-size: 1rem;
 		right: 5px;
+
+		letter-spacing: 1px;
 	}
 }
 #portfolio__grid {
@@ -115,4 +120,8 @@
 	&:hover {
 		border: 1px solid $gold;
 	}
+}
+.portfolio__signup-field {
+		margin: 0 0 15px 5px !important;
+    padding: 5px !important;
 }

@@ -109,7 +109,7 @@
 	text-align: center;
 	align-items: center;
 	justify-content: center;
-	background: #C5B358E6;
+	background: $tpdkblue;
 	font-size: 1rem;
 	@include media-breakpoint-up(md) {
 		font-size: 1.5rem
@@ -118,6 +118,10 @@
 .carousel--awards .slideshow__cta-button {
 	box-shadow: none;
 	width: 75%;
+	line-height: 1;
+	&:hover {
+		background-color: $gold;
+	}
 }
 .award-slider__award-name {
 	margin-top: 1em;

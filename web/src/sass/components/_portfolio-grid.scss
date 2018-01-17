@@ -5,7 +5,7 @@
 	border: 1px solid $ltgray;
 	margin: 0 4px 10px;
 	padding: 0;
-	.col-md-3 {
+	.col {
 		max-width: 20%; // five categories, 20% each
 		justify-content: center;
 		display: flex;
@@ -44,13 +44,20 @@
 }
 .portfolio__type-label {
 	display: block;
-	line-height: 1.5;
+	line-height: 1.25;
+	font-size: .8em;
+	@include media-breakpoint-up(lg) {
+		top: 0;
+		font-size: 1em;
+		line-height: 1.5;
+	}
 }
 .portfolio__type > portfolio__type-label[aria-expanded="true"] {
 	background: $ltgray;
 }
 .portfolio__type {
 	@include fontSmooth;
+	width: 20%;
 	cursor: pointer;
 	padding: 10px 5px;
 	text-align: center;
@@ -61,13 +68,17 @@
 	}
 }
 .portfolio__type--dropdown:hover .dropdown-menu {
-	display: block !important;
-	position: absolute;
+
 	top: 20px;
 	width: 100%;
-		@include media-breakpoint-up(lg) {
-			top: 0;
-		}
+	@include media-breakpoint-up(md) {
+		display: block !important;
+		position: absolute !important;
+		top: -7px;
+	}
+	@include media-breakpoint-up(lg) {
+		top: 0;
+	}
 }
 
 .portfolio__thumbnails {
@@ -112,7 +123,7 @@
 	@include fontSmooth;
 	color: #fff;
 	background-color: $tpdkblue;
-	transition: height .3s;
+	transition: height .15s;
 }
 .portfolio-thumbnail__name, .portfolio-thumbnail__place {
 	display: block;

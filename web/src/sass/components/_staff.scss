@@ -124,19 +124,33 @@
 	}
 	.carousel-control-prev-icon, .carousel-control-next-icon {
 		position: absolute;
-		top:48.5%;
-		padding: 20px;
-		background-color: $white;
+		top: 50%;
+		padding: 25px;
+		background-color: $dkblue;
 		background-size: 12px;
 		cursor: pointer;
 	}
 	.carousel-control-prev-icon {
-		left: -4.5%;
-		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23084560' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+		left: 0;
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
 	}
 	.carousel-control-next-icon {
-		right: -4.5%;
-		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23084560' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+		right: 0;
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffffff' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+	}
+	@include media-breakpoint-up(sm) {
+		.carousel-control-prev-icon, .carousel-control-next-icon {
+			background-color: $white;
+			top: 48.5%;
+		}
+		.carousel-control-prev-icon {
+			left: -4.5%;
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23084560' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+		}
+		.carousel-control-next-icon {
+			right: -4.5%;
+			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23084560' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+		}
 	}
 }
 .staff-member__modal-exit {
@@ -158,19 +172,28 @@
 	}
 }
 .staff-modal__portrait, .staff-modal__text {
-	height: 60vh;
+	height: 50vh;
 	margin: 0;
 	background-color: #fff;
+	@include media-breakpoint-up(sm) {
+		height: 75vh;
+	}
+	@include media-breakpoint-up(md) {
+		height: 60vh;
+	}
 }
 .staff-modal__portrait {
 	background-size:  cover !important;
-	background-position: top center;
+	background-position: 50% 25%;
 	background-repeat: no-repeat;
+	@include media-breakpoint-up(sm) {
+		background-position: top center;
+	}
 }
 .staff-modal__text {
 	box-sizing: border-box;
 	overflow-y: auto;
-	padding: 5% !important;
+	padding: 60px 5% !important;
 	line-height: 1.75;
 }
 .staff-member__name {

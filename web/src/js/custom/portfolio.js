@@ -102,3 +102,5 @@ $('li.portfolio__type .dropdown-item').on('click tap', function() {
         narrowThumbArray(parentFilter, filteredThumbs);
     }, 10);
 });
+
+// This should hide the dropdown after tapping on mobile

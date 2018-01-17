@@ -7,6 +7,7 @@
 			.not('[href="#collapseServices"]')
 			.not('[href="#collapseWho"]')
 			.not('[href="#newSlide"]')
+			.not('[href="#newgGalleryImage"]')
 
 			.click(function(event) {
 				// On-page links
@@ -40,3 +41,8 @@
 					}
 				}
 			});
+			$(document).ready(function () {
+	        $("li.dropdown ul.dropdown-menu li").click(function (event) {
+	            event.toElement.parentElement.click();
+	        })
+	    })

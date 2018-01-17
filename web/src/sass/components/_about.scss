@@ -5,7 +5,9 @@
 	margin-bottom: 4em;
 }
 .section__services {
-
+	@include media-breakpoint-up(sm) {
+		margin-bottom: 100px;
+	}
 }
 .about__side-img {
 	width: 100%;

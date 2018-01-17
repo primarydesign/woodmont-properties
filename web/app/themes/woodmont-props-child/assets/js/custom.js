@@ -243,6 +243,8 @@ $('li.portfolio__type .dropdown-item').on('click tap', function() {
     }, 10);
 });
 
+// This should hide the dropdown after tapping on mobile
+
 $('.modal .carousel-control-prev-icon').on('click tap', function() {
 
 	var staffList = $('.staff-thumbnail');

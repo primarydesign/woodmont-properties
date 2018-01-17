@@ -25,6 +25,7 @@
           background: $white;
           cursor: pointer;
           border: 0;
+          box-shadow: 1px 1px 2px #888;
       }
       .nav-item--dropdown:hover .dropdown-menu {
         display: block !important;

@@ -5,9 +5,25 @@
 <header class="section__hero" id="awards-page-header">
   <h1 class="hero__headline container">Awards</h1>
 </header>
+
 <section class="section__awards-page container">
+
+  <!-- <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <img src="/app/uploads/2017/10/Woodmont-Cove-Apartments.jpg" alt="Woodmont Cove Apartments" />
+      </div>
+      {% for image in post.get_field('award_gallery') %}
+        <div class="carousel-item">
+        <img src="{{TimberImage(image).src}}" alt="{{TimberImage(image).alt}}" />
+        </div>
+      {% endfor %}
+    </div>
+  </div> -->
+
   <img class="awards__badges" src="{{theme.path}}/assets/img/woodmont-award-badges.png" style="border:none;padding:0">
   <h2 class="awards__headline">Luxury Apartment Awards</h2>
+
   <div class="row">
     <span class="col-xl-4 col-lg-6 col-md-12">
       <div class="award__img-heading">
