@@ -722,6 +722,7 @@ section#content{border-top:68px solid #084560}
 .portfolio-thumbnail__name{font-family:"Open Sans",sans-serif;font-weight:800;text-transform:uppercase;font-weight:700}
 .portfolio-thumbnail__place{letter-spacing:.05em;padding-top:3px}
 .portfolio-thumbnail__status{padding:5px 12px;font-size:.725em;line-height:1.25;text-align:left;text-transform:uppercase;letter-spacing:.05em;background:#c5b358;color:#fefefe;position:absolute;max-width:75%;top:2em;right:1px}
+#EdgewoodCountryClub .property__status{display:none}
 .property--selected{position:relative;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-align:left;padding:0;font-size:0}
 .property__award-badge{position:absolute;left:10%;z-index:2;width:15%;max-width:125px}
 .property__featured-img{width:100%;margin-bottom:0;padding:0}
@@ -737,7 +738,7 @@ section#content{border-top:68px solid #084560}
 .property__phone:hover{background:#fff;color:#084560}
 .property__website{background:#084560}
 .property__website:hover{border:1px solid #c5b358}
-.portfolio__signup-field{margin:0 0 15px 5px !important;padding:5px !important}
+.portfolio__signup-field{margin:15px 0 15px 5px !important;padding:5px !important}
 .section__awards{margin-bottom:150px;background:#fefefe}
 .awards__badges{margin:1em auto 3em;padding-top:2em;border-top:1px solid #999}
 .awards__subheading{font-size:1em}
