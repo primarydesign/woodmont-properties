@@ -80,16 +80,16 @@
 								<a class="property__website" href="http://{{ property.website }}" target="_blank">Visit Website</a>
               {% endif %}
               {% if property.signup %}
-              <form class="portfolio__signup-form" action="signup.php" style="border:1px solid #ccc">
+              <form class="portfolio__signup-form" style="border:1px solid #ccc" name="contactform" method="post" action="{{theme.path}}/form-signup.php">
                 <div class="container">
                   <h3>Join our VIP List</h3>
                   <p>Please enter your name and email to receive email updates about {{property.title}}.</p>
                   <label><b>Name: </b> </label>
-                  <input class="portfolio__signup-field" type="text" name="name" required>
+                  <input class="portfolio__signup-field" type="text" name="Name" required>
                   <br>
                   <label><b>Email: </b> </label>
-                  <input class="portfolio__signup-field" type="text" name="email" required>
-                  <input type="text" value="{{property.title}}" name="property" required style="display:none">
+                  <input class="portfolio__signup-field" type="text" name="Email" required>
+                  <input type="text" value="{{property.title}}" name="Property" required style="display:none">
                   <br>
                   <button type="submit" class="prprty-type__cta">Sign Up</button>
                 </div>

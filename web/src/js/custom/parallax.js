@@ -23,7 +23,7 @@ window.addEventListener('resize', function() {
     }
 });
 
-parallax();
+//parallax();
 
 function onElementHeightChange(elm, callback){
     var lastHeight = elm.clientHeight, newHeight;
@@ -40,6 +40,8 @@ function onElementHeightChange(elm, callback){
     })();
 }
 onElementHeightChange(document.body, function(){
-    parallax();
-    console.log('resized')
+  setTimeout(
+    parallax(), 1000
+  );
+  console.log('resized');
 });
