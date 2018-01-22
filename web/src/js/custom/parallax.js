@@ -1,13 +1,12 @@
 //parallax
 // $('.section__header, .section__hero').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/header-image_properties.jpg', zIndex: 1});
 
-var parallaxScroll = function() {
+var parallax = function() {
   setTimeout(function() {
     $('.section__header h2, .section__hero h1').css({'z-index': 2, 'position': 'relative'});
     $('#our-company-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/header__our-company.jpg', zIndex: 1});
     $('#properties').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/header__properties.jpg', zIndex: 1});
     $('#careers-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/header__careers.jpg', zIndex: 1});
-    //$('[data-parallax="scroll"]').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/header__careers.jpg', zIndex: 1});
     $('#parallax-page-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/header__news.jpg', zIndex: 1});
     $('#awards-page-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/header__awards.jpg', zIndex: 1});
   }, 250);
@@ -16,8 +15,7 @@ var parallaxScroll = function() {
 var delay = 250, throttled = false;
 window.addEventListener('resize', function() {
     if (!throttled) {
-      //parallax('destroy');
-      //parallax();
+        parallax();
         throttled = true;
         setTimeout(function() {
             throttled = false;
@@ -25,7 +23,7 @@ window.addEventListener('resize', function() {
     }
 });
 
-parallaxScroll();
+parallax();
 
 function onElementHeightChange(elm, callback){
     var lastHeight = elm.clientHeight, newHeight;
@@ -42,11 +40,6 @@ function onElementHeightChange(elm, callback){
     })();
 }
 onElementHeightChange(document.body, function(){
-
-    //parallax('destroy');
-    parallax().parallax('updateLayers');
-    //parallax();
-    //$('[data-parallax="scroll"]').parallax();
-
-    alert('resized');
+    $(window).trigger('resize.px.parallax');
+    console.log('resized')
 });
