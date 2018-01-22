@@ -34,12 +34,13 @@ $('body').on('hidden.bs.modal', '.modal', function() {
 //parallax
 // $('.section__header, .section__hero').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/header-image_properties.jpg', zIndex: 1});
 
-var parallax = function() {
+var parallaxScroll = function() {
   setTimeout(function() {
     $('.section__header h2, .section__hero h1').css({'z-index': 2, 'position': 'relative'});
     $('#our-company-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/header__our-company.jpg', zIndex: 1});
     $('#properties').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/header__properties.jpg', zIndex: 1});
     $('#careers-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/header__careers.jpg', zIndex: 1});
+    //$('[data-parallax="scroll"]').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/header__careers.jpg', zIndex: 1});
     $('#parallax-page-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/header__news.jpg', zIndex: 1});
     $('#awards-page-header').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/monotone/header__awards.jpg', zIndex: 1});
   }, 250);
@@ -48,7 +49,8 @@ var parallax = function() {
 var delay = 250, throttled = false;
 window.addEventListener('resize', function() {
     if (!throttled) {
-        parallax();
+      //parallax('destroy');
+      //parallax();
         throttled = true;
         setTimeout(function() {
             throttled = false;
@@ -56,7 +58,7 @@ window.addEventListener('resize', function() {
     }
 });
 
-//parallax();
+parallaxScroll();
 
 function onElementHeightChange(elm, callback){
     var lastHeight = elm.clientHeight, newHeight;
@@ -73,10 +75,13 @@ function onElementHeightChange(elm, callback){
     })();
 }
 onElementHeightChange(document.body, function(){
-  setTimeout(
-    parallax(), 1000
-  );
-  console.log('resized');
+
+    //parallax('destroy');
+    parallax().parallax('updateLayers');
+    //parallax();
+    //$('[data-parallax="scroll"]').parallax();
+
+    alert('resized');
 });
 
 $('.portfolio__thumbnail').on('click tap', function() {
