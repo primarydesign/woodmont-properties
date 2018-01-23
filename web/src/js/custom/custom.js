@@ -9,17 +9,15 @@ $('body').on('hidden.bs.modal', '.modal', function() {
     $('video').trigger('pause');
 });
 
-//detect height change - WIP
+// hide dropdowns on mobile after tapping
+$('.nav-item--dropdown, .portfolio__type--dropdown').on('mouseenter', function() {
+  $(this).addClass("open");
+});
 
-// $('.nav-item--dropdown').on('click tap',function(){
-//
-//   $('.dropdown-menu').addEventListener('click tap', dropdownCloser, false);
-//   $('.dropdown-menu').show();
-// });
-//
-// function dropdownCloser(e){
-//   if(e.target.class != 'dropdown-menu'){
-//      document.body.removeEventListener('click tap', dropdownCloser, false);
-//      $('.dropdown-menu').hide();
-//   }
-// }
+$('.nav-item--dropdown, .portfolio__type--dropdown').on('mouseleave', function() {
+  $(this).removeClass("open");
+});
+
+$('.nav-item--dropdown, .portfolio__type--dropdown').on('click tap', function() {
+  $(this).toggleClass("open");
+});

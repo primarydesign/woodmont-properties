@@ -14,7 +14,7 @@
     margin-top: 15px;
     background: $dkblue !important;
     .nav-item--dropdown:hover .dropdown-menu {
-      display: none;
+      //display: none;
     }
     @include media-breakpoint-up(md) {
       position: relative;
@@ -27,8 +27,8 @@
           border: 0;
           box-shadow: 1px 1px 2px #888;
       }
-      .nav-item--dropdown:hover .dropdown-menu {
-        display: block !important;
+      .nav-item--dropdown.open:hover .dropdown-menu {
+        display: block;
         position: absolute;
         margin-top: 85px;
         top: -32px;

@@ -5,10 +5,10 @@
 </section>
 <div class="section__prprty-type prprty-type__intro--apts" id="property-types">
   <figure class="prprty-type__image prprty-type__image--apts" style="background-image: url('{{ theme.path}}/assets/img/woodmont-properties_apts.jpg')"></figure>
-  <article class="prprty-type__intro">
+  <article class="prprty-type__intro"> 
     <h3 class="prprty-type__headline">Luxury Apartments</h3>
     <p class="prprty-type__description">Woodmont Properties has been at the forefront of the movement toward lifestyle-oriented luxury apartment communities. Each award-winning rental community is strategically located and carefully constructed with the very best amenities and superior architectural details.</p>
-    <a class="prprty-type__cta" href="#portfolio">View Luxury Apartments</a>
+    <a class="prprty-type__cta LuxuryApartments" href="#portfolio">View Luxury Apartments</a>
     <a class="prprty-type__cta prprty-type__cta--ghost" data-toggle="modal" data-target="#propMgmtModal">Property Management</a>
   </article>
 </div>
@@ -20,22 +20,15 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </span>
-      <div class="staff-modal__text row">
-        <div class="col-md-6">
+      <div class="staff-modal__text">
+
           <span class="services__icon">
             {% include "svg/icon_prop-mgmt-residential.twig" %}
           </span>
           <h2 class="section__subhead">Residential Property and Asset Management</h2>
           <p class="about__paragraph">Woodmont self-manages its communities, assuring the objectives of its investments are fulfilled, and its residents are treated to a first class living experience. Woodmont’s skilled and experienced property management organization is well-versed in marketing and managing a community from inception through full occupancy.</p>
         </div>
-        <div class="col-md-6">
-          <span class="services__icon">
-            {% include "svg/icon_prop-mgmt-commercial.twig" %}
-          </span>
-          <h2 class="section__subhead">Commercial Property and Assset Management</h2>
-          <p class="about__paragraph" style="margin-bottom:4em">Our asset and property management objective is to properly maintain our investment properties while assuring the highest return on those investments. Woodmont Properties employs a skilled and dedicated team of specialists to ensure that we provide the utmost in professional and responsible property management services. The Woodmont Asset Management Team is largely responsible for our ability to maintain long-term tenancies and to assure profitability of investments.</p>
-        </div>
-      </div>
+
   </figure>
 </div>
 <div class="section__prprty-type prprty-type__intro--homes">
@@ -44,7 +37,7 @@
     <h3 class="prprty-type__headline">Luxury Homes</h3>
     <p class="prprty-type__description">Woodmont Properties has a long history of developing dynamic townhomes, condominiums and customized single-family homes that embody ease and elegance. Featuring sophisticated designs and high-end amenities, a
       Woodmont home is crafted to create a rewarding and unique living experience.</p>
-    <a class="prprty-type__cta" href="#portfolio">View Luxury Homes</a>
+    <a class="prprty-type__cta LuxuryHomes" href="#portfolio">View Luxury Homes</a>
   </article>
 </div>
 <div class="section__prprty-type prprty-type__intro--commercial">
@@ -53,45 +46,18 @@
     <h3 class="prprty-type__headline">Industrial Properties</h3>
     <p class="prprty-type__description">Woodmont Industrial Partners develops, builds, renovates, markets and manages a growing portfolio of strategically located port/intermodal industrial properties in the Eastern U.S. We acquire value-add and
       core-plus properties, which we reposition through capital improvement and/or redevelopment initiatives.</p>
-    <a class="prprty-type__cta" href="#portfolio">View Properties</a>
+    <a class="prprty-type__cta Industrial" href="#portfolio">View Properties</a>
     <a class="prprty-type__cta prprty-type__cta--ghost" data-toggle="modal" data-target="#industrialPropModal">Learn More</a>
   </article>
 </div>
-<!-- Modal -->
-<div class="modal" id="industrialPropModal" tabindex="-1" role="dialog" aria-hidden="true">
-  <figure class="modal-dialog staff-member__modal" role="document">
-      <span class="staff-member__modal-exit" >
-        <button type="button" class="close" aria-label="Close" data-dismiss="modal">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </span>
-      <div class="staff-modal__text">
-        <h3 class="prprty-type__headline">About Woodmont Industrial Partners</h3>
-        <h2 class="section__subhead">Our Team</h2>
-        <p class="about__paragraph">Woodmont’s Expertise in acquisitions, financing, entitlements, construction, marketing, leasing, asset/property management and logistics, provides the combination of skills and experience necessary for successful investment.</p>
-        <h2 class="section__subhead">Our Strategy</h2>
-        <p class="about__paragraph">Woodmont invests, develops, builds, markets, and manages a growing portfolio of strategically located port/intermodal industrial properties in the Eastern United States.</p>
-        <h2 class="section__subhead">Our Success</h2>
-        <p class="about__paragraph">In the past six years, Woodmont Industrial Partners has acquired 3.5 Million sq. ft. of Industrial Space, invested $30 Million in Capital Improvements, achieved an average $20 per sq. ft. profit, a 2.4 Cap Multiple, and a 40% Internal Rate of Return on its portfolio.</p>
-        <h2 class="section__subhead">Our Needs</h2>
-        <p class="about__paragraph">Woodmont is focused on infill value-add opportunities in acquisitions and land development in the Philadelphia and Northern New Jersey Industrial Markets. Woodmont is adept at repositioning challenging sites with complex issues.</p>
-        <h2 class="section__subhead">Our Commitment</h2>
-        <p class="about__paragraph">Woodmont is committed to its real estate community brokers and their expertise in contributing to the acquisition and development process.</p>
-        <h2 class="section__subhead">Acquisition Managers</h2>
-        <p class="about__paragraph">W. CROCKER (PA)<br>717.439.4871<br>mcrocker@woodmontind.com
-        <br><br>ANTHONY AMADEO (NJ)<br>973.487.1792<br>aamadeo@woodmontind.com</p>
-        <br>
-        <a class="prprty-type__cta" href="/assets/pdf/Woodmont-Industrial-Real-Estate.pdf" target="_blank">Download .PDF</a>
-      </div>
-  </figure>
-</div>
+{% include 'homepage/industrial-modal.twig' %}
 <div class="section__prprty-type prprty-type__intro--industrial">
   <figure class="prprty-type__image prprty-type__image--industrial" style="background-image: url('{{ site.link}}/app/uploads/2017/10/400-Alexander-Park.jpg');background-position:50%"></figure>
   <article class="prprty-type__intro">
     <h3 class="prprty-type__headline">Office / Retail Properties</h3>
     <p class="prprty-type__description">As part of our comprehensive approach to real estate investment, Woodmont Properties has developed and acquired office, and retail properties throughout the Northeast. Our vertically integrated team of
       professionals possesses a deep understanding of the constantly-evolving office and retail sectors.</p>
-    <a class="prprty-type__cta" href="#portfolio">View Properties</a>
+    <a class="prprty-type__cta OfficeRetail" href="#portfolio">View Properties</a>
   </article>
   </div>
   <div class="section__prprty-type prprty-type__intro--recreation">
@@ -99,6 +65,6 @@
     <article class="prprty-type__intro">
       <h3 class="prprty-type__headline">Hospitality / Recreation</h3>
       <p class="prprty-type__description">Woodmont’s diversified investment portfolio includes golf and tennis clubs. Recognizing the changing landscape in country club membership, Woodmont has acquired and is repositioning country clubs for golf, banquet facilities, and out parcel re-development.</p>
-      <a class="prprty-type__cta" href="#portfolio">View Properties</a>
+      <a class="prprty-type__cta Hospitality" href="#portfolio">View Properties</a>
     </article>
   </div>

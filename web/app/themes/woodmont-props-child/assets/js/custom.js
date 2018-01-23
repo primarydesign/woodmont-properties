@@ -16,20 +16,18 @@ $('body').on('hidden.bs.modal', '.modal', function() {
     $('video').trigger('pause');
 });
 
-//detect height change - WIP
+// hide dropdowns on mobile after tapping
+$('.nav-item--dropdown, .portfolio__type--dropdown').on('mouseenter', function() {
+  $(this).addClass("open");
+});
 
-// $('.nav-item--dropdown').on('click tap',function(){
-//
-//   $('.dropdown-menu').addEventListener('click tap', dropdownCloser, false);
-//   $('.dropdown-menu').show();
-// });
-//
-// function dropdownCloser(e){
-//   if(e.target.class != 'dropdown-menu'){
-//      document.body.removeEventListener('click tap', dropdownCloser, false);
-//      $('.dropdown-menu').hide();
-//   }
-// }
+$('.nav-item--dropdown, .portfolio__type--dropdown').on('mouseleave', function() {
+  $(this).removeClass("open");
+});
+
+$('.nav-item--dropdown, .portfolio__type--dropdown').on('click tap', function() {
+  $(this).toggleClass("open");
+});
 
 //parallax
 // $('.section__header, .section__hero').parallax({imageSrc: '/app/themes/woodmont-props-child/assets/img/header-image_properties.jpg', zIndex: 1});
@@ -140,7 +138,8 @@ var reduceFiltered = function(parent, name) {
     var elemIdentifier = '.portfolio__thumbnail.' + parent + '.' + name;
     $(elemIdentifier).addClass('visible');
 };
-$('li.portfolio__type').on('click tap', function() {
+
+$('.prprty-type__cta, li.portfolio__type').on('click tap', function() {
     $('.property--selected').collapse('hide');
     $('li.portfolio__type').removeClass('active');
     $(this).addClass('active');
@@ -174,6 +173,16 @@ $('li.portfolio__type').on('click tap', function() {
     }
 });
 $('li.portfolio__type .dropdown-item').on('click tap', function() {
+    var filteredThumbs = $(this).html().replace(/\s/g, '');
+    var parentFilter = $(this).parent().siblings('span.portfolio__type-label').html().replace(/\s/g, '').replace(/\//g, '');
+    setTimeout(function() {
+        reduceFiltered(parentFilter, filteredThumbs);
+        narrowThumbArray(parentFilter, filteredThumbs);
+    }, 10);
+});
+
+// Need to update this to work with non-parent non-sibling element
+$('.prprty-type__cta').on('click tap', function() {
     var filteredThumbs = $(this).html().replace(/\s/g, '');
     var parentFilter = $(this).parent().siblings('span.portfolio__type-label').html().replace(/\s/g, '').replace(/\//g, '');
     setTimeout(function() {
