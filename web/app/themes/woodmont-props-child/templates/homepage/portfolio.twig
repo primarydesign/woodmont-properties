@@ -27,7 +27,7 @@
 				</div>
         <li class="portfolio__type Hospitality col">
   				<span class="portfolio__type-label">Hospitality / Recreation</span>
-  			</li> 
+  			</li>
 			</li>
 	</ul>
 	<section id="portfolio__grid">
@@ -36,14 +36,14 @@
 			{% for property in properties %}
 
 			<div class="panel {{property.property_type|replace({' ': "", '/': ""}) }} {{property.currnet_status|replace({'.': "", ' ': "", ',': "", '-': "" }) }}">
-				<article class="property--selected collapse" id="{{ property.title|replace({'.': "", ' ': "", ',': "", '-': ""}) }}" role="tabpanel" aria-labelledby="{{ property.title|replace({'.': "", ' ': "", ',': ""}) }}">
+				<article class="property--selected collapse" id="{{ property.slug }}" role="tabpanel" aria-labelledby="{{ property.slug }}">
 					{% if property.award_winner %}
 						<a class="property__award-badge" href="./awards">
 							<img src="{{theme.path}}/assets/img/icons/icon_award-badge.svg">
 						</a>
 					{% endif %}
 					{% if property.property_photos %}
-						<div id="newgGalleryImage" class="carousel slide" data-ride="carousel">
+						<div id="new-{{property.slug}}-image" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner">
 								<div class="carousel-item active">
 									 <img class="property__featured-img" src="{{ property.thumbnail }}" width="600">
@@ -54,11 +54,11 @@
 								</div>
 								{% endfor %}
 							</div>
-							<a class="carousel-control-prev" href="#newgGalleryImage" role="button" data-slide="prev">
+							<a class="carousel-control-prev" href="#new-{{property.slug}}-image" role="button" data-slide="prev">
 								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 								<span class="sr-only">Previous</span>
 							</a>
-							<a class="carousel-control-next" href="#newgGalleryImage" role="button" data-slide="next">
+							<a class="carousel-control-next" href="#new-{{property.slug}}-image" role="button" data-slide="next">
 								<span class="carousel-control-next-icon" aria-hidden="true"></span>
 								<span class="sr-only">Next</span>
 							</a>
@@ -108,7 +108,7 @@
 
 			{% for property in properties %}
 
-			<li class="portfolio__thumbnail {{ property.property_type|replace({' ': "", '/': ""}) }} {{ property.property_filter|replace({' ': "", '/': ""}) }} col-lg-3 col-md-4 col-6" style="background-image:url({{ property.thumbnail.src }})" data-toggle="collapse" data-target="#{{ property.post_title|replace({'.': "", ' ': "", ',': "", '-': ""}) }}" aria-expanded="false" aria-controls="collapseExample" data-parent="#portfolio__grid">
+			<li class="portfolio__thumbnail {{ property.property_type|replace({' ': "", '/': ""}) }} {{ property.property_filter|replace({' ': "", '/': ""}) }} col-lg-3 col-md-4 col-6" style="background-image:url({{ property.thumbnail.src }})" data-toggle="collapse" data-target="#{{ property.slug }}" aria-expanded="false" aria-controls="collapseExample" data-parent="#portfolio__grid">
         {% if property.property_filter %}
         <span class="portfolio-thumbnail__status">{{ property.property_filter }}</span>
         {% endif %}

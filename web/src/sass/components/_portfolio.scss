@@ -105,7 +105,7 @@
 	margin: 1.5em 10px .5em 0;
 	font-size: 1rem;
 	line-height: 1.75;
-	border: 1px solid $dkblue;
+	border: 2px solid $dkblue;
 }
 .property__phone  {
 	background: #fff;
@@ -118,11 +118,14 @@
 .property__website  {
 	background: $dkblue;
 	&:hover {
-		border: 1px solid $gold;
+		border: 2px solid $gold;
 	}
 }
 .portfolio__signup-form {
+	max-width: 400px;
+	background: $ltgray;
 	margin-top: 1em;
+	padding: 1em 2em;
 }
 .portfolio__signup-field {
 		margin: 0 0 15px 5px !important;

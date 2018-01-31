@@ -5,15 +5,15 @@
 </section>
 <div class="section__prprty-type prprty-type__intro--apts" id="property-types">
   <figure class="prprty-type__image prprty-type__image--apts" style="background-image: url('{{ theme.path}}/assets/img/woodmont-properties_apts.jpg')"></figure>
-  <article class="prprty-type__intro"> 
+  <article class="prprty-type__intro">
     <h3 class="prprty-type__headline">Luxury Apartments</h3>
     <p class="prprty-type__description">Woodmont Properties has been at the forefront of the movement toward lifestyle-oriented luxury apartment communities. Each award-winning rental community is strategically located and carefully constructed with the very best amenities and superior architectural details.</p>
     <a class="prprty-type__cta LuxuryApartments" href="#portfolio">View Luxury Apartments</a>
-    <a class="prprty-type__cta prprty-type__cta--ghost" data-toggle="modal" data-target="#propMgmtModal">Property Management</a>
+    <button class="prprty-type__cta prprty-type__cta--ghost" data-toggle="modal" data-target="#propMgmtModal">Property Management</button>
   </article>
 </div>
 <!-- Modal -->
-<div class="modal" id="propMgmtModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal" id="propMgmtModal" tabindex="-1" role="dialog">
   <figure class="modal-dialog staff-member__modal" role="document">
       <span class="staff-member__modal-exit">
         <button type="button" class="close" aria-label="Close" data-dismiss="modal">
@@ -47,9 +47,10 @@
     <p class="prprty-type__description">Woodmont Industrial Partners develops, builds, renovates, markets and manages a growing portfolio of strategically located port/intermodal industrial properties in the Eastern U.S. We acquire value-add and
       core-plus properties, which we reposition through capital improvement and/or redevelopment initiatives.</p>
     <a class="prprty-type__cta Industrial" href="#portfolio">View Properties</a>
-    <a class="prprty-type__cta prprty-type__cta--ghost" data-toggle="modal" data-target="#industrialPropModal">Learn More</a>
+    <button class="prprty-type__cta prprty-type__cta--ghost" data-toggle="modal" data-target="#industrialPropModal">Learn More</button>
   </article>
 </div>
+
 {% include 'homepage/industrial-modal.twig' %}
 <div class="section__prprty-type prprty-type__intro--industrial">
   <figure class="prprty-type__image prprty-type__image--industrial" style="background-image: url('{{ site.link}}/app/uploads/2017/10/400-Alexander-Park.jpg');background-position:50%"></figure>

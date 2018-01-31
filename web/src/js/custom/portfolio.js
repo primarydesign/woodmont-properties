@@ -62,7 +62,7 @@ var reduceFiltered = function(parent, name) {
     $(elemIdentifier).addClass('visible');
 };
 
-$('.prprty-type__cta, li.portfolio__type').on('click tap', function() {
+$('a.prprty-type__cta, li.portfolio__type').on('click tap', function() {
     $('.property--selected').collapse('hide');
     $('li.portfolio__type').removeClass('active');
     $(this).addClass('active');
@@ -104,14 +104,12 @@ $('li.portfolio__type .dropdown-item').on('click tap', function() {
     }, 10);
 });
 
-// Need to update this to work with non-parent non-sibling element
-$('.prprty-type__cta').on('click tap', function() {
-    var filteredThumbs = $(this).html().replace(/\s/g, '');
-    var parentFilter = $(this).parent().siblings('span.portfolio__type-label').html().replace(/\s/g, '').replace(/\//g, '');
-    setTimeout(function() {
-        reduceFiltered(parentFilter, filteredThumbs);
-        narrowThumbArray(parentFilter, filteredThumbs);
-    }, 10);
-});
-
-// This should hide the dropdown after tapping on mobile
+// Need to update this to work with non-parent non-sibling elements
+// $('.prprty-type__cta').on('click tap', function() {
+//     var filteredThumbs = $(this).html().replace(/\s/g, '');
+//     var parentFilter = $(this).parent().siblings('span.portfolio__type-label').html().replace(/\s/g, '').replace(/\//g, '');
+//     setTimeout(function() {
+//         reduceFiltered(parentFilter, filteredThumbs);
+//         narrowThumbArray(parentFilter, filteredThumbs);
+//     }, 10);
+// });

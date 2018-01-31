@@ -1,15 +1,16 @@
-//headroom.js
+// initialize headroom.js
 $(function() {
     var myElement = document.querySelector("#mainNav");
     var headroom = new Headroom(myElement, { offset: 85 });
     headroom.init();
 });
-//pause video
+// pauses video when modal is closed
 $('body').on('hidden.bs.modal', '.modal', function() {
     $('video').trigger('pause');
 });
 
-// hide dropdowns on mobile after tapping
+// with proper css styleing, this hides the dropdowns on mobile after tapping
+
 $('.nav-item--dropdown, .portfolio__type--dropdown').on('mouseenter', function() {
   $(this).addClass("open");
 });
