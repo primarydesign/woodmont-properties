@@ -33,38 +33,39 @@ var project                 = 'web'; // Project Name.
 var projectURL              = 'woodmontproperties.test'; // Local project URL of your already running WordPress site. Could be something like local.dev or localhost:8888.
 var productURL              = './'; // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
 
-var pagesSRC                = './src/pages/**/*.{php,twig}'; // Path to main .twig / .php files.
+var pagesSRC                = './app/themes/woodmont-props-child/**/*.{php,twig}'; // Path to main .twig / .php files.
 var pagesDestination        = './app/themes/woodmont-props-child/';
 
 // Path to place the compiled CSS file.
 // Default set to root folder.
 // Style related.
-var styleSRC                = './src/sass/main.scss'; // Path to main .scss file.
+var styleSRC                = './app/themes/woodmont-props-child/src/sass/main.scss'; // Path to main .scss file.
 var styleDestination        = './app/themes/woodmont-props-child/assets/css/'; // Path to place the compiled CSS file.
 // Default set to root folder.
+var sourceStyleDestination  = './'; // Path to place the CSS source map file.
 
 // JS Vendor related.
-var jsVendorSRC             = './src/js/vendor/*.js'; // Path to JS vendor folder.
+var jsVendorSRC             = './app/themes/woodmont-props-child/src/js/vendor/*.js'; // Path to JS vendor folder.
 var jsVendorDestination     = './app/themes/woodmont-props-child/assets/js/'; // Path to place the compiled JS vendors file.
 var jsVendorFile            = 'vendors'; // Compiled JS vendors file name.
 // Default set to vendors i.e. vendors.js.
 
 // JS Custom related.
-var jsCustomSRC             = './src/js/custom/*.js'; // Path to JS custom scripts folder.
+var jsCustomSRC             = './app/themes/woodmont-props-child/src/js/custom/*.js'; // Path to JS custom scripts folder.
 var jsCustomDestination     = './app/themes/woodmont-props-child/assets/js/'; // Path to place the compiled JS custom scripts file.
 var jsCustomFile            = 'custom'; // Compiled JS custom file name.
 // Default set to custom i.e. custom.js.
 
 // Images related.
-var imagesSRC               = './src/img/**/*.{png,jpg,jpeg,gif,svg}'; // Source folder of images which should be optimized.
+var imagesSRC               = './app/themes/woodmont-props-child/src/img/**/*.{png,jpg,jpeg,gif,svg}'; // Source folder of images which should be optimized.
 var imagesDestination       = './app/themes/woodmont-props-child/assets/img/'; // Destination folder of optimized images. Must be different from the imagesSRC folder.
 
 // Watch files paths.
-var styleWatchFiles         = './src/sass/**/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
-var vendorJSWatchFiles      = './src/js/vendor/*.js'; // Path to all vendor JS files.
-var customJSWatchFiles      = './src/js/custom/*.js'; // Path to all custom JS files.
+var styleWatchFiles         = './app/themes/woodmont-props-child/src/sass/**/**/*.scss'; // Path to all *.scss files inside css folder and inside them.
+var vendorJSWatchFiles      = './app/themes/woodmont-props-child/src/js/vendor/*.js'; // Path to all vendor JS files.
+var customJSWatchFiles      = './app/themes/woodmont-props-child/src/js/custom/*.js'; // Path to all custom JS files.
 var projectPHPWatchFiles    = './app/themes/woodmont-props-child/**/*.{php,twig}'; // Path to all PHP and Twig files.
-var pagesWatchFiles         = './src/pages/**/*.{php,twig}'; // Path to all *.twig and *.php files inside templates folder
+var pagesWatchFiles         = './app/themes/woodmont-props-child/src/pages/**/*.{php,twig}'; // Path to all *.twig and *.php files inside templates folder
 
 // Browsers you care about for autoprefixing.
 // Browserlist https        ://github.com/ai/browserslist
@@ -179,7 +180,7 @@ gulp.task( 'browser-sync', function() {
     .pipe( sourcemaps.init( { loadMaps: true } ) )
     .pipe( autoprefixer( AUTOPREFIXER_BROWSERS ) )
 
-    .pipe( sourcemaps.write ( styleDestination ) )
+    .pipe( sourcemaps.write ( sourceStyleDestination ) )
     .pipe( lineec() ) // Consistent Line Endings for non UNIX systems.
     .pipe( gulp.dest( styleDestination ) )
 

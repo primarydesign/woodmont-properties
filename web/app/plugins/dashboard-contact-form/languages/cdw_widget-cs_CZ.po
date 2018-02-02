@@ -1,0 +1,418 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Custom Dashboard Widget & Dashboard Contact Form\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-05 22:15+0000\n"
+"PO-Revision-Date: 2017-07-05 22:17+0000\n"
+"Last-Translator: admin <ripasu@volny.cz>\n"
+"Language-Team: Czech\n"
+"Language: cs-CZ\n"
+"Plural-Forms: nplurals=3; plural=( n == 1 ) ? 0 : ( n >= 2 && n <= 4 ) ? 1 : "
+"2\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Poedit-Language: \n"
+"X-Poedit-Country: \n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Textdomain-Support: yes\n"
+"X-Loco-Target-Locale: cs_CZ"
+
+#: settings.php:170
+msgid "Warning, edit of this blog is disabled except to superadmins."
+msgstr ""
+"Pozor, úpravy nastavení pro tento web jsou zablokovány pro všechny uživatele "
+"kromě superadmina!"
+
+#: settings.php:266 settings.php:286
+msgid "(Current)"
+msgstr "(Aktuální)"
+
+#. URI of the plugin
+msgid "http://www.papik-wordpress.eu/plugins/dashboard-contact-form/"
+msgstr "http://www.papik-wordpress.eu/plugins/dashboard-contact-form/"
+
+#: index.php:150 settings.php:95 settings.php:188
+msgid "Dashboard Contact Form"
+msgstr "Dashboard Contact Form"
+
+#: index.php:151
+#, php-format
+msgid ""
+"<img class=\"aligncenter size-medium\" src=\"%s\" alt=\"larx-logo\" "
+"width=\"300\" height=\"96\" /><p style=\"text-align: center;\">This is "
+"example text. You can change it <a href=\"%s\">here</a>.</p>"
+msgstr ""
+"<img class=\"aligncenter size-medium\" src=\"%s\" alt=\"larx-logo\" "
+"width=\"300\" height=\"96\" /><p style=\"text-align: center;\">Toto je "
+"ukázkový text. Můžete jej změnit <a href=\"%s\">zde</a>.</p>\n"
+
+#: index.php:153
+msgid "Contact us:"
+msgstr "Napište nám:"
+
+#: index.php:154
+msgid ""
+"<strong>Sender:</strong> %SENDER_NAME%&lt;%SENDER_EMAIL%&gt;<br />\n"
+"<strong>Receiver:</strong> %TARGET_EMAIL%"
+msgstr ""
+"<strong>Odesílatel:</strong> %SENDER_NAME%&lt;%SENDER_EMAIL%&gt;<br />\n"
+"<strong>Příjemce:</strong> %TARGET_EMAIL%"
+
+#: index.php:155 settings.php:213
+msgid "Message Title"
+msgstr "Nadpis zprávy"
+
+#: index.php:156
+msgid "Type here your message."
+msgstr "Sem napište svou zprávu"
+
+#: settings.php:12 settings.php:12
+msgid "Dashboard Contact Form options"
+msgstr "Dashboard Contact Form nastavení"
+
+#: settings.php:30
+msgid "Password succesfully changed."
+msgstr "Heslo úspěšně změněno."
+
+#: settings.php:33
+msgid "New passwords mismatch, password NOT updated!"
+msgstr "Nová hesla nesouhlasí, heslo NEBYLO změněno!"
+
+#: settings.php:38
+msgid "Current password invalid, password NOT updated!"
+msgstr "Aktuální heslo je neplatné, heslo NEBYLO změněno!"
+
+#: settings.php:45
+#, php-format
+msgid ""
+"E-mail with link to reset this plugin password has been mailed to site admin "
+"on <strong>%s</strong>."
+msgstr ""
+"E-mail k obnovení hesla tohoto pluginu byl odeslán správci stránek na "
+"<strong>%s</strong>."
+
+#: settings.php:49
+#, php-format
+msgid "Failed to send message to site admin on <strong>%s</strong>."
+msgstr "Odeslání e-mailu správci stránek  na <strong>%s</strong> selhalo."
+
+#: settings.php:57
+msgid "Please enter your new password:"
+msgstr "Prosím zadejte nové heslo:"
+
+#: settings.php:60 settings.php:308
+msgid "Enter new password:"
+msgstr "Vložit nové heslo:"
+
+#: settings.php:61 settings.php:309
+msgid "Confirm new password:"
+msgstr "Potvrdit nové heslo:"
+
+#: settings.php:63 settings.php:311
+msgid "Set new password"
+msgstr "Nastavit nové heslo"
+
+#: settings.php:71
+msgid "Error: Authentization key is outdated, password NOT deleted!"
+msgstr "Chyba: autorizační klíč již není platný, heslo NEBYLO smazáno!"
+
+#: settings.php:87
+msgid "Error: invalid password"
+msgstr "Chyba: neplatné heslo"
+
+#: settings.php:96
+msgid "Type your secret password to edit Dashboard Contact Form:"
+msgstr "Vložte Vaše tajné heslo pro editaci Dashboard Contact Form."
+
+#: settings.php:98
+msgid "Type password:"
+msgstr "Zadejte heslo:"
+
+#: settings.php:99
+msgid "Enter"
+msgstr "Vložit"
+
+#: settings.php:99
+#, php-format
+msgid ""
+"Do you really want to reset this password? Mail with reset url will be sent "
+"to %s (site admin)"
+msgstr ""
+"Opravdu si přejete resetovat heslo? E-mail s odkazem pro smazání hesla bude "
+"zaslán na %s (správce stránek)"
+
+#: settings.php:99
+msgid "Reset password (site admin only)"
+msgstr "Obnovit heslo (pouze správce stránek)"
+
+#: settings.php:140
+#, php-format
+msgid "Blog #%s succesfully updated"
+msgstr "Blog #%s úspěšně aktualizován"
+
+#: settings.php:148
+msgid ""
+"Email has invalid format, not updated. Other settings saved. (You may have "
+"only one e-mail in this field)."
+msgstr ""
+"E-mail má nesprávný formát, nebyl aktualizován. Ostatní data uložena. (V "
+"tomto poli může být pouze jeden e-mail)."
+
+#: settings.php:149
+msgid "All settings successfully saved."
+msgstr "Všechna nastavení úspěšně uložena."
+
+#: settings.php:154
+msgid "ERROR: No settings saved, try again."
+msgstr "Chyba: nastavení nebylo uloženo, zkuste to znova."
+
+#: settings.php:164
+msgid "Edit of this blog is disabled by superadmin."
+msgstr "Úprava tohoto nastavení je zakázána správcem multisite"
+
+#: settings.php:191
+msgid "Widget title:"
+msgstr "Nadpis widgetu:"
+
+#: settings.php:193
+msgid ""
+"Do you really want to leave the edit mode? (Remeber to save your work here "
+"first!)"
+msgstr ""
+"Opravdu si přejete opustit režim úprav? (Nezapomeňte si nejprve uložit Vaši "
+"práci!)"
+
+#: settings.php:193
+msgid "Logout from dashboard edit"
+msgstr "Odhlásit se z editace nástěnky"
+
+#: settings.php:194
+msgid "Widget text:"
+msgstr "Text widgetu:"
+
+#: settings.php:196
+msgid "Contact form settings:"
+msgstr "Nastavení kontaktního formuláře:"
+
+#: settings.php:197
+msgid "E-mail*:"
+msgstr "E-mail*:"
+
+#: settings.php:198
+msgid "Copy (optional):"
+msgstr "Kopie (volitelné):"
+
+#: settings.php:199
+msgid "(You can input multiple e-mails separated by a coma -  ',')"
+msgstr "(Můžete vložit více e-mailů oddělených čárkou- ',')"
+
+#: settings.php:200
+msgid "Form title:"
+msgstr "Nadpis formuláře:"
+
+#: settings.php:201
+msgid "Form message**:"
+msgstr "Zpráva formuláře**:"
+
+#: settings.php:205
+msgid "Placeholders:"
+msgstr "Zástupci:"
+
+#: settings.php:206
+msgid ""
+"<strong>%SENDER_NAME%</strong> - display name of current logged - in user "
+"(you)."
+msgstr ""
+"<strong>%SENDER_NAME%</strong> - zobrazující se jméno aktuálně přihlášeného "
+"uživatele (Vy)."
+
+#: settings.php:207
+msgid ""
+"<strong>%SENDER_EMAIL%</strong> - e-mail of currently logged-in user (you)."
+msgstr ""
+"<strong>%SENDER_NAME%</strong> - zobrazující se jméno aktuálně přihlášeného "
+"uživatele (Vy)."
+
+#: settings.php:208
+msgid ""
+"<strong>%TARGET_EMAIL%</strong> - e-mail where this message will be mailed "
+"to, usually site admin."
+msgstr ""
+"<strong>%TARGET_EMAIL%</strong> - e-mailová adresa, kam bude zaslána zpráva "
+"z kontaktního formuláře, obvykle správci stránek."
+
+#: settings.php:209
+msgid ""
+"<strong>%COPY_EMAILS%</strong> - list of e-mails of additional receivers of "
+"this message."
+msgstr ""
+"<strong>%COPY_EMAILS%</strong> - Seznam e-mailů dalších příjemců této zprávy."
+
+#: settings.php:210
+msgid ""
+"** This section is NOT automatically formatted and requires HTML elements!"
+msgstr "** Tato sekce NENÍ automaticky formátována a vyžaduje HTML značky!"
+
+#: settings.php:213
+msgid "Title placeholder:"
+msgstr "Zástupce nadpisu:"
+
+#: settings.php:215
+msgid "Message placeholder:"
+msgstr "Zástupce zprávy:"
+
+#: settings.php:222
+msgid "Display for roles:"
+msgstr "Zobrazit pro skupiny uživatelů:"
+
+#: settings.php:241
+msgid "Enable contact form for roles:"
+msgstr "Povolit kontaktní formulář pro tyto skupiny:"
+
+#: settings.php:251
+msgid ""
+"E-mail address where will be delivered all messages from the contact form"
+msgstr ""
+"E-mailová adresa, na kterou bude zpráva doručena z kontaktního formuláře"
+
+#: settings.php:259
+msgid "Copy settings on blogs:"
+msgstr "Kopírovat nastavení na blogy:"
+
+#: settings.php:260 settings.php:280
+msgid "ID"
+msgstr "ID"
+
+#: settings.php:260 settings.php:280
+msgid "Blog url:"
+msgstr "URL blogu:"
+
+#: settings.php:278
+msgid "Enable override settings on blogs:"
+msgstr "Povolit změnu nastavení u těchto blogů:"
+
+#: settings.php:299
+msgid "Save"
+msgstr "Uložit"
+
+#: settings.php:302
+msgid "Set or change password"
+msgstr "Nastavit nebo změnit heslo"
+
+#: settings.php:305
+msgid "Enter current password:"
+msgstr "Vložit aktuální heslo:"
+
+#: settings.php:306
+msgid "(Current password is blank.)"
+msgstr "(Aktuální heslo je prázdné.)"
+
+#: settings.php:317
+msgid ""
+"If you like this plugin, you can click on the 'Donate' button here (opens a "
+"new window) and send me 5$. Thank you!"
+msgstr ""
+"Pokud se vám tento plugin líbil, můžete kliknout na tlačítko 'Donate' zde "
+"(otevře se v novém okně) a poslat 5$ (cca 120 Kč). Děkujeme Vám!"
+
+#: settings.php:320
+msgid "You may also donate any amount of money. (Thank you!)"
+msgstr "Můžete také poslat libovolné množství peněz. (Děkuji!)"
+
+#: settings.php:411
+#, php-format
+msgid "Resetting Dashboard Contact Form password for %s"
+msgstr "Obnovení hesla Dashboard Contact Form pro %s"
+
+#: settings.php:412
+#, php-format
+msgid ""
+"User <strong>%s</strong> asked you to reset Dashboard Contact Form password "
+"for <strong>%s</strong>.<br /> To reset password, click on the following url:"
+"<a target=\"_blank\" href=\"%s\">%s</a>. If you don't want reset this "
+"password, simply ignore this message."
+msgstr ""
+"Uživatel <strong>%s</strong> Vás požádal o obnovení hesla Dashboard Contact "
+"Form pro <strong>%s</strong>.<br /> Ke smazání hesla prosím klikněte na "
+"následující odkaz: <a target=\"_blank\" href=\"%s\">%s</a>. Pokud si heslo "
+"nepřejete odstranit, tuto zprávu jednoduše ignorujte."
+
+#: settings.php:413 widget.php:111
+#, php-format
+msgid ""
+"This message has been sent from <strong>%1$s</strong> at <strong>"
+"%2$s</strong> by user <strong>%3$s</strong>."
+msgstr ""
+"Tato zpráva byla odeslána z <strong>%1$s</strong> v <strong>%2$s</strong> "
+"uživatelem/uživatelkou <strong>%3$s</strong>."
+
+#: settings.php:439 settings.php:451
+msgid "Settings"
+msgstr "Nastavení"
+
+#: settings.php:454
+msgid "FAQ"
+msgstr "FAQ"
+
+#: settings.php:455
+msgid "Support"
+msgstr "Podpora"
+
+#: widget.php:43
+msgid "Submitting message..."
+msgstr "Odesílám zprávu..."
+
+#: widget.php:44
+msgid "Fill in all fields, some fields are empty"
+msgstr "Vyplňte všechna pole, některá jsou prázdná."
+
+#: widget.php:78
+msgid "Title:"
+msgstr "Název:"
+
+#: widget.php:83
+msgid "Your message:"
+msgstr "Vaše zpráva:"
+
+#: widget.php:89
+msgid "Send message"
+msgstr "Odeslat zprávu"
+
+#: widget.php:90
+msgid "Sending Message"
+msgstr "Odesílám zprávu"
+
+#: widget.php:125
+#, php-format
+msgid "Message succesfully sent to <strong>%s</strong>"
+msgstr "Zpráva úspěšně odeslána na <strong>%s</strong>."
+
+#: widget.php:126
+msgid "Couldn't send message."
+msgstr "Zprávu se nepodařilo odeslat."
+
+#. Name of the plugin
+msgid "Custom Dashboard Widget & Dashboard Contact Form"
+msgstr "Custom Dashboard Widget & Dashboard Contact Form"
+
+#. Description of the plugin
+msgid "Custom dashboard widget with optional contact form"
+msgstr "Vlastní widget nástěnky s volitelným formulářem"
+
+#. Author of the plugin
+msgid "Pavel Riha"
+msgstr "Pavel Říha"
+
+#. Author URI of the plugin
+msgid "http://www.larxdigital.com"
+msgstr "http://www.larxdigital.com"
