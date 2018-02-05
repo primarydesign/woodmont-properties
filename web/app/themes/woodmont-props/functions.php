@@ -65,8 +65,10 @@ new StarterSite();
 
 // Create the function to output the contents of our Dashboard Widget
 function example_dashboard_widget_function() {
-	// Display whatever it is you want to show
+	// Dev version
 	echo '<style>.primary-metrics{display:flex;width:100%}.primary-metrics div{flex:1;width:15%;height:300px;background-repeat:no-repeat;background-position:center center}.primary-metrics div:nth-of-type(1){background-image:url(/app/themes/woodmont-props/dashboard/1.png);background-size:contain;background-color:#50966f}.primary-metrics div:nth-of-type(2){background-image:url(/app/themes/woodmont-props/dashboard/2.png);background-size:contain;background-color:#69bb8a}.primary-metrics div:nth-of-type(3){background-image:url(/app/themes/woodmont-props/dashboard/3.png);background-size:contain;background-color:#50966f}.primary-metrics div:nth-of-type(4){background-image:url(/app/themes/woodmont-props/dashboard/4.png);background-size:contain;background-color:#69bb8a}.primary-metrics div:nth-of-type(5){background-image:url(/app/themes/woodmont-props/dashboard/6.png);background-size:contain;background-color:#50966f}.primary-metrics div:nth-of-type(6){background-image:url(/app/themes/woodmont-props/dashboard/5.png);background-size:contain;background-color:#69bb8a}@media screen and (max-width:782px){.primary-metrics{flex-direction:column}.primary-metrics div{width:100%;height:200px}}</style><div class="primary-metrics"><div></div><div></div><div></div><div></div><div></div><div></div></div>';
+
+
 } 
  
 // Create the function use in the action hook
